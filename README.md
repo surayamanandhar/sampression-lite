@@ -77,31 +77,26 @@ Please follow the steps below to install the theme.
   - Fixed CSS related bugs, especially on the IE browsers < version 9.x
   - Fixed "Featured Image Height" issue
   - Fixed "Featured Image Alignment" related issues on various view-port sizes
-
   - Fixed "Notice" issue: Notice doesn't appear when there are no sticky posts
   - Fixed "Tags Alignment" issue: Before the fix, tags didn't align when there were many tags and categories
   - Fixed “Image Alignment” issue: Image inserted from editor are automatically aligned
   - Fixed "Default About Me Widget" issue: Default "About Me Widget" on the bottom of the page can now be removed 
   - Fixed "Responsive Design" related issues
-
   - Fixed "Tick Mark" issue: The "Tick Mark" icon that appeared while hovering over categories filter in the primary navigation bar doesn't appear anymore when unchecked
   - Added: "Filter By" bar shows all categories by default along with a sliding animation
   - Added: Sneak-peek of all existing categories
   - Fixed "Filter By" bar click issue
   - The page now scrolls to the top when category is changed
-
   - Different image thumbnail sizes have been used for featured image on homepage and interior pages
   - Improved multiple level menus for large screen sizes and added support for small screen sizes
   - Changed previous social media icons (Facebook, Twitter, Google Plus) and added YouTube as an option
   - The design of "Sticky Post" has been made more prominent
   - A slightly darker color has been used for links
   - Fixed Meta links now redirect to their respective archive pages
-
   - Users can now use any name for apple touch icons, favicons and logos
   - Added Options to not use the default logos and favicons
   - Removed Site verification, analytics, etc.
   - Removed default logo, favicons and apple touch icons
-
   - Few sampression hooks ( sampression_meta, sampression_title, sampression_favicon, sampression_styles, sampression_links, sampression_logo, etc. ) are introduced.
 
 ### Version 1.3.2.1
@@ -113,26 +108,21 @@ Please follow the steps below to install the theme.
   - Added: Sampresson Lite now supports custom background image and color
   - Added: Sampresson Lite now supports custom header image and color
   - Added: Apple touch icon of size 144x144 for high resolution ipads with option on admin panel
-
   - Fixed: Top Nav resizing problem
   - Fixed: Custom code not working
   - Fixed: Categories overlap on archive page
-
   - Improved: Various code optimizations
 
 
 ### Version 1.4.1.1
   - Added: CSS for header section
-
   - Fixed: Logo/icons popup issue
   - Fixed: Various CSS Fixing
-
   - Improved: Code optimizations
 
 ### Version 1.5
   - Changed: Isotope jquery plugin replaced by shuffle.js jquery plugin
   - Changed: Multiple category filtering changed to single category filtering in home page
-
   - Fixed: Various CSS Fixings
   
 

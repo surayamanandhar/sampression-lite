@@ -233,7 +233,7 @@ function sampression_options_tabs() { ?>
             </div>
 			<!-- Apple Touch Icon for first and second generation iPad (114x114)  -->
             <div class="group">
-                <label><?php echo _e('Apple Touch Icon for for high-resolution iPad and iPhone Retina displays (114x114)','sampression'); ?></label>
+                <label><?php echo _e('Apple Touch Icon for high-resolution iPad and iPhone Retina displays (114x114)','sampression'); ?></label>
                 <input type="text" class="upload_image text-box" name="sam_apple_icons_114" value="<?php echo get_option('opt_sam_apple_icons_114'); ?>" />
                 <input class= "upload_image_button button" type="button" value="Browse" />
 				
@@ -252,7 +252,7 @@ function sampression_options_tabs() { ?>
             </div>
 			<!-- Apple Touch Icon for first and second generation iPad (144x144)  -->
 			<div class="group">
-                <label><?php echo _e('Apple Touch Icon for for high-resolution iPad and iPhone Retina displays (144x144)','sampression'); ?></label>
+                <label><?php echo _e('Apple Touch Icon for high-resolution iPad and iPhone Retina displays (144x144)','sampression'); ?></label>
                 <input type="text" class="upload_image text-box" name="sam_apple_icons_144" value="<?php echo get_option('opt_sam_apple_icons_144'); ?>" />
                 <input class= "upload_image_button button" type="button" value="Browse" />
 				

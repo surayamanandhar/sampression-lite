@@ -157,7 +157,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		margin:0 0 10px 20px;
 		margin:0 0 1.0rem 2.0rem;
 		}
-
+	form ul {
+	    list-style-type: none;
+	}
 /* #Images/videos
 ================================================== */
 	img {
@@ -356,6 +358,7 @@ table {
 table td, table th {
 	border:1px solid #eee; border:0.1rem solid #eee;
 	padding:5px; padding:0.5rem;
+	text-align: center;
 	} 
 table th {
 	font-weight:bold;
@@ -537,7 +540,7 @@ img.logo-img{
 	border-bottom:none;
 	position:absolute;
 	left: -75px; left:-7.5rem;
-	top:17px; top:1.7rem;
+	top:23px; top:2.3rem;
 	z-index:5;
 	display:none;
 	width:120px; width:12.0rem;
@@ -625,7 +628,7 @@ img.logo-img{
 #top-nav ul ul ul {
 	top:0;
 	left:inherit;
-	 right: 123px; right: 12.3rem;
+	 right: 127px; right: 12.7rem;
 	
 	}
 #top-nav ul ul ul:before {
@@ -1238,12 +1241,19 @@ body.page .meta .overflow-hidden {
 	}
 
 /* interior widget search */
-.sidebar-right .widget.widget_search .widget-entry {
+.sidebar-right .widget.widget_search .widget-entry
+{
 	margin-left:0;
 	}
 .sidebar-right #searchform input#s {
 	width:166px; width:16.6rem;
 	}
+.sidebar-right .widget.widget_categories .widget-entry select, .sidebar-right .widget.widget_archive .widget-entry select {
+    background-image: none;
+    margin-left: -2rem;
+    max-width: none;
+    width: 21rem;
+}
 
 /* Single */
 body.single .featured-img img {
@@ -1274,7 +1284,7 @@ body.single .featured-img img {
 	top:0;
 	width:30px; width:3.0rem;
 	}
-.btn-top.fixed {
+.btn-top {
 	position:fixed;
 	bottom:7px; bottom:0.7rem;
 	}

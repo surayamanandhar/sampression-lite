@@ -936,6 +936,7 @@ body.single #content, body.page #content {
 	width:100%;
 	float:left;
 	padding-bottom:20px; padding-bottom:2.0rem;
+	overflow: hidden;
 	}
 
 article.post {

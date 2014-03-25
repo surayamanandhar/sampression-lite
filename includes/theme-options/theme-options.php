@@ -312,7 +312,7 @@ function sampression_options_tabs() { ?>
         	<legend><?php _e('Custom code to insert into Header','sampression'); ?></legend>
             <textarea name="sam_header" class="text-area" rows="10" cols="100"><?php echo stripslashes(get_option('opt_sam_header')); ?></textarea>
             <p class="note">
-			<?php _e('Write/Paste the codes which you want to insert in Header.','sampression'); ?> 
+			<?php _e('Write/Paste the codes which you want to insert in Header. For eg. custom styles, scripts, etc.','sampression'); ?> 
 			<?php _e('This will be inserted before the  &#060;/head&#062; tag in the header of the document.','sampression'); ?>
 			</p>
         </fieldset>

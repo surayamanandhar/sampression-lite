@@ -138,6 +138,7 @@ Version 1.4.1.1
 Version 1.5
 = Changed: Isotope jquery plugin replaced by shuffle.js jquery plugin
 = Changed: Multiple category filtering changed to single category filtering in home page
+= Changed: Sticky post's position changed from right to left.
 
 = Fixed: Various CSS Fixings
 

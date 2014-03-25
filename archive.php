@@ -35,7 +35,7 @@ get_header(); ?>
 <!-- .page-header --> 
   <div id="post-listing" class="clearfix">
   <!-- Corner Stamp: It will always remaing to the right top of the page -->
-  <section class="corner-stamp post columns four">
+  <section class="corner-stamp post columns four item">
   <header><h3><?php _e('Archives', 'sampression'); ?></h3></header>
   <div class="entry">
     <ul class="categories archives">

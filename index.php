@@ -19,7 +19,7 @@ get_header(); ?>
 <section id="content" class="clearfix">
 	
   <?php if (have_posts()) : ?>
-  <div id="grid" class="clearfix">
+  <div id="post-listing" class="clearfix">
   
 	<?php 
 		// Show only one Sticky Post

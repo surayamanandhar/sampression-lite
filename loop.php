@@ -10,7 +10,7 @@ if ( !defined('ABSPATH')) exit;
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="post columns four item" data-groups='["all", <?php $count = sampression_cat_count(); $i=1; foreach((get_the_category()) as $category) { if($i< $count) { $item = ', '; } else{ $item =''; } echo "\"".$category->slug."\"".$item; $i++; } ?>]'>
+<article id="post-<?php the_ID(); ?>" class="post columns four item <?php echo sampression_cat_slug(); ?> <?php if ( is_sticky() && is_home() ) { echo 'sticky corner-stamp'; } else { echo 'item'; } ?>" data-groups='["all", <?php $count = sampression_cat_count(); $i=1; foreach((get_the_category()) as $category) { if($i< $count) { $item = ', '; } else{ $item =''; } echo "\"".$category->slug."\"".$item; $i++; } ?>]'>
 
       <h3 class="post-title"><a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="bookmark" ><?php the_title(); ?></a></h3>
       

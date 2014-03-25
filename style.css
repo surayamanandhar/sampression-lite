@@ -936,8 +936,11 @@ body.single #content, body.page #content {
 	width:100%;
 	float:left;
 	padding-bottom:20px; padding-bottom:2.0rem;
-	overflow: hidden;
+	
 	}
+body.home{
+	overflow: hidden;
+}	
 
 article.post {
 	background-color:#fff;
@@ -1187,7 +1190,7 @@ body.page .meta .overflow-hidden {
 .sidebar-right {
 	padding-top:50px; padding-top:5.0rem;
 	}
-.sidebar-right .widget {
+.widget {
 	margin-bottom:20px; margin-bottom:2.0rem;
 	}
 .sidebar-right .widget .widget-title {

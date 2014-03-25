@@ -345,9 +345,9 @@ function sampression_widget_reset() {
 		'description' => __('Appears on right of the Interior Pages - Can use as much widgets as you wish.', 'sampression'),
 		'id' => 'right-sidebar',
 		'before_title' => '<header class="widget-title">',
-		'after_title' => '</header><div class="widget-entry clearfix">',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></section>'
+		'after_title' => '</header>',
+		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+		'after_widget' => '</section>'
 	));
 }
 add_action('widgets_init', 'sampression_widgets_init'); 

@@ -194,6 +194,13 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 .logo-section .col-2 {
 	width:520px;
 	}
+.logo-section .col-2 .logo-img > img {
+    display: block;
+    max-width: 520px;
+}
+.logo-section .col-1 .image-block img {
+    max-width: 295px;
+}	
 .logo-section .logo-img {
 	margin-right:10px;
 	}

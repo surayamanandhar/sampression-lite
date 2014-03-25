@@ -1288,7 +1288,7 @@ body.single .featured-img img {
 	top:0;
 	width:30px; width:3.0rem;
 	}
-.btn-top {
+.btn-top.fixed {
 	position:fixed;
 	bottom:7px; bottom:0.7rem;
 	}

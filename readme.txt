@@ -1,7 +1,7 @@
 ﻿== Sampression Lite ==
 
 Theme Name: Sampression Lite
-Theme URI: http://www.sampression.com/sampression-lite/
+Theme URI: http://sampression.com/themes/sampression-lite/
 Author: Sampression
 Author URI: http://www.sampression.com
 
@@ -142,7 +142,7 @@ Version 1.5
 = Changed: Multiple category filtering changed to single category filtering in home page
 = Changed: Sticky post's position changed from right to left.
 
-= Fixed: Various CSS Fixings
+= Fixed: CSS Fixings
 
 
  == Child Theme Support ===

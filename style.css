@@ -671,7 +671,7 @@ img.logo-img{
 	width:235px; width:23.5rem;
 }
 
-#searchform input, .sm-top a, #get-cats, select {
+#searchform input, .sm-top a, #get-cats, select,#get-cat-ios {
  	display:block;
 	float:left;
 	position:relative;
@@ -792,7 +792,7 @@ select {
 	background-position:200px -181px; background-position:20.0rem -18.1rem;
 	padding:5px; padding:0.5rem;
 	}
-#get-cats {
+#get-cats,#get-cat-ios {
 	display:none;
 	margin-left:90px; margin-left:9.0rem;
 	}
@@ -1716,7 +1716,7 @@ article.post .featured-img {
 		#primary-nav ul.nav-listing {
 			margin: 1rem 0 0 9rem;
 		}
-		#get-cats {
+		#get-cats,#get-cat-ios {
 			display:inline;
 			float: none;
 			margin-left: 0;
@@ -1726,7 +1726,7 @@ article.post .featured-img {
 			top:15px; top:1.5rem;
 			}
 		#btn-nav-opt {
-			display:block !important;
+			display:none !important;
 			visibility:visible;
 			}
 		
@@ -1804,12 +1804,12 @@ article.post .featured-img {
 		.socialtwo #searchform #s{ width:296px; width:29.6rem;}
 		.socialthree #searchform #s{ width:264px; width:26.4rem;}
 		.socialfour #searchform #s{ width:232px;  width:23.2rem;}
-		#page_id,.top-menu-nav, #get-cats{ width:335px; width:33.5rem;}
+		#page_id,.top-menu-nav, #get-cats,#get-cat-ios{ width:335px; width:33.5rem;}
 		#page_id,.top-menu-nav, .menu-primary-menu-container select{ 
 			width:365px; width:36.5rem; 
 			background-position: 345px -181px; background-position: 34.5rem -18.1rem;
 		}
-		#get-cats{ background-position: 315px -181px; background-position: 31.5rem -18.1rem;}
+		#get-cats,#get-cat-ios{ background-position: 315px -181px; background-position: 31.5rem -18.1rem;}
 		}
 		
 
@@ -1916,7 +1916,7 @@ article.post .featured-img {
 			background-position: 105% -95px; background-position: 105% -9.5rem;
 			background-size: 33px 284px;  background-size: 3.3rem 28.4rem; 
 		}
-		#get-cats{
+		#get-cats,#get-cat-ios{
 			background-position: 105% -95px; background-position: 105% -9.5rem;
 			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
 		}

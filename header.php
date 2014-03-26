@@ -162,7 +162,7 @@
 
 
  <select name="get-cats" id="get-cat-ios" style="display:hidden;">
-        <option value="all">Show all</option>
+        <option value="<?php echo home_url();?>">Show all</option>
         <?php
         foreach($categories as $category):
         ?>

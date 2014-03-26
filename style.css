@@ -1711,7 +1711,7 @@ article.post .featured-img {
 			}
 		
 		#primary-nav .nav-listing {
-			/*display:none;*/
+			display:none;
 			}
 		#primary-nav ul.nav-listing {
 			margin: 1rem 0 0 9rem;

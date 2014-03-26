@@ -152,7 +152,7 @@
     </ul>
        
     <!-- Check Viewport: If the normal design couldn't fit with viewport, the Categories will appear via CSS with Select Menu form -->
-    <?php /* 
+    
     <select name="get-cats" id="get-cats">
         <option value="*">Show all</option>
         <?php
@@ -163,7 +163,7 @@
         endforeach;
         ?>
     </select>
-	 */ ?>
+	 
 
     
     </div>

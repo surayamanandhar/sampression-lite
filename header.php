@@ -166,7 +166,7 @@
         <?php
         foreach($categories as $category):
         ?>
-        <option value="<?php echo home_url('/') ?><?php echo $category->slug; ?>"><?php echo $category->name; ?></option>
+        <option value="<?php echo get_term_link($category->slug, 'category'); ?>"><?php echo $category->name; ?></option>
         <?php
         endforeach;
         ?>

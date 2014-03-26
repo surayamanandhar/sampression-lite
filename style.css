@@ -184,7 +184,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* #Basic WordPress Classes
 ================================================== */
 /* Aligns, prev next links */
-	.alignnone{ padding-right:10px; padding-right:1.0rem; padding-top:5px; padding-top:0.5rem; padding-bottom:5px; padding-bottom:0.5rem;}
+	.alignnone{ padding-right:10px; padding-right:1.0rem; padding-top:5px; padding-top:0.5rem; padding-bottom:5px; padding-bottom:0.5rem; padding-left:10px; padding-left:1.0rem; }
 	.alignleft {float:left;}
 	.alignright {float:right;}
 	.aligncenter, div.aligncenter {	display: block;	margin-left: auto;	margin-right: auto;}
@@ -1077,7 +1077,7 @@ body.single .entry.clearfix form input[type="submit"]{
 	margin-top:4px; margin-top:0.4rem;
 	}
 .cats .ico {
-	background-position:0 -139px; background-position:0 -13.9rem;
+	background-position:0 -139.3px; background-position:0 -13.93rem;
 	margin-top:3px; margin-top:0.3rem;
 	margin-right:5px; margin-right:0.5rem;
 	}

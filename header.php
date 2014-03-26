@@ -153,7 +153,7 @@
        
     <!-- Check Viewport: If the normal design couldn't fit with viewport, the Categories will appear via CSS with Select Menu form -->
     
-     <select name="get-cats" id="get-cats" style="display:hidden;">         
+     <select name="get-cats" id="get-cats" >         
      <option value="all">Show all</option>
          <?php foreach($categories as $category): ?>
               <option value="<?php echo $category->slug;
@@ -161,8 +161,8 @@
 ?>     </select> 
 
 
- <select name="get-cats" id="get-cat-ios" style="display:hidden;">
-        <option value="<?php echo esc_url( home_url( '/' ) ); ?>">Show all</option>
+ <select id="get-cat-ios">
+        <option value="<?php echo esc_url( home_url( '/' ) ); ?>">Show this</option>
         <?php
         foreach($categories as $category):
         ?>

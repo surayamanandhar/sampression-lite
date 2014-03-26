@@ -1598,6 +1598,13 @@ body.error404 #content {
             #primary-nav .sixteen{
                 height:34px; height:3.4rem;
             }
+            #primary-nav .nav-label {
+			margin-top:3px;
+			top:25px; top:2.5rem;
+			}
+        }
+        @media only screen and (min-width: 1025px) {
+	#get-cats, #get-cat-ios{display:none!important}	
         }
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (min-width: 959px) {

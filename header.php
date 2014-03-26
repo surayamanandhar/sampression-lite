@@ -152,15 +152,16 @@
     </ul>
        
     <!-- Check Viewport: If the normal design couldn't fit with viewport, the Categories will appear via CSS with Select Menu form -->
-
-        <?php
+	 
+                <?php
         $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
         $iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
         $iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
         if ($iPod || $iPhone || $iPad) {
             ?>
+
             <select id="get-cat-ios">
-                <option value="<?php echo esc_url(home_url('/')); ?>">Show This</option>
+                <option value="<?php echo esc_url(home_url('/')); ?>">Show All</option>
                 <?php
                 foreach ($categories as $category):
                     ?>
@@ -170,14 +171,15 @@
                 ?>
             </select>
             <?php
-        }else {
+        } else{
+            
             ?>
-            <select name="get-cats" id="get-cats" >         
-                <option value="all">Show all</option>
-                <?php foreach ($categories as $category): ?>
-                    <option value="<?php echo $category->slug;
-                    ?>"><?php echo $category->name; ?></option>         <?php endforeach; ?>     
-            </select> 
+        <select name="get-cats" id="get-cats" >         
+            <option value="all">Show all</option>
+                    <?php foreach ($categories as $category): ?>
+                <option value="<?php echo $category->slug;
+                        ?>"><?php echo $category->name; ?></option>         <?php endforeach;
+                    ?>     </select> 
         <?php } ?>
     </div>
   </div>

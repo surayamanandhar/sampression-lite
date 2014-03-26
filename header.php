@@ -152,39 +152,33 @@
     </ul>
        
     <!-- Check Viewport: If the normal design couldn't fit with viewport, the Categories will appear via CSS with Select Menu form -->
-    
-     <select name="get-cats" id="get-cats" >         
-     <option value="all">Show all</option>
-         <?php foreach($categories as $category): ?>
-              <option value="<?php echo $category->slug;
-?>"><?php echo $category->name; ?></option>         <?php         endforeach;
-?>     </select> 
 
-
- <select id="get-cat-ios">
-        <option value="<?php echo esc_url( home_url( '/' ) ); ?>">Show this</option>
         <?php
-        foreach($categories as $category):
-        ?>
-        <option value="<?php echo get_term_link($category->slug, 'category'); ?>"><?php echo $category->name; ?></option>
-        <?php
-        endforeach;
-        ?>
-    </select>
-	 
-<?php
-$iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
-$iPhone  = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-$iPad    = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
-if($iPod || $iPhone || $iPad){
-    ?>
-    <script>
-    alert('Ipad or Ipod or Iphone');
-    </script>
-    <?php
-}
-?>
-    
+        $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
+        $iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
+        $iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
+        if ($iPod || $iPhone || $iPad) {
+            ?>
+            <select id="get-cat-ios">
+                <option value="<?php echo esc_url(home_url('/')); ?>">Show This</option>
+                <?php
+                foreach ($categories as $category):
+                    ?>
+                    <option value="<?php echo get_term_link($category->slug, 'category'); ?>"><?php echo $category->name; ?></option>
+                    <?php
+                endforeach;
+                ?>
+            </select>
+            <?php
+        }else {
+            ?>
+            <select name="get-cats" id="get-cats" >         
+                <option value="all">Show all</option>
+                <?php foreach ($categories as $category): ?>
+                    <option value="<?php echo $category->slug;
+                    ?>"><?php echo $category->name; ?></option>         <?php endforeach; ?>     
+            </select> 
+        <?php } ?>
     </div>
   </div>
 </nav>

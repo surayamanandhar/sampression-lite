@@ -145,7 +145,9 @@ Version 1.5
 = Fixed: CSS Fixings
 
 Version 1.5.1
-= Fixed: Search form id changed to class
+= Fixed: Repeating id changed to class
+= Fixed: Category Filtering menu fixed in ios devices
+= Fixed: Removed extra closing tags on sidebar.php file
 
 
 

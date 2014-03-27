@@ -436,7 +436,7 @@ article.post, .sm-top li a, .btn-top, .cancel-comment-reply a, .corner-stamp, .p
 	  border-radius: 5px; border-radius: 0.5rem;
 	  }
 	 
-.searchform input.searchsubmit, #primary-nav ul.nav-listing li a span, .ico, .btn-top, select, #comments-header a, .commentlist span.pointer, #btn-nav-opt {
+.search-form input.search-submit, #primary-nav ul.nav-listing li a span, .ico, .btn-top, select, #comments-header a, .commentlist span.pointer, #btn-nav-opt {
 	background:url(images/sampression-css-sprite.png) no-repeat 0 0;
 	}
 
@@ -665,18 +665,18 @@ img.logo-img{
 
 /* Search Form
 ---------------------------------------------------------- */	
-.searchform {
+.search-form {
 	margin:0 5px 0 0; margin:0 0.5rem 0 0;
 	float:left;
 	}
-.ie8 .searchform, .ie6 .searchform{
+.ie8 .search-form, .ie6 .search-form{
 	width:260px; width:26.0rem;
 }
-.ie8 .searchform{
+.ie8 .search-form{
 	width:235px; width:23.5rem;
 }
 
-.searchform input, .sm-top a, #get-cats, select,#get-cat-ios {
+.search-form input, .sm-top a, #get-cats, select,#get-cat-ios {
  	display:block;
 	float:left;
 	position:relative;
@@ -687,20 +687,20 @@ img.logo-img{
 	-webkit-box-shadow:2px 2px 3px #D2DFDC; 
 	box-shadow:2px 2px 3px #D2DFDC; box-shadow:0.2rem 0.2rem 0.3rem #D2DFDC;
 	}
-.searchform input {
+.search-form input {
 	-moz-border-radius: 0;
 	  -webkit-border-radius: 0;
 	  border-radius: 0;
 	}
 	
-.searchform:hover input {
+.search-form:hover input {
 	border-color:#8AB7AD;
 	}
-.searchform:hover input.searchsubmit{
+.search-form:hover input.search-submit{
 		border-color:#8AB7AD;
 		
 	}
-.searchform input.search-field {
+.search-form input.search-field {
 	border-right:none;
 	width:190px; width:19.0rem;
 	padding-left:10px; padding-left:1.0rem;
@@ -716,7 +716,7 @@ img.logo-img{
 	  	 border-bottom-left-radius:5px; border-bottom-left-radius:0.5rem;
 	}
 
-.searchform input.searchsubmit {
+.search-form input.search-submit {
 	background-color:#ffffff;
 	background-position:-10px -7px; background-position:-1.0rem -0.7rem;
 	border-left:0;
@@ -740,12 +740,12 @@ img.logo-img{
 	  
 	  }
 
-.searchform ::-webkit-input-placeholder {
+.search-form ::-webkit-input-placeholder {
 	color:#dddddd;
 	font-style:italic;
 }
 
-.searchform :-moz-placeholder {  
+.search-form :-moz-placeholder {  
    color:#dddddd;
 	font-style:italic; 
 }
@@ -1259,7 +1259,7 @@ body.page .meta .overflow-hidden {
 {
 	margin-left:0;
 	}
-.sidebar-right .searchform input.search-field {
+.sidebar-right .search-form input.search-field {
 	width:166px; width:16.6rem;
 	}
 .sidebar-right .widget.widget_categories .widget-entry select, .sidebar-right .widget.widget_archive .widget-entry select {
@@ -1643,7 +1643,7 @@ body.error404 #content {
 			left:5px; left:0.5rem;
 			background-position:0 -45px; background-position:0 -4.5rem;
 			}
-		.searchform input.search-field {
+		.search-form input.search-field {
 			width:132px; width:13.2rem;
 			}
 		
@@ -1668,11 +1668,11 @@ body.error404 #content {
 			text-align: center;
 		}
 		.sm-top:after{clear:both;}
-		.searchform:before, .searchform:after{
+		.search-form:before, .search-form:after{
 				content:'';
 				display:none;
 		}
-		.searchform {
+		.search-form {
 			margin: 0 5px 0 0; margin: 0 0.5rem 0 0;
 		}
 		.socialzero{ margin:0 auto;}
@@ -1680,14 +1680,14 @@ body.error404 #content {
 		.socialtwo{ margin:0 auto;}
 		.socialthree{ margin:0 auto;}
 		.socialfour{ margin:0 auto;}
-		.socialzero .searchform .search-field{ width:248px; width:24.8rem;}
-		.socialone .searchform .search-field{ width:213px; width:21.3rem;}
-		.socialtwo .searchform .search-field{ width:181px; width:18.1rem;}
-		.socialthree .searchform .search-field{ width:149px; width:14.9rem;}
-		.socialfour .searchform .search-field{ width:117px; width:11.7rem;}
+		.socialzero .search-form .search-field{ width:248px; width:24.8rem;}
+		.socialone .search-form .search-field{ width:213px; width:21.3rem;}
+		.socialtwo .search-form .search-field{ width:181px; width:18.1rem;}
+		.socialthree .search-form .search-field{ width:149px; width:14.9rem;}
+		.socialfour .search-form .search-field{ width:117px; width:11.7rem;}
 		#top-nav ul { float:none; text-align:center}
 		#top-nav ul li { float:none;}
-		.searchform input.search-field { width:190px;  width:19.0rem;}
+		.search-form input.search-field { width:190px;  width:19.0rem;}
 		#top-nav ul li:hover ul { display:none; }
 		#top-nav{ display:none;}  /*don't show  navigation on small screen */
 		#top-nav-mobile{ display:block;} /*show mobile navigation on small screen */
@@ -1829,11 +1829,11 @@ article.post .featured-img {
 		article.post .featured-img {
 		text-align:center;
 		}
-		.socialzero .searchform .search-field{ width:359px; width:35.9rem;}
-		.socialone .searchform .search-field{ width:328px; width:32.8rem;}
-		.socialtwo .searchform .search-field{ width:296px; width:29.6rem;}
-		.socialthree .searchform .search-field{ width:264px; width:26.4rem;}
-		.socialfour .searchform .search-field{ width:232px;  width:23.2rem;}
+		.socialzero .search-form .search-field{ width:359px; width:35.9rem;}
+		.socialone .search-form .search-field{ width:328px; width:32.8rem;}
+		.socialtwo .search-form .search-field{ width:296px; width:29.6rem;}
+		.socialthree .search-form .search-field{ width:264px; width:26.4rem;}
+		.socialfour .search-form .search-field{ width:232px;  width:23.2rem;}
 		#page_id,.top-menu-nav, #get-cats,#get-cat-ios{ width:335px; width:33.5rem;}
 		#page_id,.top-menu-nav, .menu-primary-menu-container select{ 
 			width:365px; width:36.5rem; 
@@ -1845,7 +1845,7 @@ article.post .featured-img {
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-		.searchform input.search-field {
+		.search-form input.search-field {
 			width:120px; width:12.0rem;
 			}
 		
@@ -1920,7 +1920,7 @@ article.post .featured-img {
 			background-size: 137px 23px; background-size: 13.7rem 2.3rem;
 			}
 		
-		.searchform input.searchsubmit, #primary-nav ul.nav-listing li a.selected span, .ico, .btn-top, select, #comments-header a, 
+		.search-form input.search-submit, #primary-nav ul.nav-listing li a.selected span, .ico, .btn-top, select, #comments-header a, 
 		.commentlist span.pointer, #btn-nav-opt,.count-comment .pointer {
 			background:url('images/sampression-css-sprite2x.png') no-repeat 0 0;
 			display:inline-block;
@@ -1929,17 +1929,17 @@ article.post .featured-img {
 		.ico{
 			margin: 3px 2px 5px 5px; margin: 0.3rem 0.2rem 0.5rem 0.5rem;
 		}
-		.searchform input.searchsubmit {
+		.search-form input.search-submit {
 		
 			background-position: -3px 5px; background-position: -0.3rem 0.5rem;
 			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
 			
 		}
-		.searchform{
+		.search-form{
 			box-shadow: 2px 2px 3px #D2DFDC; box-shadow: 0.2rem 0.2rem 0.3rem #D2DFDC;
 			border-radius:0 5px 5px 0; border-radius:0 0.5rem 0.5rem 0;
 		}
-		.searchform input.search-field, .searchform input.searchsubmit {
+		.search-form input.search-field, .search-form input.search-submit {
 		box-shadow: none;
 		}
 		#top-nav-mobile select{

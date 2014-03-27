@@ -135,7 +135,7 @@ if (!function_exists('sampression_js')) {
 		wp_enqueue_script('sampression-modernizer', get_template_directory_uri() . '/lib/js/modernizr.js', array('jquery'), '2.6.1', false);
 		wp_enqueue_script('sampression-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.min.js', array('jquery'), '', false);                
 		wp_enqueue_script('sampression-custom-script', get_template_directory_uri() . '/lib/js/scripts.js', array('jquery'), '1.1', true);
-                 wp_enqueue_script('shuffle', get_template_directory_uri() . '/lib/js/shuffle.js', array('jquery'), '', false);
+        wp_enqueue_script('shuffle', get_template_directory_uri() . '/lib/js/shuffle.js', array('jquery'), '', false);
 	}
 
 }
@@ -381,8 +381,6 @@ add_action('widgets_init', 'sampression_default_widgets', 11);
  * simply create your own sampression_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
- *
- * @since Twenty Eleven 1.0
  *=======================================================================*/
 
 if ( ! function_exists( 'sampression_comment' ) ) :

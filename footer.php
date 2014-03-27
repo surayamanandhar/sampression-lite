@@ -9,7 +9,7 @@
 
  </div>
 </div>
-<!-- #content -->
+<!-- #content-wrapper -->
 
 <footer id="footer">
 	<div class="container">

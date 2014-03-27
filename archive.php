@@ -54,7 +54,7 @@ get_header(); ?>
     </ul>
   </div>
   </section>
-  <!-- corner-stamp -->
+  <!-- .corner-stamp -->
   
   <?php
   	while (have_posts()) : the_post(); 

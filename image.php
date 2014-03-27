@@ -128,6 +128,7 @@ get_header(); ?>
         	<?php comments_template( '', true ); ?>
  
 </section>
+<!-- #content -->
 <?php endif; ?>
 <?php get_sidebar('right'); ?>
 <?php get_footer(); ?>

@@ -74,12 +74,12 @@
 			</ul>
 			<?php
 		} ?>
-      </nav>
+      </nav><!-- #top-nav-->
 	  <div id="top-nav-mobile">
 				
 				
 	  </div> 
-      <!-- #top-nav -->
+      <!-- #top-nav-mobile-->
       <div id="interaction-sec" class="clearfix <?php echo getnoofclass(); ?>">
         <?php get_search_form(); ?>
      

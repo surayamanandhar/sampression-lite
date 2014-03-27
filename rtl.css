@@ -55,14 +55,14 @@ img.logo-img {
 #interaction-sec{
 	float:left;
 }
-#searchform input, .sm-top a, #get-cats, select {
+.searchform input, .sm-top a, #get-cats, select {
  	display:block;
 	float:right;
 	-moz-box-shadow:-2px 2px 3px #D2DFDC;
 	-webkit-box-shadow:-2px 2px 3px #D2DFDC; 
 	box-shadow:-2px 2px 3px #D2DFDC; box-shadow:-0.2rem 0.2rem 0.3rem #D2DFDC;
 	}
-#searchform input#s {
+.searchform input.search-field {
 	border-left:none;
 	border-right: 1px solid #D2DFDC; border-right: 0.1rem solid #D2DFDC;
 	padding-right:10px; padding-right:1.0rem;
@@ -83,10 +83,10 @@ img.logo-img {
     -webkit-border-bottom-right-radius:5px;
 	border-bottom-right-radius:5px; border-bottom-right-radius:0.5rem;
 	}
-#searchform input#s:hover{
+.searchform input.search-field:hover{
 		border-right:1px solid #8AB7AD; border-right:0.1rem solid #8AB7AD;
 }
-#searchform input#searchsubmit {
+.searchform input.searchsubmit {
 	background-position:-11px -7px; background-position:-1.1rem -0.7rem;
 	border-right:0;
 	text-indent:9999px; text-indent:9999rem;
@@ -158,7 +158,7 @@ img.logo-img {
     float: right;
 	margin: 0 0 5px 5px; margin: 0 0 0.5rem 0.5rem;
 }
-.widget #searchform {
+.widget .searchform {
     float: right;
 	display:inline;
 }
@@ -187,22 +187,22 @@ img.logo-img {
 			padding-left: 1px; padding-left: 0.1rem;
 			padding-right: 0;
 		}
-		.socialzero #searchform #s{ width:247px; width:24.7rem;}
-		.socialone #searchform #s{ width:212px; width:21.2rem;}
-		.socialtwo #searchform #s{ width:180px; width:18.0rem;}
-		.socialthree #searchform #s{ width:148px; width:14.8rem;}
-		.socialfour #searchform #s{ width:116px; width:11.6rem;}
+		.socialzero .searchform .search-field{ width:247px; width:24.7rem;}
+		.socialone .searchform .search-field{ width:212px; width:21.2rem;}
+		.socialtwo .searchform .search-field{ width:180px; width:18.0rem;}
+		.socialthree .searchform .search-field{ width:148px; width:14.8rem;}
+		.socialfour .searchform .search-field{ width:116px; width:11.6rem;}
 	
 	}
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
 		#page_id,.top-menu-nav, .menu-primary-menu-container select{ width:365px; width:36.5rem; background-position: 345px -181px; background-position: 2% -18.1rem;}
 		#get-cats{ background-position: 3% -181px; background-position: 3% -18.1rem;}
-		.socialzero #searchform #s{ width:359px; width:35.9rem;}
-		.socialone #searchform #s{ width:328px; width:32.8rem;}
-		.socialtwo #searchform #s{ width:296px; width:29.6rem;}
-		.socialthree #searchform #s{ width:264px; width:26.4rem;}
-		.socialfour #searchform #s{ width:232px;  width:23.2rem;}
+		.socialzero .searchform .search-field{ width:359px; width:35.9rem;}
+		.socialone .searchform .search-field{ width:328px; width:32.8rem;}
+		.socialtwo .searchform .search-field{ width:296px; width:29.6rem;}
+		.socialthree .searchform .search-field{ width:264px; width:26.4rem;}
+		.socialfour .searchform .search-field{ width:232px;  width:23.2rem;}
 		}
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
@@ -220,7 +220,7 @@ img.logo-img {
 		#get-cats{
 			background-position: 2% -95px; background-position: 2% -9.5rem;
 		}
-		#searchform input#searchsubmit {
+		.searchform input.searchsubmit {
 			background-position: -7px 4px; background-position: -0.7rem 0.4rem;
 			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
 		}

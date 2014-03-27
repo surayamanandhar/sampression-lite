@@ -260,31 +260,39 @@ add_filter('get_the_excerpt', 'sampression_custom_excerpt_more');
 /*=======================================================================
  * Get Category Slugs
  *=======================================================================*/
-function sampression_cat_slug() {
-    $cats = array();
-	foreach((get_the_category()) as $category) { 
-		$cats[] = $category->slug;
-	} 
-	$slug = implode(' ', $cats);
-	return $slug;
+if(!function_exists('sampression_cat_slug')){
+    function sampression_cat_slug() {
+        $cats = array();
+        foreach ((get_the_category()) as $category) {
+            $cats[] = $category->slug;
+        }
+        $slug = implode(' ', $cats);
+        return $slug;
+    }
 }
 
-function sampression_cat_slugs() {
-    $cats = array();
-	foreach((get_the_category()) as $category) { 
-		$cats[] = $category->slug;
-	} 
-	$slug = implode(', ', $cats);
-	return $slug;
+if(!function_exists('sampression_cat_slugs')){
+    function sampression_cat_slugs() {
+        $cats = array();
+        foreach ((get_the_category()) as $category) {
+            $cats[] = $category->slug;
+        }
+        $slug = implode(', ', $cats);
+        return $slug;
+    }
+
 }
 
-function sampression_cat_count(){
-    $cats = array();
-    $count = 0;
-	foreach((get_the_category()) as $category) { 
-		$count = $count + 1;
-	} 
-	return $count;
+if(!function_exists('sampression_cat_count')){
+    function sampression_cat_count() {
+        $cats = array();
+        $count = 0;
+        foreach ((get_the_category()) as $category) {
+            $count = $count + 1;
+        }
+        return $count;
+    }
+
 }
 
 

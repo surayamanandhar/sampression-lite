@@ -137,7 +137,7 @@
         <li><a href="#" class="active selected" data-filter="*" data-group="all"><span></span><?php _e('Show All','sampression'); ?></a></li>
         <?php
 		/*to exclude some categories */ 
-		$args = array( 'hide_empty' => 1);
+		$args = array();
 		/* $args = array(
 		'exclude'=>  array( get_cat_ID('aciform'), get_cat_ID('alignment'), get_cat_ID('antiquarianism'))  // exclude by category slug
 		'exclude'=>  array( 1, 2, 3) //exclude by category id

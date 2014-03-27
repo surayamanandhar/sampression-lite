@@ -133,8 +133,7 @@ if (!function_exists('sampression_js')) {
 		wp_enqueue_script("jquery");
 		// JS at the bottom for fast page loading. 
 		wp_enqueue_script('sampression-modernizer', get_template_directory_uri() . '/lib/js/modernizr.js', array('jquery'), '2.6.1', false);
-		//wp_enqueue_script('sampression-jquery-isotope', get_template_directory_uri() . '/lib/js/jquery.isotope.min.js', array('jquery'), '1.5.19', true);
-                wp_enqueue_script('sampression-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.min.js', array('jquery'), '', false);                
+		wp_enqueue_script('sampression-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.min.js', array('jquery'), '', false);                
 		wp_enqueue_script('sampression-custom-script', get_template_directory_uri() . '/lib/js/scripts.js', array('jquery'), '1.1', true);
                  wp_enqueue_script('shuffle', get_template_directory_uri() . '/lib/js/shuffle.js', array('jquery'), '', false);
 	}
@@ -532,25 +531,6 @@ function sampression_show_logo() {
 	}
 }
 
-
-/*=======================================================================
-* embed the javascript file that makes the AJAX request to filter category in Primary Navigation
-*=======================================================================*/
-
-if (!is_admin())
-	add_action('wp_enqueue_scripts', 'sampression_ajax');
-	
-
-if (!function_exists('sampression_ajax')) {
-
-	function sampression_ajax() {
-		wp_enqueue_script("jquery");
-		
-		 wp_enqueue_script( 'my-ajax-request', get_template_directory_uri() . '/lib/js/load_content.js', '' , '1.1', true );
-		 wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-	}
-
-}
 
 /*=======================================================================
 * declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)

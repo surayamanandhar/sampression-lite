@@ -12,19 +12,19 @@
 <!-- #content -->
 
 <footer id="footer">
-<div class="container">
-<div class="columns fourteen">
-<div class="alignleft copyright"><?php esc_attr_e( 'Copyright', 'sampression' ); ?> &copy; <?php _e(date('Y')); ?> "<?php bloginfo( 'name' ); ?>".</div><?php do_action( 'sampression_credits' ); ?>
-</div>
+	<div class="container">
+		<div class="columns fourteen">
+			<div class="alignleft copyright"><?php esc_attr_e( 'Copyright', 'sampression' ); ?> &copy; <?php _e(date('Y')); ?> "<?php bloginfo( 'name' ); ?>".</div><?php do_action( 'sampression_credits' ); ?>
+		</div>
 
-<div class="columns two footer-right">
-<div id="btn-top-wrapper">
-<a href="javascript:pageScroll('.top');" class="btn-top"><?php _e('Goto Top', 'sampression'); ?></a>
-</div>
-</div>
+		<div class="columns two footer-right">
+			<div id="btn-top-wrapper">
+			<a href="javascript:pageScroll('.top');" class="btn-top"><?php _e('Goto Top', 'sampression'); ?></a>
+			</div>
+		</div><!--/footer-right-->
 
-</div>
-</footer>
+	</div><!--.container-->
+</footer><!--#footer-->
 
 <?php 
 	   	/** sampression_footer hook **/

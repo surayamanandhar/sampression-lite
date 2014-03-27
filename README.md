@@ -127,7 +127,10 @@ Please follow the steps below to install the theme.
   - Changed: Sticky post's position changed from right to left.
   - Fixed: CSS Fixings
   
-
+### Version 1.5.1
+  - Fixed: Repeating id changed to class
+  - Fixed: Category Filtering menu fixed in ios devices
+  - Fixed: Removed extra closing tags on sidebar.php file
 
 ## Child Theme Support
 Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

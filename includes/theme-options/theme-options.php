@@ -1,5 +1,8 @@
 <?php
 
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 /**
  * Sampression Lite Theme Options
  *

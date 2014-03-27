@@ -76,16 +76,7 @@
 		} ?>
       </nav>
 	  <div id="top-nav-mobile">
-		
-			<?php	/* $args = array(
-							'depth'            => 0,
-							'child_of'         => 0,
-							'selected'         => 0,
-							'echo'             => 1,
-							'name'             => 'page_id'); 
-							
-						 wp_dropdown_pages( $args ); */ 
-			?>
+				
 				
 	  </div> 
       <!-- #top-nav -->
@@ -137,11 +128,7 @@
         <li><a href="#" class="active selected" data-filter="*" data-group="all"><span></span><?php _e('Show All','sampression'); ?></a></li>
         <?php
 		/*to exclude some categories */ 
-		$args = array();
-		/* $args = array(
-		'exclude'=>  array( get_cat_ID('aciform'), get_cat_ID('alignment'), get_cat_ID('antiquarianism'))  // exclude by category slug
-		'exclude'=>  array( 1, 2, 3) //exclude by category id
-		); */
+		$args = array( 'hide_empty' => 1);
 		$categories = get_categories($args);
         foreach($categories as $category):
         ?>

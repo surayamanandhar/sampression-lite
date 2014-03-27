@@ -43,7 +43,7 @@ get_header(); ?>
   </article>
   <?php comments_template( '', true ); ?>
 </section>
-<!-- end content -->
+<!-- #content -->
 
 <?php endwhile; endif; ?>
 <?php get_sidebar('right'); ?>

@@ -33,7 +33,7 @@ if ( !defined('ABSPATH')) exit;
                 </ul>
                 <?php endif; ?>
 				</div>
-			</section><!-- end of .widget -->
+			</section><!--.widget-->
             
             <section class="widget">
                 <header class="widget-title"><?php _e('Categories', 'sampression'); ?></header>
@@ -43,7 +43,7 @@ if ( !defined('ABSPATH')) exit;
                <?php wp_list_categories('title_li'); ?> 
                 </ul>
                </div>
-			</section><!-- end of .widget -->
+			</section><!--.widget -->
             
               <section class="widget">
                 <header class="widget-title"><?php _e('Archive', 'sampression'); ?></header>
@@ -53,11 +53,11 @@ if ( !defined('ABSPATH')) exit;
                <?php wp_get_archives(); ?> 
                 </ul>
                </div>
-			</section><!-- end of .widget -->
+			</section><!--.widget -->
             
 			<?php endif; //end of home-widget-1 ?>
             
       
      
     
-    </aside>
+    </aside><!--#sidebar-->

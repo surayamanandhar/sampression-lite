@@ -84,7 +84,7 @@ get_header(); ?>
         
 				<?php comments_template( '', true ); ?>
         
-        </section><!-- end content -->
+        </section><!-- #content -->
 		
 		<?php endwhile; endif; ?>
 	

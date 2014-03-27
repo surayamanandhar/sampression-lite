@@ -66,4 +66,4 @@ if ( !defined('ABSPATH')) exit;
       </div>
 	  <?php } ?>
          
-</article> 
+</article> <!--.post-->

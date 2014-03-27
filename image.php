@@ -24,7 +24,7 @@ get_header(); ?>
                 
                 <header class="post-header">
 					<h2 class="post-title"><a href="<?php echo get_permalink( $post->post_parent ); ?>" title="<?php esc_attr( printf( 'Return to %s', get_the_title( $post->post_parent ) ) ); ?>"><?php printf( '%s', get_the_title( $post->post_parent ) ); ?></a>: <span class="img-title"><?php the_title(); ?></span></h2>
-				</header>
+				</header><!--.post-header-->
                 
                 <div class="meta clearfix">
             <?php 
@@ -49,7 +49,7 @@ get_header(); ?>
             <span class="pointer"></span>
             <?php comments_popup_link(__('0', 'sampression'), __('1', 'sampression'), __('%', 'sampression')); ?>
             <?php endif; ?>
-        	</div>
+        	</div><!--.count-comment-->
             
 			<?php if(has_tag()) {?>
                     <div class="tags col"><span class="ico">Tags</span><?php the_tags(' ', ', '); ?> </div>

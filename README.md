@@ -121,10 +121,11 @@ Please follow the steps below to install the theme.
   - Improved: Code optimizations
 
 ### Version 1.5
+  - Added: Responsive video feature added.
   - Changed: Isotope jquery plugin replaced by shuffle.js jquery plugin
   - Changed: Multiple category filtering changed to single category filtering in home page
   - Changed: Sticky post's position changed from right to left.
-  - Fixed: Various CSS Fixings
+  - Fixed: CSS Fixings
   
 
 

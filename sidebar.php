@@ -74,15 +74,17 @@ if ( !defined('ABSPATH')) exit;
     <?php endif;
 	// Showing Dummy Text untill the user put any widget in Bottom widget 2
 	 if (!dynamic_sidebar('bottom-widget-3')) : ?>
-	 
-            <!--<section class="column one-third widget">
+	 <?php /*
+            <section class="column one-third widget">
             
                 <header class="widget-title"><?php _e('About me', 'sampression'); ?></header>
                 <div class="widget-entry">
 				<?php _e('This is your Third Bottom Widget box (Bottom Widget 3). To edit please go to Appearance > Widgets and choose 3rd widget from the top in area second called Bottom Widget 3. Title is also manageable from widgets as well.','sampression'); ?>
-				</div> -->
+				</div> 
             
 			</section>
+          * *
+          */ ?>
 			<!-- end of .widget-wrapper -->
 			<?php endif; //end of bottom-widget-3 ?>
     

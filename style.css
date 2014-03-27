@@ -1618,9 +1618,12 @@ body.error404 #content {
 			margin-top:3px;
 			top:25px; top:2.5rem;
 			}
+			#get-cats, #get-cat-ios{
+				display:block;
+				}
         }
         @media only screen and (min-width: 1025px) {
-	#get-cats, #get-cat-ios{display:none!important}	
+	/*#get-cats, #get-cat-ios{display:none!important}	*/
         }
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (min-width: 959px) {

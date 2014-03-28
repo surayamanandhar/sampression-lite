@@ -786,4 +786,27 @@ function sampression_enqueue_conditional_scripts(){
 	<![endif]-->
 	<?php
 }
-?>
+
+//==============================================================
+// Script for Non-IE Browser
+// =============================================================
+        function sampression_not_ie_js() {
+            ?>
+            <!--[if !IE]> -->
+            <script>
+                //==============================================================
+                // Hide the Address Bar in MobileSafari
+                // =============================================================
+                window.addEventListener("load", function() {
+                    setTimeout(
+                    hideURLbar, 0);
+                }, false);
+                function hideURLbar() {
+                    window.scrollTo(0,1);
+                }
+            </script>
+            <!-- <![endif]-->
+        <?php
+        }
+
+add_action('wp_head', 'sampression_not_ie_js');

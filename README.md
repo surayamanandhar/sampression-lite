@@ -9,7 +9,7 @@ Sampression Lite is a minimal, fully responsive, retina ready, translation ready
 
 
 ## Features 
-Responsive design, Theme Options, Custom Logo,Fav Icons, Apple Touch Icons, Custom Widgets, Custom Menu, shuffle jQuery, Sticky Post, W3C validated, supports social media, supports webmaster tools.
+Responsive design, Theme Options, Custom Logo, Fav Icons, Apple Touch Icons, Custom Widgets, Custom Menu, shuffle jQuery, Sticky Post, W3C validated, supports social media, supports webmaster tools.
 
 ## Tags
 white, orange, green, one-column, two-columns, flexible-width, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, right-sidebar

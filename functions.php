@@ -9,7 +9,6 @@ if ( !defined('ABSPATH')) exit;
  *
  * load the theme function files
  */
-// require ( get_template_directory() . '/includes/functions.php' );
-// require ( get_template_directory() . '/includes/theme-options/theme-options.php' );
-require_once( dirname( __FILE__ ) . '/inc/init.php' );
+require ( get_template_directory() . '/includes/functions.php' );
+require ( get_template_directory() . '/includes/theme-options/theme-options.php' );
 ?>

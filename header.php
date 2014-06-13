@@ -58,7 +58,7 @@
       <nav id="top-nav">
         <?php
 		//Check if the Custom Navigation is available
-		if ( has_nav_menu( 'top-menu' ) ) {
+		if ( has_nav_menu('top-menu') ) {
 			wp_nav_menu( array (
 				'theme_location'    => 'top-menu',
 				'container'         => '',
@@ -70,7 +70,7 @@
 		// Otherwise list the Pages
 			 ?>
 			<ul class="top-menu clearfix">
-				<?php wp_list_pages( 'title_li=&depth=0' ); ?>
+				<?php wp_list_pages('title_li=&depth=0'); ?>
 			</ul>
 			<?php
 		} ?>

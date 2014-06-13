@@ -41,7 +41,6 @@ get_header(); ?>
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	query_posts( array(
 		'post__not_in' => get_option( 'sticky_posts' ),
-                //'category__not_in' => array(1),
 		'paged' => $paged
 		) );
 		

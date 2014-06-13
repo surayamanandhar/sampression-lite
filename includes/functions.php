@@ -692,7 +692,7 @@ add_action( 'sampression_links', 'sampression_add_links' );
 function sampression_add_links() {
 	?>
 	<!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href="<?php echo esc_url( '//fonts.googleapis.com/css?family=Droid+Serif:700,400,400italic,700italic' ); ?>" rel="stylesheet" type="text/css">
 	<!-- Pingback Url -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php

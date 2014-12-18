@@ -21,8 +21,10 @@ if ( !defined('ABSPATH')) exit;
             </span>
      <?php endif; ?>
       
-      <?php if ( has_post_thumbnail() ) { ?>
-        <div class="featured-img">
+      <?php if ( has_post_thumbnail() ) {
+          $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), 'featured-thumbnail' );
+        ?>
+        <div class="featured-img" style="height: <?php echo $thumbnail[2] ?>px;">
         <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" >
 			<?php the_post_thumbnail( 'featured-thumbnail','',true ); ?></a>
         </div>

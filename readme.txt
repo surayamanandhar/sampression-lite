@@ -5,13 +5,13 @@ Theme URI: http://sampression.com/themes/sampression-lite/
 Author: Sampression
 Author URI: http://www.sampression.com
 
-Version: 1.5.1
+Version: 1.5.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 == Theme Description ==
-Sampression Lite is a minimal, fully responsive, retina ready, clean theme, perfect for blogging. It's lightweight responsive design allows this theme to adapt across a range of screen sizes. Besides an elegant design, Sampression Lite features customizable menus and widgets, supports custom header color and image, custom background color and image, along with a threaded comments section. It supports sticky notes with special effects and allows for the best placement of feature images on posts. It is a full fledged theme with easily customizable theme option page.
+The first theme for Sampression is clean, lightweight and fully responsive. Its not just another responsive theme - its a unique responsive theme with an attractive masonry blog layout. On the back-end it has a user friendly theme options panel which allows you to easily customize your blog’s header, menus, widgets, background color and image. Upfront its a retina ready, four-column, state-of-the-art blog that will help you reach out to your target audience and their various internet-enabled devices.
 
 == Features ==
 Responsive design, Theme Options, Custom Logo/Fav Icons/Apple Touch Icons, Custom Widgets, Custom Menu, iSotope jQuery, Sticky Post, W3C validated, supports social media, supports webmaster tools.
@@ -149,7 +149,11 @@ Version 1.5.1
 = Fixed: Category Filtering menu fixed in ios devices
 = Fixed: Removed extra closing tags on sidebar.php file
 
-
+Version 1.5.2
+= Fixed: Overlapping issue of the posts
+= Fixed: CSS issue for featured image
+= Added: Language file (sampression.po) added for translation
+= Some function is changed
 
  == Child Theme Support ===
  Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

@@ -3,9 +3,9 @@ Theme Name: Sampression Lite
 Theme URI: http://sampression.com/themes/sampression-lite/
 Author: Sampression
 Author URI: http://www.sampression.com 
-Description: Sampression Lite is a minimalist, fully responsive, retina ready, clean theme, perfect for blogging. It's lightweight responsive design allows this theme to adapt across a range of screen sizes. Besides an elegant design, Sampression Lite features customizable menus and widgets, supports custom header color and image, custom background color and image, along with a threaded comments section. It supports sticky notes with special effects and allows for the best placement of feature images on posts. It is a full fledged theme with easily customizable theme option page.
+Description: The first theme for Sampression is clean, lightweight and fully responsive. Its not just another responsive theme - its a unique responsive theme with an attractive masonry blog layout. On the back-end it has a user friendly theme options panel which allows you to easily customize your blog’s header, menus, widgets, background color and image. Upfront its a retina ready, four-column, state-of-the-art blog that will help you reach out to your target audience and their various internet-enabled devices.
 
-Version: 1.5.1
+Version: 1.5.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, orange, green, one-column, two-columns, responsive-layout, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, right-sidebar
@@ -163,6 +163,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* #Images/videos
 ================================================== */
 	img {
+		display: block;
 		max-width: 100%;
 		height:auto;
 		 }

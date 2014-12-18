@@ -148,7 +148,7 @@
             ?>
 
             <select id="get-cat-ios">
-                <option value="<?php echo esc_url(home_url('/')); ?>">Show All</option>
+                <option value="<?php echo esc_url(home_url('/')); ?>"><?php _e('Show All', 'sampression'); ?></option>
                 <?php
                 foreach ($categories as $category):
                     ?>

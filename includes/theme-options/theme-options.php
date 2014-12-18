@@ -83,7 +83,7 @@ function sampression_build_options() {
 		$emailsubj = $_POST['emailsubj'];
 		$emailmsg = $_POST['emailmsg'];
 		$toemail = "themes@sampression.com";
-		$text_message = "Dear Admin,<p>Support message have been received from ".get_bloginfo('wpurl').". Client IP address: $userip.</p><p>Message Body:</p><p>$emailmsg</p>";
+		$text_message = "Dear Admin,<p>Support message have been received from ".esc_url( site_url() ).". Client IP address: $userip.</p><p>Message Body:</p><p>$emailmsg</p>";
 		$headers='MIME-Version: 1.0' . "\r\n";
 		$headers.='Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		$headers.='From: '.$fullname.' <'.$emailadd.'>' . "\r\n";

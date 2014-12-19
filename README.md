@@ -1,11 +1,11 @@
 # [Sampression Lite](http://www.sampression.com/sampression-lite/)
-Just another responsive theme
+Not just another responsive theme
 
 ##Download Link:
 Sampression lite is available to download on http://wordpress.org/themes/sampression-lite
 
 ## Theme Description
-Sampression Lite is a minimal, fully responsive, retina ready, translation ready, clean theme, perfect for blogging. It's lightweight responsive design allows this theme to adapt across a range of screen sizes. Besides an elegant design, Sampression Lite features customizable menus and widgets, supports custom header color and image, custom background color and image, along with a threaded comments section. It supports sticky notes with special effects and allows for the best placement of feature images on posts. It is a full fledged theme with easily customizable theme option page.
+The first theme for Sampression is clean, lightweight and fully responsive. Its not just another responsive theme - its a unique responsive theme with an attractive masonry blog layout. On the back-end it has a user friendly theme options panel which allows you to easily customize your blog’s header, menus, widgets, background color and image. Upfront its a retina ready, four-column, state-of-the-art blog that will help you reach out to your target audience and their various internet-enabled devices.
 
 
 ## Features 
@@ -133,6 +133,12 @@ Please follow the steps below to install the theme.
   - Fixed: Repeating id changed to class
   - Fixed: Category Filtering menu fixed in ios devices
   - Fixed: Removed extra closing tags on sidebar.php file
+
+### Version 1.5.2
+  - Fixed: Overlapping issue of the posts
+  - Fixed: CSS issue for featured image
+  - Added: Language file (sampression.po) added for translation
+  - Some function is changed
 
 ## Child Theme Support
 Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

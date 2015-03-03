@@ -39,10 +39,10 @@
   <div class="container">
     <div class="columns nine">
 	
-			<?php 
-				if(!get_option('opt_sam_use_logo') || get_option('opt_sam_use_logo') == 'no') { 
+			<?php
+            if(get_option('opt_sam_use_logo') == 'no' && get_option('opt_sam_logo')) {
 						do_action('sampression_logo');
-				} 
+				} else {
 			?>
 			
 			<div class="logo-txt">
@@ -53,6 +53,7 @@
 			  </h1>
 			  <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
+        <?php } ?>
     </div>
     <div class="columns seven">
       <nav id="top-nav">

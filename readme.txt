@@ -5,7 +5,7 @@ Theme URI: http://sampression.com/themes/sampression-lite/
 Author: Sampression
 Author URI: http://www.sampression.com
 
-Version: 1.5.2
+Version: 1.5.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -76,7 +76,6 @@ Version 1.3
  = Supports WP-Pagenavi plugin.
  = Supports dropdown menu.
  = Theme Options layout enchance.
- 
  
 Version 1.3.2
 = Fixed CSS related bugs, especially on the IE browsers < version 9.x
@@ -154,6 +153,19 @@ Version 1.5.2
 = Fixed: CSS issue for featured image
 = Added: Language file (sampression.po) added for translation
 = Some function is changed
+
+Version 1.5.3
+= Fixed: Comment count issue of posts
+= Fixed: Logo/Site title issue on both front-end and back-end
+= Fixed: CSS - Header spacing issue
+= Fixed: CSS - Search box focus issue
+= Fixed: CSS - Image caption issue
+= Fixed: Javascript issues - Uploading Logo on Theme Options
+= Fixed: Blank content search
+= Fixed: Blank category meta on search page
+= Added: Buttons/Links on Theme Options header
+= Changed: Copyright text
+= Changed: Translation (.po and .mo files)
 
  == Child Theme Support ===
  Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

@@ -4,15 +4,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sampression Lite\n"
-"POT-Creation-Date: 2014-11-28 14:12+0545\n"
-"PO-Revision-Date: 2014-12-04 11:16+0545\n"
-"Last-Translator: Prayas Sapkota <sapkotaprayas@gmail.com>\n"
+"POT-Creation-Date: 2015-02-18 09:38+0545\n"
+"PO-Revision-Date: 2015-02-18 09:39+0545\n"
+"Last-Translator: Sampression Themes <hello@sampression.com>\n"
 "Language-Team: Sampression Team <themes@sampression.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -126,7 +126,7 @@ msgstr ""
 msgid "<span class=\"meta-nav\">&larr;</span> Back to Gallery"
 msgstr ""
 
-#: image.php:31 includes/functions.php:571 loop.php:41
+#: image.php:31 includes/functions.php:550 loop.php:41
 #, php-format
 msgid ""
 "%3$s <time class=\"col\" datetime=\"2011-09-28\"><span class=\"ico"
@@ -138,19 +138,19 @@ msgstr ""
 msgid "<span class=\"ico\">Categories</span> %s"
 msgstr ""
 
-#: image.php:50 includes/functions.php:588 loop.php:20 single.php:43
+#: image.php:50 includes/functions.php:567 loop.php:20 single.php:43
 msgid "0"
 msgstr ""
 
-#: image.php:50 includes/functions.php:588 loop.php:20 single.php:43
+#: image.php:50 includes/functions.php:567 loop.php:20 single.php:43
 msgid "1"
 msgstr ""
 
-#: image.php:50 includes/functions.php:588 loop.php:20 single.php:43
+#: image.php:50 includes/functions.php:567 loop.php:20 single.php:43
 msgid "%"
 msgstr ""
 
-#: image.php:60 includes/functions.php:402 includes/functions.php:441
+#: image.php:60 includes/functions.php:381 includes/functions.php:420
 #: page.php:39 single.php:70
 msgid "Edit"
 msgstr ""
@@ -180,11 +180,11 @@ msgid "WordPress"
 msgstr ""
 
 #: includes/functions.php:117
-msgid "Theme by:"
+msgid "A theme by:"
 msgstr ""
 
 #: includes/functions.php:117
-msgid "http://sampression.com/"
+msgid "http://www.sampression.com/"
 msgstr ""
 
 #: includes/functions.php:117
@@ -199,74 +199,72 @@ msgstr ""
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: includes/functions.php:238
+#: includes/functions.php:217
 msgid "Read more &#8250;"
 msgstr ""
 
-#: includes/functions.php:320
+#: includes/functions.php:299
 msgid "Bottom Widget 1"
 msgstr ""
 
-#: includes/functions.php:321
+#: includes/functions.php:300
 msgid ""
 "Appears on bottom of the Page - First Widget - Please insert only one widget "
 "for better appearance."
 msgstr ""
 
-#: includes/functions.php:330
+#: includes/functions.php:309
 msgid "Bottom Widget 2"
 msgstr ""
 
-#: includes/functions.php:331
+#: includes/functions.php:310
 msgid ""
 "Appears on bottom of the Page - Second Widget - Please insert only one "
 "widget for better appearance."
 msgstr ""
 
-#: includes/functions.php:340
+#: includes/functions.php:319
 msgid "Bottom Widget 3"
 msgstr ""
 
-#: includes/functions.php:341
+#: includes/functions.php:320
 msgid ""
 "Appears on bottom of the Page - Third Widget - Please insert only one widget "
 "for better appearance."
 msgstr ""
 
-#: includes/functions.php:350
+#: includes/functions.php:329
 msgid "Inner Sidebar"
 msgstr ""
 
-#: includes/functions.php:351
+#: includes/functions.php:330
 msgid ""
 "Appears on right of the Interior Pages - Can use as much widgets as you wish."
 msgstr ""
 
-#: includes/functions.php:402
+#: includes/functions.php:381
 msgid "Pingback:"
 msgstr ""
 
-#. translators: 1: comment author, 2: date and time
-#: includes/functions.php:430
+#: includes/functions.php:409
 #, php-format
 msgid "%1$s on %2$s"
 msgstr ""
 
-#. translators: 1: date, 2: time
-#: includes/functions.php:436
+#: includes/functions.php:415
 #, php-format
 msgid "<span class=\"date-details\">%1$s</span>"
 msgstr ""
 
-#: includes/functions.php:445
+#: includes/functions.php:424
 msgid "Reply <span>&darr;</span>"
 msgstr ""
 
-#: includes/functions.php:453
+#: includes/functions.php:432
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: includes/functions.php:595 loop.php:57
+#: includes/functions.php:574 loop.php:57
 #, php-format
 msgid ""
 "<span class=\"ico\">Categories</span><div class=\"overflow-hidden cat-listing"
@@ -285,189 +283,189 @@ msgstr ""
 msgid "Sampression Lite Options"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:128
+#: includes/theme-options/theme-options.php:135
 msgid "Logo &amp; Icons"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:129
+#: includes/theme-options/theme-options.php:136
 msgid "Social Media"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:130
+#: includes/theme-options/theme-options.php:137
 msgid "Advanced"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:131
+#: includes/theme-options/theme-options.php:138
 msgid "Get Support"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:139
+#: includes/theme-options/theme-options.php:146
 msgid "Site Logo"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:143
+#: includes/theme-options/theme-options.php:150
 msgid "Browse or enter logo URL"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:149
-#: includes/theme-options/theme-options.php:189
-#: includes/theme-options/theme-options.php:208
-#: includes/theme-options/theme-options.php:227
-#: includes/theme-options/theme-options.php:246
-#: includes/theme-options/theme-options.php:265
+#: includes/theme-options/theme-options.php:156
+#: includes/theme-options/theme-options.php:196
+#: includes/theme-options/theme-options.php:215
+#: includes/theme-options/theme-options.php:234
+#: includes/theme-options/theme-options.php:253
+#: includes/theme-options/theme-options.php:272
 msgid "no"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:150
+#: includes/theme-options/theme-options.php:157
 msgid "I dont want to use Logo."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:154
+#: includes/theme-options/theme-options.php:161
 msgid "Logo"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:160
+#: includes/theme-options/theme-options.php:167
 msgid "Logo Preview"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:180
+#: includes/theme-options/theme-options.php:187
 msgid "Favicon and apple touch icons"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:183
-#: includes/theme-options/theme-options.php:194
+#: includes/theme-options/theme-options.php:190
+#: includes/theme-options/theme-options.php:201
 msgid "Favicon"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:190
+#: includes/theme-options/theme-options.php:197
 msgid "I dont want to use favicon."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:196
+#: includes/theme-options/theme-options.php:203
 msgid "File dimension should be 16x16."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:201
+#: includes/theme-options/theme-options.php:208
 msgid "Apple Touch Icon (57x57)"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:209
-#: includes/theme-options/theme-options.php:228
-#: includes/theme-options/theme-options.php:247
-#: includes/theme-options/theme-options.php:266
+#: includes/theme-options/theme-options.php:216
+#: includes/theme-options/theme-options.php:235
+#: includes/theme-options/theme-options.php:254
+#: includes/theme-options/theme-options.php:273
 msgid "I dont want to use apple touch icon."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:220
+#: includes/theme-options/theme-options.php:227
 msgid "Apple Touch Icon for first and second generation iPad (72x72)"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:239
+#: includes/theme-options/theme-options.php:246
 msgid ""
 "Apple Touch Icon for high-resolution iPad and iPhone Retina displays "
 "(114x114)"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:258
+#: includes/theme-options/theme-options.php:265
 msgid ""
 "Apple Touch Icon for high-resolution iPad and iPhone Retina displays "
 "(144x144)"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:284
+#: includes/theme-options/theme-options.php:291
 msgid "Facebook"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:286
+#: includes/theme-options/theme-options.php:293
 msgid ""
 "Insert the full URL of your Facebook ID, For eg.  http://facebook.com/xyz"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:290
+#: includes/theme-options/theme-options.php:297
 msgid "Twitter"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:292
+#: includes/theme-options/theme-options.php:299
 msgid "Insert the full URL of your Twitter ID, For eg. http://twitter.com/xyz"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:296
+#: includes/theme-options/theme-options.php:303
 msgid "Google Plus"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:298
+#: includes/theme-options/theme-options.php:305
 msgid ""
 "Insert the full URL of your Google Plus ID, For eg. https://plus.google.com/"
 "u/0/123456789/posts"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:302
+#: includes/theme-options/theme-options.php:309
 msgid "YouTube"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:304
+#: includes/theme-options/theme-options.php:311
 msgid ""
 "Insert the full URL of your YouTube Channel, For eg. https://www.youtube.com/"
 "user/xyz"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:315
+#: includes/theme-options/theme-options.php:322
 msgid "Custom code to insert into Header"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:318
+#: includes/theme-options/theme-options.php:325
 msgid ""
 "Write/Paste the codes which you want to insert in Header. For eg. custom "
 "styles, scripts, etc."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:319
+#: includes/theme-options/theme-options.php:326
 msgid ""
 "This will be inserted before the  &#060;/head&#062; tag in the header of the "
 "document."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:323
+#: includes/theme-options/theme-options.php:330
 msgid "Custom code to insert into Footer"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:326
+#: includes/theme-options/theme-options.php:333
 msgid ""
 "Write/Paste the codes which you want to insert in Footer. For eg. custom "
 "styles, scripts, etc."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:327
+#: includes/theme-options/theme-options.php:334
 msgid ""
 "This will be inserted before the  &#060;/body&#062; tag in the footer of the "
 "document."
 msgstr ""
 
-#: includes/theme-options/theme-options.php:334
+#: includes/theme-options/theme-options.php:341
 msgid "Any comments/feedback/questions?"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:336
+#: includes/theme-options/theme-options.php:343
 msgid "Get support from Sampression Support Team!"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:341
+#: includes/theme-options/theme-options.php:348
 msgid "Name"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:345
+#: includes/theme-options/theme-options.php:352
 msgid "Email"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:349
+#: includes/theme-options/theme-options.php:356
 msgid "Subject"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:353
+#: includes/theme-options/theme-options.php:360
 msgid "Message"
 msgstr ""
 
-#: includes/theme-options/theme-options.php:358
+#: includes/theme-options/theme-options.php:365
 msgid "Send Message"
 msgstr ""
 

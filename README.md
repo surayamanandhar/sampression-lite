@@ -140,8 +140,18 @@ Please follow the steps below to install the theme.
   - Added: Language file (sampression.po) added for translation
   - Some function is changed
 
+### Version 1.5.3
+  - Fixed: Comment count issue of posts
+  - Fixed: Logo/Site title issue on both front-end and back-end
+  - Fixed: CSS - Header spacing issue
+  - Fixed: CSS - Search box focus issue
+  - Fixed: CSS - Image caption issue
+  - Fixed: Javascript issues - Uploading Logo on Theme Options
+  - Fixed: Blank content search
+  - Fixed: Blank category meta on search page
+  - Added: Buttons/Links on Theme Options header
+  - Changed: Copyright text
+  - Changed: Translation (.po and .mo files)
+
 ## Child Theme Support
 Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.
-  
-
-

@@ -14,7 +14,7 @@
 <footer id="footer">
 	<div class="container">
 		<div class="columns fourteen">
-			<div class="alignleft copyright"><?php esc_attr_e( 'Copyright', 'sampression' ); ?> &copy; <?php _e(date('Y')); ?> "<?php bloginfo( 'name' ); ?>".</div><?php do_action( 'sampression_credits' ); ?>
+            <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.</div><?php do_action( 'sampression_credits' ); ?>
 		</div>
 
 		<div class="columns two footer-right">

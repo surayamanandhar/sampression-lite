@@ -10,14 +10,14 @@ jQuery('.upload_image_button').click(function() {
 		window.send_to_editor = function(html) {
 			imgurl = jQuery('img',html).attr('src');
 			if(imageholder){
-				imageholder.attr('src',imgurl);
+				imageholder.append('<img src="'+imgurl+'" style="max-width:250px;">');
 			}
 			formvar.val(imgurl);
 			tb_remove();
 		}
 		formfield = jQuery(this).prev('.upload_image').attr('name');
 		formvar = jQuery(this).prev('.upload_image');
-		imageholder = jQuery(this).parent().find('.image-holder img');
+		imageholder = jQuery(this).parent().find('.image-holder');
 		tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
 		return false;
 	});	

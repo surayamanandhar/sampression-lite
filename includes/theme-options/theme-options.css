@@ -216,7 +216,6 @@ h1#site-title {
 	font-size:27px;
 	line-height:1;
 	margin:10px 0 0 0;
-	text-transform:uppercase;
 	}
 h2#site-description {
 	color:#8AB7AC;
@@ -237,4 +236,26 @@ h2#site-description {
 }
 .upload_image.text-box {
     width: 173px;
+}
+.upgrade-nav {
+    overflow: hidden;
+}
+.upgrade-nav li {
+    float: left;
+    padding: 5px 10px;
+}
+.upgrade-nav li.button {
+    background-color: #f60;
+    border: 0 none;
+    border-radius: 15px;
+    margin-left: 10px;
+    padding: 0 20px;
+    box-shadow: none;
+}
+.upgrade-nav li.button:hover {
+    background-color: #EB5E00;
+}
+.upgrade-nav li.button a {
+    color: #fff;
+    text-decoration: none;
 }

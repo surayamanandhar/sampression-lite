@@ -53,10 +53,12 @@ if ( !defined('ABSPATH')) exit;
                 );
             ?>
       </div>
-      <div class="meta">
+     <?php if(get_post_type() == 'post'){?>
+    <div class="meta">
         <div class="cats"><?php printf(__('<span class="ico">Categories</span><div class="overflow-hidden cat-listing">%s</div>', 'sampression'), get_the_category_list(', ')); ?></div>
       </div>
-      <?php if(has_tag()) {?>
+
+      <?php } if(has_tag()) {?>
       <div class="meta">
         <div class="tags"><span class="ico">Tags</span><div class="overflow-hidden tag-listing"><?php the_tags(' ', ', ', '<br />'); ?></div> </div>
       </div>

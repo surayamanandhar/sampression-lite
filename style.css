@@ -5,7 +5,7 @@ Author: Sampression
 Author URI: http://www.sampression.com 
 Description: The first theme for Sampression is clean, lightweight and fully responsive. Its not just another responsive theme - its a unique responsive theme with an attractive masonry blog layout. On the back-end it has a user friendly theme options panel which allows you to easily customize your blog’s header, menus, widgets, background color and image. Upfront its a retina ready, four-column, state-of-the-art blog that will help you reach out to your target audience and their various internet-enabled devices.
 
-Version: 1.5.2
+Version: 1.5.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, orange, green, one-column, two-columns, responsive-layout, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, right-sidebar
@@ -207,9 +207,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	.alignleft { float: left; }
 
 /* Captions */
-	.wp-caption {	max-width:100%; border: 1px solid #ddd; border: 0.1rem solid #ddd;	text-align: center;	background-color: #fafafa;	padding-top: 5px; padding-top: 0.5rem;	margin:10px; margin:1.0rem;	-moz-border-radius: 3px;	-khtml-border-radius: 3px;	-webkit-border-radius: 3px;	border-radius: 3px; border-radius: 0.3rem;}
+	.wp-caption {	max-width:100%; text-align: center;	padding-top: 5px; padding-top: 0.5rem;	margin:10px; margin:1.0rem;	-moz-border-radius: 3px;	-khtml-border-radius: 3px;	-webkit-border-radius: 3px;	border-radius: 3px; border-radius: 0.3rem;}
 	.wp-caption img {	margin: 0;	padding: 0;	border: 0 none;}
-	.wp-caption p.wp-caption-text {	font-size: 12px; font-size: 1.2rem; line-height: 16px; line-height: 1.6rem;	padding: 4px 4px 5px 0;	padding: 0.4rem 0.4rem 0.5rem 0; margin: 0; color:#666; }
+	.wp-caption p.wp-caption-text {	font-size: 12px; font-size: 1.2rem; line-height: 16px; line-height: 1.6rem;	padding: 7px 4px 5px 0;	padding: 0.7rem 0.4rem 0.5rem 0; margin: 0; color:#666; }
 	.wp-caption.alignleft { margin:0 20px 5px 0;  margin:0 2.0rem 0.5rem 0; }
 	.wp-caption.alignright { margin:0 0 5px 20px; margin:0 0 0.5rem 2.0rem; }
 
@@ -428,7 +428,7 @@ pre {
 	font-size:14px; font-size:1.4rem;
 	margin-left:20px; margin-left:2.0rem;
 	}
-#site-title {
+#site-title a {
 	color:#FE6E41;
 	}
 article.post, .sm-top li a, .btn-top, .cancel-comment-reply a, .corner-stamp, .post-navigation .wp-pagenavi a, .post-navigation .wp-pagenavi span {
@@ -465,9 +465,12 @@ body {
 	background-color:#fff;
 	}
 #header {
-	padding:10px 0 20px 0; padding:1.0rem 0 2.0rem 0;
+	padding:20px 0 20px 0; padding:2.0rem 0 2.0rem 0;
 	border-bottom:1px dashed #C3DAD5; border-bottom:0.1rem dashed #C3DAD5;
 	}
+#logo-area {
+    margin-top: 10px;
+}
 a#logo-area:link {
 	text-decoration:none;
         vertical-align: middle;
@@ -495,7 +498,7 @@ img.logo-img{
 	}
 #site-description {
 	font-size:16px; font-size:1.6rem;
-	font-weight:bold;
+	font-weight:normal;
 	line-height:1.2;
 	margin:0;
 	}
@@ -706,8 +709,8 @@ img.logo-img{
 	width:190px; width:19.0rem;
 	padding-left:10px; padding-left:1.0rem;
 	height:16px; height:1.6rem;
-	z-index:0; 
-	
+	z-index:0;
+
     -moz-border-radius-topleft:5px;
     -webkit-border-top-left-radius:5px;
 	border-top-left-radius:5px; border-top-left-radius:0.5rem;
@@ -716,7 +719,9 @@ img.logo-img{
       -webkit-border-bottom-left-radius:5px;
 	  	 border-bottom-left-radius:5px; border-bottom-left-radius:0.5rem;
 	}
-
+.search-form input.search-field:focus{
+    box-shadow:0.2rem 0.2rem 0.3rem #D2DFDC;
+}
 .search-form input.search-submit {
 	background-color:#ffffff;
 	background-position:-10px -7px; background-position:-1.0rem -0.7rem;

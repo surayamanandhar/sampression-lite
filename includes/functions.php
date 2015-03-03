@@ -110,11 +110,11 @@ function sampression_footer() {
 ?>
 
 <div class="alignleft powered-wp">
-<?php _e('Proudly powered by:', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
+    <?php _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
 </div>
 
 <div class="alignright credit">
-	<?php _e( 'Theme by:', 'sampression');?> <a href="<?php echo esc_url( __( 'http://sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
+	<?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
 </div>
 <?php
 }
@@ -185,28 +185,7 @@ function sampression_content_nav( $nav_id ) {
 		</nav>
 	<?php endif;
 }
-endif; 
-
-
-/*=======================================================================
- * Filter 'get_comments_number'
- * 
- * Filter 'get_comments_number' to display correct 
- * number of comments (count only comments, not 
- * trackbacks/pingbacks)
- *
- * Courtesy of Chip Bennett
- *=======================================================================*/
-function sampression_comment_count( $count ) {  
-	if ( ! is_admin() ) {
-		global $id;
-		$comments_by_type = &separate_comments(get_comments('status=approve&post_id=' . $id));
-		return count($comments_by_type['comment']);
-	} else {
-		return $count;
-	}
-}
-add_filter('get_comments_number', 'sampression_comment_count', 0);
+endif;
 
 /**
  * wp_list_comments() Pings Callback

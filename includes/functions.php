@@ -17,6 +17,13 @@ if ( !defined('ABSPATH')) exit;
  * @since Sampression Lite 1.0
  */
 
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) ) {
+    $content_width = 650;
+}
+
 /*=======================================================================
  * Fire up the engines to start theme setup.
  *=======================================================================*/
@@ -27,13 +34,6 @@ if (!function_exists('sampression_setup')):
 
     function sampression_setup() {
 
-        global $content_width;
-
-        /**
-         * Global content width.
-         */
-        if (!isset($content_width))
-            $content_width = 650;
         /**
          * Sampression is now available for translations.
          */
@@ -64,12 +64,15 @@ if (!function_exists('sampression_setup')):
 		 * This feature enables custom background color and image support for a theme
 		 */
 		add_theme_support( 'custom-background', array(
-			'default-color' => '',
+			'default-color' => 'efefef',
+            'default-image' => get_template_directory_uri().'/images/content-bg-rpt.gif',
+            'wp-head-callback' => 'sampression_custom_background_cb'
 		) );
 		
 		/**
 		 * This feature enables custom header color and image support for a theme
 		 */
+        //define( 'NO_HEADER_TEXT', true );
 		add_theme_support( 'custom-header', array(
 			// Text color and image (empty to use none).
 			'default-text-color'     => 'FE6E41',
@@ -103,6 +106,54 @@ if (!function_exists('sampression_setup')):
 
 endif;
 
+/**
+ * Sampression theme background image css callback
+ */
+if(!function_exists( 'sampression_custom_background_cb' )):
+
+    function sampression_custom_background_cb() {
+        $background = get_background_image();
+        $color = get_background_color();
+     
+        if ( ! $background && ! $color )
+            return;
+     
+        $style = $color ? "background-color: #$color;" : '';
+     
+        if ( $background ) {
+            $image = " background-image: url('$background');";
+     
+            $repeat = get_theme_mod( 'background_repeat', 'repeat' );
+     
+            if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
+                $repeat = 'repeat';
+     
+            $repeat = " background-repeat: $repeat;";
+     
+            $position = get_theme_mod( 'background_position_x', 'left' );
+     
+            if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
+                $position = 'left';
+     
+            $position = " background-position: top $position;";
+     
+            $attachment = get_theme_mod( 'background_attachment', 'scroll' );
+     
+            if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
+                $attachment = 'scroll';
+     
+            $attachment = " background-attachment: $attachment;";
+     
+            $style .= $image . $repeat . $position . $attachment;
+        }
+    ?>
+    <style type="text/css">
+    #content-wrapper { <?php echo trim( $style ); ?> }
+    </style>
+    <?php
+    }
+
+endif;
 /*=======================================================================
  * Shows footer credits
  *=======================================================================*/
@@ -110,11 +161,23 @@ function sampression_footer() {
 ?>
 
 <div class="alignleft powered-wp">
-    <?php _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
+    <?php
+    if(!empty(get_theme_mod('sampression_copyright_text'))) {
+        echo get_theme_mod('sampression_copyright_text');
+    } else {
+    ?>
+    <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved.</div>
+    <?php } ?>
 </div>
-
 <div class="alignright credit">
-	<?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
+	<?php
+    if(!empty(get_theme_mod('sampression_poweredby_text'))) {
+        echo get_theme_mod('sampression_poweredby_text');
+    } else {
+    _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>. <?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
+    <?php
+    }
+    ?>
 </div>
 <?php
 }
@@ -138,6 +201,33 @@ if (!function_exists('sampression_js')) {
 	}
 
 }
+
+/**
+ * Widget Scripts
+ * @since version 1.6
+ */
+
+add_action('customize_controls_enqueue_scripts', 'sampression_widget_scripts');
+if( !function_exists( 'sampression_widget_scripts' ) ):
+
+    function sampression_widget_scripts() {
+        wp_enqueue_media();
+        wp_enqueue_script('sampression_widget_script', get_template_directory_uri() . '/lib/js/widget.js', false, '1.0', true);
+    }
+
+endif;
+
+add_action( 'admin_enqueue_scripts', 'sampression_admin_widget_scripts');
+if( !function_exists( 'sampression_admin_widget_scripts' ) ):
+
+    function sampression_admin_widget_scripts($hook) {
+        if($hook === 'widgets.php') {
+            wp_enqueue_media();
+            wp_enqueue_script('sampression_widget_script', get_template_directory_uri() . '/lib/js/widget.js', false, '1.0', true);
+        }
+    }
+
+endif;
 
 /*=======================================================================
  * Comment Reply
@@ -455,48 +545,48 @@ endif; // ends check for sampression_comment()
 function sampression_favicon() {
 
 	//apple touch icon 16x16
-	if(!get_option('opt_sam_use_favicon16x16') || trim(get_option('opt_sam_use_favicon16x16')) == 'no') {
+	if(!empty(get_theme_mod('sampression_favicon', get_option('opt_sam_favicons')))) {
 		if(get_option('opt_sam_favicons')) { 
 		?>
-			<link rel="shortcut icon" href="<?php echo get_option('opt_sam_favicons'); ?>">
+			<link rel="shortcut icon" href="<?php echo get_theme_mod('sampression_favicon', get_option('opt_sam_favicons')); ?>">
 		<?php
 		}
 	}
 	
 	//apple touch icon 57x57
-	if(!get_option('opt_sam_use_appletouch57x57') || trim(get_option('opt_sam_use_appletouch57x57')) == 'no') {
+	if(!empty(get_theme_mod('sampression_appletouch_57', get_option('opt_sam_apple_icons_57')))) {
 		if(get_option('opt_sam_apple_icons_57')) {
 		?>
-			<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_option('opt_sam_apple_icons_57'); ?>">
+			<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_theme_mod('sampression_appletouch_57', get_option('opt_sam_apple_icons_57')); ?>">
 		<?php
 		} 
 	}
 	
 	//apple touch icon 72x72
-	if(!get_option('opt_sam_use_appletouch72x72') || trim(get_option('opt_sam_use_appletouch72x72')) == 'no') {
+	if(!empty(get_theme_mod('sampression_appletouch_72', get_option('opt_sam_apple_icons_72')))) {
 		if(get_option('opt_sam_apple_icons_72')) {
 		?>
-			<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_option('opt_sam_apple_icons_72'); ?>">
+			<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_theme_mod('sampression_appletouch_72', get_option('opt_sam_apple_icons_72')); ?>">
 		<?php
 		} 
 	}
 	
 	//apple touch icon 114x114
-	if(!get_option('opt_sam_use_appletouch114x114') || trim(get_option('opt_sam_use_appletouch114x114')) == 'no') {	
+	if(!empty(get_theme_mod('sampression_appletouch_114', get_option('opt_sam_apple_icons_114')))) {
 		if(get_option('opt_sam_apple_icons_114')) {
 		?>
 			
-			<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_option('opt_sam_apple_icons_114'); ?>">
+			<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_theme_mod('sampression_appletouch_114', get_option('opt_sam_apple_icons_114')); ?>">
 		<?php
 		}
 	}
 	
 	// apple touch icon 144x144
-	if(!get_option('opt_sam_use_appletouch144x144') || trim(get_option('opt_sam_use_appletouch144x144')) == 'no') {	
+	if(!empty(get_theme_mod('sampression_appletouch_144', get_option('opt_sam_apple_icons_144')))) {
 		if(get_option('opt_sam_apple_icons_144')) {
 		?>
 			
-			<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_option('opt_sam_apple_icons_144'); ?>">
+			<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_theme_mod('sampression_appletouch_144', get_option('opt_sam_apple_icons_144')); ?>">
 		<?php
 		}
 	}
@@ -506,10 +596,11 @@ function sampression_favicon() {
  *=======================================================================*/
 add_action('sampression_logo', 'sampression_show_logo');
 function sampression_show_logo() {
-	if(get_option('opt_sam_logo')) {
+    $logo = get_theme_mod('sampression_logo', get_option('opt_sam_logo'));
+	if(!empty($logo)) {
 	?>
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( ucwords(get_bloginfo( 'name', 'display' )) ); ?>" rel="home" id="logo-area">
-			<img class="logo-img" src="<?php echo get_option('opt_sam_logo'); ?>" alt="<?php bloginfo('name'); ?>">
+			<img class="logo-img" src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>">
 		</a>
     <?php
 	}
@@ -713,11 +804,7 @@ function sampression_enqueue_styles(){
 	global $wp_styles;
     // other style sheets...
 	wp_enqueue_style('sampression-style', get_stylesheet_uri(), false, '1.4');
-	wp_enqueue_style('fontello', get_template_directory_uri() . '/lib/css/fontello.css', false, false, 'screen');
-    // ie-specific style sheets
-    wp_register_style('ie7-only', get_template_directory_uri() . '/lib/css/fontello-ie7.css');
-    $wp_styles->add_data('ie7-only', 'conditional', 'IE 7');
-    wp_enqueue_style('ie7-only');
+	wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', false, false, 'screen');
 }
 
 add_action('sampression_custom_header_style','sampression_custom_header_style');
@@ -736,15 +823,17 @@ function sampression_custom_header_style() {
 			.site-title,
 			.site-description {
 				position: absolute !important;
-				clip: rect(1px 1px 1px 1px); /* IE7 */
+				clip: rect(1px 1px 1px 1px); // IE7
 				clip: rect(1px, 1px, 1px, 1px);
 			}
 		<?php	// If the user has set a custom color for the text, lets use that.
 			else : 
 		?>
 			.site-title a,
-			.site-description {
-				color: #<?php echo $text_color; ?> !important;
+			.site-description,
+            h3.post-title a,
+            h2.post-title {
+				color: #<?php echo $text_color; ?>;
 			}
 		<?php endif; ?>
 	</style>
@@ -765,4 +854,23 @@ function sampression_enqueue_conditional_scripts(){
 	<![endif]-->
 	<?php
 }
-?>
+
+if(!function_exists('sampression_insert_into_header')) {
+    function sampression_insert_into_header() {
+        if(!empty(get_theme_mod('sampression_header_code'))) {
+            echo get_theme_mod('sampression_header_code');
+        }
+    }
+}
+
+add_action('wp_head','sampression_insert_into_header', 999);
+
+if(!function_exists('sampression_insert_into_footer')) {
+    function sampression_insert_into_footer() {
+        if(!empty(get_theme_mod('sampression_footer_code'))) {
+            echo get_theme_mod('sampression_footer_code');
+        }
+    }
+}
+
+add_action('wp_footer','sampression_insert_into_footer', 999);

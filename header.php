@@ -40,7 +40,7 @@
     <div class="columns nine">
 	
 			<?php
-            if(get_option('opt_sam_use_logo') == 'no' && get_option('opt_sam_logo')) {
+        if(get_theme_mod('sampression_logo', get_option('opt_sam_logo')) != '' && get_theme_mod('sampression_remove_logo') != 1) {
 						do_action('sampression_logo');
 				} else {
 			?>
@@ -82,28 +82,48 @@
 	  </div> 
       <!-- #top-nav-mobile-->
       <div id="interaction-sec" class="clearfix <?php echo getnoofclass(); ?>">
-        <?php get_search_form(); ?>
+        <?php
+        if( get_theme_mod( 'sampression_remove_search' ) != 1 ) {
+            get_search_form();
+        }
+        ?>
      
        <ul class="sm-top">
-       <?php // Being Social 
+       <?php // Being Social
 	   //Facebook
-	    if( get_option( 'opt_get_facebook' ) !=''){ ?>
-          <li class="sm-top-fb"><a href="<?php echo stripslashes(get_option( 'opt_get_facebook' )); ?>" target="_blank">Facebook</a></li>
+       $fb_icon = '#';
+       if(get_option('opt_get_facebook'))
+           $fb_icon = get_option('opt_get_facebook');
+
+	    if( !empty(get_theme_mod( 'sampression_socials_facebook', $fb_icon )) ) { ?>
+          <li class="sm-top-fb"><a class="genericon-facebook-alt" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_facebook', $fb_icon )); ?>" target="_blank"></a></li>
        <?php }
 		// Twitter
-	   if( get_option( 'opt_get_twitter' ) !='') {
+       $tw_icon = '#';
+       if(get_option('opt_get_twitter'))
+           $tw_icon = get_option('opt_get_twitter');
+
+	   if( !empty(get_theme_mod( 'sampression_socials_twitter', $tw_icon )) ) {
 	    ?>
-          <li class="sm-top-tw"><a href="<?php echo stripslashes(get_option( 'opt_get_twitter') ); ?>" target="_blank">Twitter</a></li>
+          <li class="sm-top-tw"><a class="genericon-twitter" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_twitter', $tw_icon ) ); ?>" target="_blank"></a></li>
          <?php }
-		// Google plus 
-	   if( get_option( 'opt_get_gplus' ) !='') {
+		// Google plus
+       $gp_icon = '#';
+       if(get_option('opt_get_gplus'))
+           $gp_icon = get_option('opt_get_gplus');
+
+	   if( !empty(get_theme_mod( 'sampression_socials_googleplus', $gp_icon )) ) {
 	    ?>
-          <li class="sm-top-gplus"><a href="<?php echo stripslashes(get_option( 'opt_get_gplus') ); ?>" target="_blank">Google Plus</a></li>
+          <li class="sm-top-gplus"><a class="genericon-googleplus" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_googleplus', $gp_icon ) ); ?>" target="_blank"></a></li>
           <?php } 
 		// Youtube
-		if( get_option( 'opt_get_youtube' ) !='' ) {
+       $yt_icon = '#';
+       if(get_option('opt_get_youtube'))
+           $yt_icon = get_option('opt_get_youtube');
+
+		if( !empty(get_theme_mod( 'sampression_socials_youtube', $yt_icon )) ) {
 	    ?>
-          <li class="sm-top-youtube"><a href="<?php echo stripslashes(get_option( 'opt_get_youtube') ); ?>" target="_blank">YouTube</a></li>
+          <li class="sm-top-youtube"><a class="genericon-youtube" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_youtube', $yt_icon ) ); ?>" target="_blank"></a></li>
           <?php } ?> 
        </ul>
         <!-- .sm-top --> 

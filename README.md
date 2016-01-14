@@ -153,5 +153,12 @@ Please follow the steps below to install the theme.
   - Changed: Copyright text
   - Changed: Translation (.po and .mo files)
 
+### Version 2.0
+  - Added: All options to Customizer
+  - Added: About Theme pages under Appearance menu
+  - Changed: Translation (.po and .mo files)
+  - Changed: Theme description
+  - Removed: Theme Options page (Added options to Customizer)
+
 ## Child Theme Support
 Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

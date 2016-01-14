@@ -5,7 +5,7 @@ Author: Sampression
 Author URI: http://www.sampression.com 
 Description: The first theme for Sampression is clean, lightweight and fully responsive. Its not just another responsive theme - its a unique responsive theme with an attractive masonry blog layout. On the back-end it has a user friendly theme options panel which allows you to easily customize your blog’s header, menus, widgets, background color and image. Upfront its a retina ready, four-column, state-of-the-art blog that will help you reach out to your target audience and their various internet-enabled devices.
 
-Version: 1.5.3
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, orange, green, one-column, two-columns, responsive-layout, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, right-sidebar
@@ -428,7 +428,8 @@ pre {
 	font-size:14px; font-size:1.4rem;
 	margin-left:20px; margin-left:2.0rem;
 	}
-#site-title a {
+#site-title a,
+#site-description, {
 	color:#FE6E41;
 	}
 article.post, .sm-top li a, .btn-top, .cancel-comment-reply a, .corner-stamp, .post-navigation .wp-pagenavi a, .post-navigation .wp-pagenavi span {
@@ -437,7 +438,7 @@ article.post, .sm-top li a, .btn-top, .cancel-comment-reply a, .corner-stamp, .p
 	  border-radius: 5px; border-radius: 0.5rem;
 	  }
 	 
-.search-form input.search-submit, #primary-nav ul.nav-listing li a span, .ico, .btn-top, select, #comments-header a, .commentlist span.pointer, #btn-nav-opt {
+.search-form input.search-submit, .ico, .btn-top, select, #comments-header a, .commentlist span.pointer, #btn-nav-opt {
 	background:url(images/sampression-css-sprite.png) no-repeat 0 0;
 	}
 
@@ -451,13 +452,61 @@ article.post .post-title a,
 #comment-header h3,
 #comments-title,
 #comment-form-title,
-#site-description,
 .widget .widget-title,
 #page-not-found-message h3,
 #reply-title {
 	color:#8AB7AC;
 	}
-	
+
+/* genericons */
+.sm-top li a:before,
+.search-form .search-submit:before,
+.post-author:before,
+.posted-on:before,
+.edit:before,
+.cats:before,
+.tags:before,
+.cats:before,
+#primary-nav ul.nav-listing li a.selected span:before,
+.btn-top:before{
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: "Genericons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    speak: none;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: top;
+}
+.post-author:before,
+.posted-on:before,
+.edit:before,
+.cats:before,
+.tags:before,
+.cats:before{
+    font-size: 18px;
+}
+.cats:before,
+.tags:before{
+	float: left;
+}
+#primary-nav ul.nav-listing li a.selected span:before{
+    content: "\f418";
+    color: #fff;
+    font-size: 23px;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.btn-top:before{
+	content: '\f432';
+    font-size: 22px;
+    margin:5px 0 0 6px;
+}
 /* #Site Styles
 ================================================== */
 
@@ -508,7 +557,10 @@ img.logo-img{
         float: right;
         margin: 0 0 10px; 
         }
-        
+#header .seven.columns + a {
+	clear: both;
+    display: block;
+}
 /* Top Nav
 ---------------------------------------------------------- */
 #top-nav ul {
@@ -680,7 +732,7 @@ img.logo-img{
 	width:235px; width:23.5rem;
 }
 
-.search-form input, .sm-top a, #get-cats, select,#get-cat-ios {
+.search-form input, .search-form button, .sm-top a, #get-cats, select,#get-cat-ios {
  	display:block;
 	float:left;
 	position:relative;
@@ -697,7 +749,7 @@ img.logo-img{
 	  border-radius: 0;
 	}
 	
-.search-form:hover input {
+.search-form:hover input, .search-form:hover button {
 	border-color:#8AB7AD;
 	}
 .search-form:hover input.search-submit{
@@ -722,30 +774,38 @@ img.logo-img{
 .search-form input.search-field:focus{
     box-shadow:0.2rem 0.2rem 0.3rem #D2DFDC;
 }
-.search-form input.search-submit {
+.search-form .search-submit {
 	background-color:#ffffff;
 	background-position:-10px -7px; background-position:-1.0rem -0.7rem;
 	border-left:0;
-	text-indent:-9999px; text-indent:-9999rem;
-	font-size:0;
-	line-height:0;
+	line-height:1;
 	width:29px; width:2.9rem;
 	height:30px;  height:3.0rem; 
 	border:1px solid #D2DFDC; border:0.1rem solid #D2DFDC;
 	border-left:0px;
 	padding: 0;
-	
-	
+	outline: none;
+	border-radius: 0;
     -moz-border-radius-topright:5px;
     -webkit-border-top-right-radius:5px;
 	border-top-right-radius:5px; border-top-right-radius:0.5rem;
-		
       -moz-border-radius-bottomright:5px;
       -webkit-border-bottom-right-radius:5px;
 	  border-bottom-right-radius:5px; border-bottom-right-radius:0.5rem;
-	  
+	    margin-left: -2px;
+	    z-index: 2;
+	    position: relative;
 	  }
-
+.search-form .search-submit:before{
+    content: "\f400";
+    position: relative;
+    font-size: 15px;
+    left: -1px;
+    color: #8AB7AD;
+    padding-left: 5px;
+    border-left: 1px solid #8AB7AD;
+    top: -1px;
+}
 .search-form ::-webkit-input-placeholder {
 	color:#dddddd;
 	font-style:italic;
@@ -774,22 +834,23 @@ img.logo-img{
 	}
 .sm-top li a {
 	width:28px; width:2.8rem;
-	height:28px; height:2.8rem;
-	display:block;
-	text-indent:-999em; text-indent:-999rem;
-	background:url('images/social_icons.png');
+	font-size: 19px;
+    padding: 4.5px 1px;
 	}
 .sm-top li.sm-top-fb a {
-	background-position: 0px -2px; background-position: 0px -0.2rem;
+	color: #3a5795;
+	font-size: 17px;
+	padding: 5px 0;
+
 	}
 .sm-top li.sm-top-youtube a {
-	background-position: -31px -2px; background-position: -3.1rem -0.2rem;
+	color: #d32323;
 	}
 .sm-top li.sm-top-tw a {
-	background-position: -60px -2px; background-position: -6.0rem -0.2rem;
+	 color: #55acee;
 	}
 .sm-top li.sm-top-gplus a {
-	background-position: -90px -2px; background-position: -9.0rem -0.2rem;
+	color:#d73d32;
 	}
 .sm-top li.sm-top-fb a:hover, 
 .sm-top li.sm-top-gplus a:hover ,
@@ -917,7 +978,7 @@ body.admin-bar #primary-nav.fixed {
 /* Content
 ---------------------------------------------------------- */
 #content-wrapper {
-	background:url(images/content-bg-rpt.gif) repeat;
+	/*background:url(images/content-bg-rpt.gif) repeat;*/
 	padding:20px 0; padding:2.0rem 0;
 	min-height:400px; min-height:40.0rem;
 	}
@@ -960,24 +1021,6 @@ article.post {
 	background-color:#fff;
 	margin-bottom:30px !important; margin-bottom:3.0rem !important;
 	position:relative;
-	}
-article.post:after {
-	content:".";
-	background:url(images/box-shadows.png) no-repeat 0 -11px; background:url(images/box-shadows.png) no-repeat 0 -1.1rem;
-	width:100%;
-	height:10px; height:1.0rem;
-	display:block;
-	text-indent:-9999px; text-indent:-9999rem;
-	position:absolute;
-	bottom:-10px; bottom:-1.0rem;
-	left:3px; left:0.3rem;
-	}
-body.single article.post:after,
-body.page article.post:after {
-	background:url(images/box-shadows.png) no-repeat 0 -55px; background:url(images/box-shadows.png) no-repeat 0 -5.5rem;
-	left:10px; left:1.0rem;
-	bottom:-15px; bottom:-1.5rem;
-	height:15px; height:1.5rem;
 	}
 article.post .post-title {
 	font-size:14px; font-size:1.4rem;
@@ -1062,6 +1105,7 @@ body.single .entry.clearfix form input[type="submit"]{
 .post-author {
 	margin-right:5px; margin-right:0.5rem;
 	}
+
 .ico{
 	width:10px; width:1.0rem;
 	height:11px; height:1.1rem;
@@ -1318,7 +1362,6 @@ body.single .featured-img img {
 	width:32px; width:3.2rem;
 	height:32px; height:3.2rem;
 	display:block;
-	text-indent:-9999px; text-indent:-999rem;
 	}
 .btn-top:hover {
 	border:1px solid #8AB7AD;

@@ -14,12 +14,12 @@
 <footer id="footer">
 	<div class="container">
 		<div class="columns fourteen">
-            <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.</div><?php do_action( 'sampression_credits' ); ?>
+            <?php do_action( 'sampression_credits' ); ?>
 		</div>
 
 		<div class="columns two footer-right">
 			<div id="btn-top-wrapper">
-			<a href="javascript:pageScroll('.top');" class="btn-top"><?php _e('Goto Top', 'sampression'); ?></a>
+			<a href="javascript:pageScroll('.top');" class="btn-top"></a>
 			</div>
 		</div><!--/footer-right-->
 

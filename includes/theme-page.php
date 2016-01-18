@@ -38,8 +38,8 @@ function about_sampression_theme_page() {
         <div>
             <h2>Sampression Pro</h2>
             <p>
-                <a class="button button-primary" href="http://www.sampression.com/themes/sampression-pro/">Buy Now</a>
-                <a class="button button-primary" href="http://www.demo.sampression.com/sampression-pro/">View Demo</a>
+                <a target="_blank" class="button button-primary" href="http://www.sampression.com/themes/sampression-pro/">Buy Now</a>
+                <a target="_blank" class="button button-primary" href="http://www.demo.sampression.com/sampression-pro/">View Demo</a>
             </p>
             <p>We want to make sure you have the best experience using Sampression Lite and that is why we gathered here all the necessary informations for you. We hope you will enjoy using Sampression Lite, as much as we enjoy creating great products.</p>
         </div>

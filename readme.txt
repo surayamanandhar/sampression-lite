@@ -170,6 +170,8 @@ Version 1.5.3
 Version 2.0
 = Added: All options to Customizer
 = Added: About Theme pages under Appearance menu
+= Added: Body text color option
+= Added: Link text color option
 = Changed: Translation (.po and .mo files)
 = Changed: Theme description
 = Removed: Theme Options page (Added options to Customizer)

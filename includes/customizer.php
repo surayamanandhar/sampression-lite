@@ -31,6 +31,7 @@ function sampression_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'body_textcolor' )->transport = 'postMessage';
     /**
      * Default Sections
      * ------------------------------------
@@ -97,7 +98,8 @@ function sampression_customize_register( $wp_customize ) {
     /*
      * Logo Setting
      */
-        $wp_customize->add_setting( 'sampression_logo', array('sanitize_callback' => 'esc_url_raw', 'default' => get_option('opt_sam_logo')));
+        $wp_customize->add_setting(
+            'sampression_logo', array('sanitize_callback' => 'esc_url_raw', 'default' => get_option('opt_sam_logo')));
         $wp_customize->add_control(
             new WP_Customize_Image_Control(
                 $wp_customize,
@@ -107,6 +109,7 @@ function sampression_customize_register( $wp_customize ) {
                     'section'  => 'sampression_general_section',
                     'settings' => 'sampression_logo',
                     'priority'    => 1,
+                    'description' => 'We recommend logo sizes within 220px x 120px.'
                 )
             )
         );
@@ -375,6 +378,49 @@ function sampression_customize_register( $wp_customize ) {
         'priority'       => 1,
         'panel' => 'sampression_advance_panel'
     ) );
+
+    /**
+     * Body text color setting
+     **************************/
+        $wp_customize->add_setting( 'body_textcolor',
+            array(
+                'default' => '#444444',
+                'sanitize_callback' => 'sanitize_hex_color',
+                'transport' => 'postMessage'
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'body_textcolor',
+                array(
+                    'label' => 'Body Text Color',
+                    'section' => 'colors',
+                    'settings' => 'body_textcolor'
+                )
+            )
+        );
+
+    /**
+     * Link color setting
+     **************************/
+        $wp_customize->add_setting( 'link-color',
+            array(
+                'default' => '#444444',
+                'sanitize_callback' => 'sanitize_hex_color',
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'link-color',
+                array(
+                    'label' => 'Link Color',
+                    'section' => 'colors',
+                    'settings' => 'link-color'
+                )
+            )
+        );
 
     /**
      * Background Image Section

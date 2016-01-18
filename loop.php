@@ -30,11 +30,7 @@ if ( !defined('ABSPATH')) exit;
       <!-- .entry -->
 
       <div class="meta clearfix">
-			<?php if ( comments_open() ) : ?>
-            <span class="col count-comment">
-            <?php comments_popup_link(__('0', 'sampression'), __('1', 'sampression'), __('%', 'sampression')); ?>
-            </span>
-     <?php endif; 
+			<?php
                 printf( __( '%3$s <time class="col posted-on genericon-month" datetime="2011-09-28">%2$s</time> ', 'sampression' ),'meta-prep meta-prep-author',
 					sprintf( '<a href="%4$s" title="%2$s" rel="bookmark">%3$s</a>',
 						get_permalink(),
@@ -49,6 +45,11 @@ if ( !defined('ABSPATH')) exit;
 						)
                 );
             ?>
+            <?php if ( comments_open() ) : ?>
+            <span class="col count-comment genericon-comment">
+            <?php comments_popup_link(__('0', 'sampression'), __('1', 'sampression'), __('%', 'sampression')); ?>
+            </span>
+         <?php endif; ?>
       </div>
      <?php if(get_post_type() == 'post'){?>
     <div class="meta">

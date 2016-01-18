@@ -51,7 +51,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline; }
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
 		display: block; }
 	body {
 		line-height: 1; }
@@ -234,17 +234,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"] {
-		background:url(images/arrow-right.png) no-repeat 10px 9px #8AB7AD; background:url(images/arrow-right.png) no-repeat 1.0rem 0.9rem #8AB7AD;
+		background-image: url("images/rightarrow.png");
+		background-image: linear-gradient(transparent, transparent),  url("images/rightarrow.svg");
+		background-repeat: no-repeat;
+		background-color: #8AB7AD;
+		background-position: 10px 6px;
 		border:none;
-	  padding: 6px 12px 6px 25px; padding: 0.6rem 1.2rem 0.6rem 2.5rem;
-	  -moz-border-radius: 3px;
-	  -webkit-border-radius: 3px;
-	  border-radius: 3px; border-radius: 0.3rem;
-	  color: #ffffff;
-	  display: inline-block;
-	  text-decoration: none;
-	  cursor: pointer;
-	  font:normal 14px "Droid Serif", serif; font:normal 1.4rem "Droid Serif", serif;
+		padding: 6px 12px 6px 25px; padding: 0.6rem 1.2rem 0.6rem 2.5rem;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px; border-radius: 0.3rem;
+		color: #ffffff;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		font:normal 14px "Droid Serif", serif; font:normal 1.4rem "Droid Serif", serif;
 	   }
 
 	.button:hover,
@@ -468,7 +472,8 @@ article.post .post-title a,
 .tags:before,
 .cats:before,
 #primary-nav ul.nav-listing li a.selected span:before,
-.btn-top:before{
+.btn-top:before,
+.count-comment:before{
 	-moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -488,7 +493,8 @@ article.post .post-title a,
 .edit:before,
 .cats:before,
 .tags:before,
-.cats:before{
+.cats:before,
+.count-comment:before{
     font-size: 18px;
 }
 .cats:before,
@@ -541,7 +547,7 @@ img.logo-img{
 	}
 #site-title {
 	line-height:1;
-	margin:10px 0 0 0; margin:1.0rem 0 0 0;
+	margin:0 0 5px 0; margin:0 0 0.5rem 0;
 	font-weight:bold;
 	text-transform:capitalize;
 	}
@@ -564,7 +570,7 @@ img.logo-img{
 /* Top Nav
 ---------------------------------------------------------- */
 #top-nav ul {
-	margin:0 0 20px ; margin:0 0 2.0rem ;
+	margin:0 0 10px ; margin:0 0 1.0rem ;
 	padding:0;
 	list-style:none;
 	text-align:right;
@@ -738,10 +744,6 @@ img.logo-img{
 	position:relative;
 	border:1px solid #D2DFDC; border:0.1rem solid #D2DFDC;
 	margin:0;
-
-	-moz-box-shadow:2px 2px 3px #D2DFDC;
-	-webkit-box-shadow:2px 2px 3px #D2DFDC; 
-	box-shadow:2px 2px 3px #D2DFDC; box-shadow:0.2rem 0.2rem 0.3rem #D2DFDC;
 	}
 .search-form input {
 	-moz-border-radius: 0;
@@ -845,6 +847,7 @@ img.logo-img{
 	}
 .sm-top li.sm-top-youtube a {
 	color: #d32323;
+	padding: 3.5px 1px 5.5px;
 	}
 .sm-top li.sm-top-tw a {
 	 color: #55acee;
@@ -891,6 +894,7 @@ body.admin-bar #primary-nav.fixed {
 	top:20px; top:2.0rem;
 	} 
 #primary-nav .sixteen {
+	box-sizing: content-box;
 	height:28px; height:2.8rem;
 	border-bottom:15px solid #fff; border-bottom:1.5rem solid #fff;
 	border-top:20px solid #fff; border-top:2.0rem solid #fff;
@@ -1161,53 +1165,11 @@ div.entry.clearfix p a{
 	color:#666;
 }
 
-.count-comment {
-	position:absolute;
-	right:10px; right:1.0rem;
-	top:10px; top:1.0rem;
-	z-index:0;
-	}
 body.single .count-comment {
 	position:absolute;
 	right:5px; right:0.5rem;
 	top:5px; top:0.5rem;
 	}
-.count-comment a {
-	background:#C1D6D2;
-	padding:0 7px; padding:0 0.7rem;
-	display:inline-block;
-	color:#fff;
-	line-height:1;
-	text-align:center;
-	font-size:12px; font-size:1.2rem;
-	font-weight:normal;
-	line-height:18px; line-height:1.8rem;
-	
-	-moz-border-radius: 10px;
-	  -webkit-border-radius: 10px;
-	  border-radius: 10px; border-radius: 1.0rem;
-	}
-.count-comment .pointer {
-	background:url(images/sampression-css-sprite.png) no-repeat -3px -295px; background:url(images/sampression-css-sprite.png) no-repeat -0.3rem -29.5rem;
-	width:5px; width:0.5rem;
-	height:3px; height:0.3rem;
-	display:block;
-	position:absolute;
-	left:5px; left:0.5rem;
-	}
-.home .count-comment .pointer{
-
-	bottom:-2px; bottom:-0.2rem;
-}
-.single .count-comment .pointer{
-	bottom:0;
-	
-}
-@-moz-document url-prefix() { 
-  .count-comment .pointer {
-	 bottom:-1px;  bottom:-0.1rem; 
-	  }
-}
 
 body.single .meta .overflow-hidden,
 body.page .meta .overflow-hidden {

@@ -313,12 +313,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		background: #fff;
 		font-size:13px; font-size:1.3rem;
 		font-family: Arial, Helvetica, sans-serif;
-		
-		
-		-moz-box-shadow:-1px -1px 0 #A6BBB7;
-		-webkit-box-shadow:-1px -1px 0 #A6BBB7;
-		
-		-webkit-appearance: none;
+	   -webkit-appearance: none;
 	 }
 	select {
 		padding: 0;
@@ -329,9 +324,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	input[type="email"]:focus,
 	textarea:focus {
  		color: #444;
-		-moz-box-shadow:1px 1px 0 #A6BBB7;
-		-webkit-box-shadow:1px 1px 0 #A6BBB7; 
- 		box-shadow:1px 1px 0 #A6BBB7; box-shadow:0.1rem 0.1rem 0 #A6BBB7;}
+      }
 	textarea {
 		min-height: 80px; min-height:8.0rem; }
 	label,
@@ -442,7 +435,7 @@ article.post, .sm-top li a, .btn-top, .cancel-comment-reply a, .corner-stamp, .p
 	  border-radius: 5px; border-radius: 0.5rem;
 	  }
 	 
-.search-form input.search-submit, .ico, .btn-top, select, #comments-header a, .commentlist span.pointer, #btn-nav-opt {
+.search-form input.search-submit, .ico, .btn-top, select, #comments-header a, .commentlist span.pointer{
 	background:url(images/sampression-css-sprite.png) no-repeat 0 0;
 	}
 
@@ -473,7 +466,8 @@ article.post .post-title a,
 .cats:before,
 #primary-nav ul.nav-listing li a.selected span:before,
 .btn-top:before,
-.count-comment:before{
+.count-comment:before,
+#btn-nav-opt i:before{
 	-moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -742,7 +736,8 @@ img.logo-img{
  	display:block;
 	float:left;
 	position:relative;
-	border:1px solid #D2DFDC; border:0.1rem solid #D2DFDC;
+	border:1px solid #333;
+	border:1px solid rgba(51,51,51,0.1);
 	margin:0;
 	}
 .search-form input {
@@ -751,14 +746,18 @@ img.logo-img{
 	  border-radius: 0;
 	}
 	
-.search-form:hover input, .search-form:hover button {
-	border-color:#8AB7AD;
+.search-form input:focus, 
+.search-form input:focus + button {
+	border-color:#B9B6B6;
+	border-color:rgba(51,51,51,0.3);
 	}
 .search-form:hover input.search-submit{
 		border-color:#8AB7AD;
 		
 	}
 .search-form input.search-field {
+	background:#ffffff;
+	background:rgba(255,255,255,0.5);
 	border-right:none;
 	width:190px; width:19.0rem;
 	padding-left:10px; padding-left:1.0rem;
@@ -773,17 +772,14 @@ img.logo-img{
       -webkit-border-bottom-left-radius:5px;
 	  	 border-bottom-left-radius:5px; border-bottom-left-radius:0.5rem;
 	}
-.search-form input.search-field:focus{
-    box-shadow:0.2rem 0.2rem 0.3rem #D2DFDC;
-}
+
 .search-form .search-submit {
-	background-color:#ffffff;
-	background-position:-10px -7px; background-position:-1.0rem -0.7rem;
+	background:#ffffff;
+	background:rgba(255,255,255,0.5);
 	border-left:0;
 	line-height:1;
 	width:29px; width:2.9rem;
 	height:30px;  height:3.0rem; 
-	border:1px solid #D2DFDC; border:0.1rem solid #D2DFDC;
 	border-left:0px;
 	padding: 0;
 	outline: none;
@@ -794,7 +790,6 @@ img.logo-img{
       -moz-border-radius-bottomright:5px;
       -webkit-border-bottom-right-radius:5px;
 	  border-bottom-right-radius:5px; border-bottom-right-radius:0.5rem;
-	    margin-left: -2px;
 	    z-index: 2;
 	    position: relative;
 	  }
@@ -803,11 +798,12 @@ img.logo-img{
     position: relative;
     font-size: 15px;
     left: -1px;
-    color: #8AB7AD;
+    color: #B9B6B6;
+    color: rgba(51,51,51,0.3);
     padding-left: 5px;
-    border-left: 1px solid #8AB7AD;
     top: -1px;
 }
+
 .search-form ::-webkit-input-placeholder {
 	color:#dddddd;
 	font-style:italic;
@@ -835,6 +831,8 @@ img.logo-img{
 	margin-right:0;
 	}
 .sm-top li a {
+	background: #fff;
+	background: rgba(255,255,255,0.5);
 	width:28px; width:2.8rem;
 	font-size: 19px;
     padding: 4.5px 1px;
@@ -859,7 +857,8 @@ img.logo-img{
 .sm-top li.sm-top-gplus a:hover ,
 .sm-top li.sm-top-tw a:hover,
 .sm-top li.sm-top-youtube a:hover {
-	border-color:#8ab7ad;
+	border-color:#B9B6B6;
+	border-color:rgba(51,51,51,0.3);
 	}
 
 /* Primary Navigation
@@ -906,26 +905,32 @@ body.admin-bar #primary-nav.fixed {
 	}
 
 #btn-nav-opt {
-	background-position:0 -308px; background-position:0 -30.8rem;
+	background: #8AB7AD;
 	width:22px; width:2.2rem;
 	height:13px; height:1.3rem;
 	display:block;
-	text-indent:-9999px; text-indent:-9999rem;
 	position:absolute;
 	bottom:0;
 	left:10px; left:1.0rem;
 	z-index:999;
 	display:none;
+	border-radius: 2px 2px 0 0;
 	}
-#btn-nav-opt.up {
-	background-position:0 -322px; background-position:0 -32.2rem;
-	}
-#btn-nav-opt:hover {
-	background-position:0 -336px; background-position:0 -33.6rem;
-	}
-#btn-nav-opt.up:hover {
-	background-position:0 -350px; background-position:0 -35.0rem;
-	}
+#btn-nav-opt i {
+    margin: 5px 6px 0;
+    font-size: 10px;
+    line-height: 14px;
+    color: #fff;
+    display: inline-block;
+    height: 8px;
+}
+#btn-nav-opt .genericon-uparrow, #btn-nav-opt.up .genericon-downarrow {
+    display: none;
+}
+#btn-nav-opt.up .genericon-uparrow {
+    display: block;
+    margin-top: -1px;
+}
 #primary-nav .nav-label {
 	margin-right:10px; margin-right:1.0rem;
 	position:absolute;
@@ -982,7 +987,6 @@ body.admin-bar #primary-nav.fixed {
 /* Content
 ---------------------------------------------------------- */
 #content-wrapper {
-	/*background:url(images/content-bg-rpt.gif) repeat;*/
 	padding:20px 0; padding:2.0rem 0;
 	min-height:400px; min-height:40.0rem;
 	}
@@ -994,16 +998,16 @@ body.admin-bar #primary-nav.fixed {
 	margin-bottom:20px; margin-bottom:2.0rem;
 	}
 .quick-note a.btn-back {
-	background:url(images/sampression-css-sprite.png) no-repeat 0 -265px; background:url(images/sampression-css-sprite.png) no-repeat 0 -26.5rem;
 	color:#fff;
 	text-decoration:none;
 	padding-left:20px; padding-left:2.0rem;
 	}
 	
 #content {
-	background:url(images/separator.gif) repeat-x left bottom;
 	padding-bottom:10px; padding-bottom:1.0rem;
 	margin-bottom:20px; margin-bottom:2.0rem;
+	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid rgba(51,51,51,0.1);
 	}
 body.single #content, body.page #content {
 	background:none;
@@ -1932,7 +1936,7 @@ article.post .featured-img {
 			}
 		
 		.search-form input.search-submit, #primary-nav ul.nav-listing li a.selected span, .ico, .btn-top, select, #comments-header a, 
-		.commentlist span.pointer, #btn-nav-opt,.count-comment .pointer {
+		.commentlist span.pointer, .count-comment .pointer {
 			background:url('images/sampression-css-sprite2x.png') no-repeat 0 0;
 			display:inline-block;
 			vertical-align:baseline;

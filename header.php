@@ -141,7 +141,10 @@
 <span id="primary-nav-scroll"></span>
 <nav id="primary-nav">
   <div class="container">
-  <a href="#" id="btn-nav-opt">show/hide</a>
+  <a href="#" id="btn-nav-opt">
+    <i class="genericon-downarrow"></i>
+    <i class="genericon-uparrow"></i>
+  </a>
   <div class="columns sixteen">
     <div class="nav-label"><?php _e('Filter By:','sampression'); ?></div>
 	

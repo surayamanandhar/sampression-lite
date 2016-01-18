@@ -378,7 +378,7 @@ function sampression_customize_register( $wp_customize ) {
         'priority'       => 1,
         'panel' => 'sampression_advance_panel'
     ) );
-
+    //background_image
     /**
      * Body text color setting
      **************************/
@@ -545,7 +545,7 @@ function sampression_customize_preview_js() {
 
 function sampression_customize_controls_js() {
 
-    wp_enqueue_script( 'sampression_customizer_script', get_template_directory_uri() . '/lib/js/sampression_customizer.js', array( 'jquery' ), '1.0', true  );
+    wp_enqueue_script( 'sampression_customizer_script', get_template_directory_uri() . '/lib/js/sampression.customizer.js', array( 'jquery' ), '1.0', true  );
 
     wp_localize_script( 'sampression_customizer_script', 'objectL10n', array(
         

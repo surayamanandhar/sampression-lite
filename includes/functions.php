@@ -64,8 +64,8 @@ if (!function_exists('sampression_setup')):
 		 * This feature enables custom background color and image support for a theme
 		 */
 		add_theme_support( 'custom-background', array(
-			'default-color' => 'efefef',
-            'default-image' => get_template_directory_uri().'/images/content-bg-rpt.gif',
+			'default-color' => 'F3F7F6',
+            'default-image' => '',//get_template_directory_uri().'/images/content-bg-rpt.gif',
             'wp-head-callback' => 'sampression_custom_background_cb'
 		) );
 		
@@ -194,8 +194,8 @@ if (!function_exists('sampression_js')) {
 
 	function sampression_js() {
 		// JS at the bottom for fast page loading. 
-		wp_enqueue_script('sampression-modernizer', get_template_directory_uri() . '/lib/js/modernizr.js', array('jquery'), '2.6.1', false);
-		wp_enqueue_script('sampression-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.min.js', array('jquery'), '', false);                
+		wp_enqueue_script('sampression-modernizer', get_template_directory_uri() . '/lib/js/modernizr.custom.min.js', array('jquery'), '2.6.2', false);
+		wp_enqueue_script('sampression-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.js', array('jquery'), '', false);                
 		wp_enqueue_script('sampression-custom-script', get_template_directory_uri() . '/lib/js/scripts.js', array('jquery'), '1.1', true);
         wp_enqueue_script('shuffle', get_template_directory_uri() . '/lib/js/shuffle.js', array('jquery'), '', false);
 	}

@@ -78,23 +78,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		background: #fff;
 		font: 12px/18px Arial, Helvetica, sans-serif; font: 1.2rem/1.8rem Arial, Helvetica, sans-serif;
 		font-size: 12px; font-size: 1.2rem;
-		color: #666;
+		color: #333;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust:100%;
 		-ms-text-size-adjust:100%
  }
  
 /* Highlight Color */
-	::-moz-selection{ background: #F60; color:#fff; text-shadow: none; }
-	::selection { background:#F60; color:#fff; text-shadow: none; }
+	::-moz-selection{ background: #FE6E41; color:#fff; text-shadow: none; }
+	::selection { background:#FE6E41; color:#fff; text-shadow: none; }
 /* Device onclick */	
-	a:link { -webkit-tap-highlight-color: #F60; }
+	a:link { -webkit-tap-highlight-color: #FE6E41; }
 
 
 /* #Typography
 ================================================== */
 	h1, h2, h3, h4, h5, h6, #comment-header {
-		color: #F60;
+		color: #FE6E41;
 		font-family: "Droid Serif", serif;
 		font-weight: bold;
 		line-height:1.23;
@@ -128,7 +128,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* #Links
 ================================================== */
-	a:link, a:visited { color: #9BB0AB; text-decoration: none; outline: 0; }
+	a:link, a:visited { color: #8AB7AD; text-decoration: none; outline: 0; }
 	a:hover, a:focus { color: #80938F; }
 	p a, p a:visited { line-height: inherit; }
 
@@ -425,20 +425,12 @@ pre {
 	font-size:14px; font-size:1.4rem;
 	margin-left:20px; margin-left:2.0rem;
 	}
-#site-title a,
-#site-description, {
-	color:#FE6E41;
-	}
 article.post, .sm-top li a, .btn-top, .cancel-comment-reply a, .corner-stamp, .post-navigation .wp-pagenavi a, .post-navigation .wp-pagenavi span {
 	-moz-border-radius: 5px;
 	  -webkit-border-radius: 5px;
 	  border-radius: 5px; border-radius: 0.5rem;
 	  }
 	 
-.search-form input.search-submit, .ico, .btn-top, select, #comments-header a, .commentlist span.pointer{
-	background:url(images/sampression-css-sprite.png) no-repeat 0 0;
-	}
-
 #page-not-found-message h2,
 article.post .post-title,
 article.post .post-title a,
@@ -532,8 +524,7 @@ img.logo-img{
 	margin-right:1rem;
 }
 .logo-txt{
-        vertical-align: middle;
-        display: inline-block;
+       margin-top: 20px;
         }
 #logo-wrapper .logo-txt  {
 	overflow:hidden;
@@ -541,15 +532,24 @@ img.logo-img{
 	}
 #site-title {
 	line-height:1;
-	margin:0 0 5px 0; margin:0 0 0.5rem 0;
-	font-weight:bold;
-	text-transform:capitalize;
+	margin:0 0 2px 0; margin:0 0 0.2rem 0;
+	font-weight:normal;
+	color:#FE6E41;
+	font-size: 27px;
+	font-size: 2.7rem;
+	text-transform:uppercase;
 	}
+#site-title a{
+    color:#FE6E41;
+}
 #site-description {
-	font-size:16px; font-size:1.6rem;
+	font-size:12px; font-size:1.2rem;
 	font-weight:normal;
 	line-height:1.2;
 	margin:0;
+	color:#666;
+	color:rgba(51,51,51,0.75);
+	font-family: arial;
 	}
 #content .bypostauthor {
 }
@@ -1006,7 +1006,7 @@ body.admin-bar #primary-nav.fixed {
 #content {
 	padding-bottom:10px; padding-bottom:1.0rem;
 	margin-bottom:20px; margin-bottom:2.0rem;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #B9B6B6;
 	border-bottom: 1px solid rgba(51,51,51,0.1);
 	}
 body.single #content, body.page #content {
@@ -1029,6 +1029,8 @@ article.post {
 	background-color:#fff;
 	margin-bottom:30px !important; margin-bottom:3.0rem !important;
 	position:relative;
+	box-shadow: 0px 1px 1px 1px #C1C0C0;
+	box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.2);
 	}
 article.post .post-title {
 	font-size:14px; font-size:1.4rem;
@@ -1102,7 +1104,7 @@ body.single .entry.clearfix form input[type="submit"]{
 	clear:both;
 	}
 .meta, .meta a {
-	color:#9BB0AB;
+	color:#8AB7AD;
 	}
 .meta a:link, .meta a:visited {
 	text-decoration:none;
@@ -1132,26 +1134,19 @@ body.single .entry.clearfix form input[type="submit"]{
 	vertical-align: bottom;
 	}
 .post-author .ico {
-	background-position:0 -128px; background-position:0 -12.8rem;
 	margin-top:4px; margin-top:0.4rem;
 	}
 .meta time {
 	margin-right:10px; margin-right:1.0rem;
 	}
 .meta time .ico {
-	background-position:-14px -128px; background-position:-1.4rem -12.8rem;
 	margin-top:4px; margin-top:0.4rem;
 	}
 .cats .ico {
-	background-position:0 -139.3px; background-position:0 -13.93rem;
 	margin-top:3px; margin-top:0.3rem;
 	margin-right:5px; margin-right:0.5rem;
 	}
-.edit .ico {
-	background-position:-14px -141px; background-position:-1.4rem -14.1rem;
-	}
 .tags .ico {
-	background-position:-14px -113px; background-position:-1.4rem -11.3rem;
 	width:13px; width:1.3rem;
 	}
 .single .meta time, .single .meta .cats, .single .meta .edit, .single .meta .post-author, .single .meta .tags{ float:left; display:inline; margin-right:10px; margin-right:1rem;}
@@ -1188,7 +1183,7 @@ body.page .meta .overflow-hidden {
 ---------------------------------------------------------- */
 .post-navigation {}
 #nav-below {
-	background:url(images/separator.gif) repeat-x left top;
+	border-bottom: 1px solid rgba(51,51,51,0.1);
 	padding-top:10px; padding-top:1.0rem;
 	clear:both;
 	}
@@ -1363,7 +1358,6 @@ ol.commentlist article.comment {
 	}
 
 .commentlist span.pointer {
-	background-position:-5px -243px; background-position:-0.5rem -24.3rem;
 	width:8px; width:0.8rem;
 	height:13px; height:1.3rem;
 	display:block;
@@ -1468,7 +1462,7 @@ ol.commentlist article.comment {
 	margin-bottom:20px; margin-bottom:2.0rem;
 	}
 .cancel-comment-reply a {
-	color:#F60;
+	color:#FE6E41;
 	}
 
 #respond {
@@ -1489,103 +1483,14 @@ ol.commentlist article.comment {
 /* Corner Stamp
 ---------------------------------------------------------- */
 .sticky{ }
-.corner-stamp {
-	background-color:#8AB7AD;
-	float:right;
-	margin-bottom:20px; margin-bottom:2.0rem;
-	}
-.corner-stamp.columns.four {
-	float:right;
-	margin-bottom:20px; margin-bottom:2.0rem;
-	background-color: #8AB7AD;
-    color: #FFFFFF;
-	}
-.post.corner-stamp .post-title a,
-.corner-stamp  .entry  .read-more a{
-	color:#ffffff;
-}
-.corner-stamp  .entry  .read-more a{
-	color:#eee;
-}
-.corner-stamp  .entry  .page-link a {
-	color:#eee;
-}
-
-.corner-stamp  .entry  .page-link a:hover,
-.post  .entry  .page-link a:hover,
-.corner-stamp  .entry  .read-more a :hover,
-.corner-stamp  .ico a:hover{
+.post  .entry  .page-link a:hover{
 	color:#666;
 }
 .overflow-hidden.cat-listing > a:hover,
-.post.corner-stamp .meta a:hover,
 .url.fn.n:hover,
 .col > a:hover{
     color: #666;
 }
-.post.corner-stamp .post-title {
-	border-bottom: 1px solid #75AB9F; border-bottom: 0.1rem solid #75AB9F;
-}
-.corner-stamp header {
-	border-bottom:1px solid #75AB9F; border-bottom:0.1rem solid #75AB9F;
-	padding:10px 20px; padding:1.0rem 2.0rem;
-	}
-.corner-stamp header h3 {
-	font-size:16px; font-size:1.6rem;
-	line-height:20px; line-height:2.0rem;
-	font-weight:bold;
-	color:#fff;
-	margin:0;
-	}
-.post.corner-stamp .entry{
-	padding:20px; padding:2.0rem;
-	border-top:1px solid #9BC2B9; border-top:0.1rem solid #9BC2B9;
-}
-.post.corner-stamp .meta, 
-.post.corner-stamp .meta a{
-	color:#fff;
-}
-.post.corner-stamp .meta .post-author .ico {
-	background-position: -20px -236px; background-position: -2.0rem -23.6rem;
-}
-.post.corner-stamp .meta time .ico{
-	background-position: -18px -225px; background-position: -1.8rem -22.5rem;
-}
-.post.corner-stamp .meta .cats .ico{
-	background-position: -18px -248px; background-position: -1.8rem -24.8rem;
-}
-.post.corner-stamp .meta .tags .ico{
-	background-position: -18px -261px; background-position: -1.8rem -26.1rem;
-}
-.post.corner-stamp .meta .edit .ico{
-	background-position: -18px -274px; background-position: -1.8rem -27.4rem;
-}
-.corner-stamp .categories, .corner-stamp .categories ul, .corner-stamp .categories ol {
-	margin:0;
-	padding:0;
-	list-style:none;
-	}
-.corner-stamp .categories li {
-	margin:0;
-	}
-.corner-stamp .categories ul {
-	margin:0 0 0 15px; margin:0 0 0 1.5rem;
-	}
-.corner-stamp .categories a {
-	display:block;
-	margin-bottom:5px; margin-bottom:0.5rem;
-	text-decoration:none;
-	}
-.corner-stamp .categories a,
-.corner-stamp .categories li.current-cat li a {
-	color:#CDEBE6;
-	}
-.corner-stamp .categories a:hover,
-.corner-stamp .categories li.current-cat a,
-.corner-stamp .categories li.current-cat li a:hover {
-	color:#fff;
-	font-weight:bold;
-	}
 
 /* Search Results
 ---------------------------------------------------------- */
@@ -1656,7 +1561,6 @@ body.error404 #content {
 			height:10px; height:1.0rem;
 			bottom:-10px; bottom:-1.0rem;
 			left:5px; left:0.5rem;
-			background-position:0 -45px; background-position:0 -4.5rem;
 			}
 		.search-form input.search-field {
 			width:132px; width:13.2rem;
@@ -1739,7 +1643,6 @@ body.error404 #content {
 			height:10px; height:1.0rem;
 			bottom:-10px; bottom:-1.0rem;
 			left:3px; left:0.3rem;
-			background-position:0 -22px; background-position:0 -2.2rem;
 			}
 		
 article.post .featured-img {
@@ -1789,7 +1692,6 @@ article.post .featured-img {
 			padding:0 0 10px 0; padding:0 0 1.0rem 0;
 		}
 		.commentlist span.pointer {
-			background-position:0 -233px; background-position:0 -23.3rem;
 			width:13px; width:1.3rem;
 			height:8px; height:0.8rem;
 			right:inherit;
@@ -1839,7 +1741,6 @@ article.post .featured-img {
 			height:10px; height:1.0rem;
 			bottom:-10px; bottom:-1.0rem;
 			left:3px; left:0.3rem;
-			background-position:0 -33px; background-position:0 -3.3rem;
 			}
 		article.post .featured-img {
 		text-align:center;
@@ -1854,7 +1755,6 @@ article.post .featured-img {
 			width:365px; width:36.5rem; 
 			background-position: 345px -181px; background-position: 34.5rem -18.1rem;
 		}
-		#get-cats,#get-cat-ios{ background-position: 315px -181px; background-position: 31.5rem -18.1rem;}
 		}
 		
 
@@ -1888,157 +1788,11 @@ article.post .featured-img {
 			padding-right:0;
 			margin-right:0;
 			}
-		#top-nav-mobile select{ width:250px; width:25.0rem; background-position: 230px -181px; background-position: 23.0rem -18.1rem;}
+		#top-nav-mobile select{ width:250px; width:25.0rem;}
 	}
 		
 	
 	/* Small Andriod Mobile Portrait Size ( 240 devices and browsers) */
 	@media only screen and (max-width: 319px) { }
-	 /* Retina displays 
-	 
-	only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (-o-min-device-pixel-ratio: 5/2),
-	only screen and ( min-resolution: 144dpi) {*/
-	@media
-	only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (-o-min-device-pixel-ratio: 5/2),
-	only screen and ( min-resolution: 144dpi) {
-		.button,
-		button,
-		input[type="submit"],
-		input[type="reset"],
-		input[type="button"] {
-			background: url('images/arrow2x.png') no-repeat 9px 9px #8AB7AD;
-			background-size: 8px 11px;
-		}
-		.sm-top li a {
-			width:28px; width:2.8rem;
-			height:28px; height:2.8rem;
-			display:block;
-			text-indent:-999em; text-indent:-999rem;
-			background:url('images/social_icons2x.png') no-repeat;
-			}
-		.sm-top li.sm-top-fb a {
-			background-position: 2px 3px; background-position: 0.2rem 0.3rem;
-			background-size: 137px 23px; background-size: 13.7rem 2.3rem;
-			}
-		.sm-top li.sm-top-youtube a {
-			background-position: -106px 2px; background-position: -10.6rem 0.2rem;
-			background-size: 137px 23px; background-size: 13.7rem 2.3rem;
-			}
-		.sm-top li.sm-top-tw a {
-			background-position: -32px 3px; background-position: -3.2rem 0.3rem;
-			background-size: 137px 23px; background-size: 13.7rem 2.3rem;
-			}
-		.sm-top li.sm-top-gplus a {
-			background-position: -70px 3px; background-position: -7.0rem 0.3rem;
-			background-size: 137px 23px; background-size: 13.7rem 2.3rem;
-			}
-		
-		.search-form input.search-submit, #primary-nav ul.nav-listing li a.selected span, .ico, .btn-top, select, #comments-header a, 
-		.commentlist span.pointer, .count-comment .pointer {
-			background:url('images/sampression-css-sprite2x.png') no-repeat 0 0;
-			display:inline-block;
-			vertical-align:baseline;
-		}
-		.ico{
-			margin: 3px 2px 5px 5px; margin: 0.3rem 0.2rem 0.5rem 0.5rem;
-		}
-		.search-form input.search-submit {
-		
-			background-position: -3px 5px; background-position: -0.3rem 0.5rem;
-			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
-			
-		}
-		.search-form{
-			box-shadow: 2px 2px 3px #D2DFDC; box-shadow: 0.2rem 0.2rem 0.3rem #D2DFDC;
-			border-radius:0 5px 5px 0; border-radius:0 0.5rem 0.5rem 0;
-		}
-		.search-form input.search-field, .search-form input.search-submit {
-		box-shadow: none;
-		}
-		#top-nav-mobile select{
-			background-position: 105% -95px; background-position: 105% -9.5rem;
-			background-size: 33px 284px;  background-size: 3.3rem 28.4rem; 
-		}
-		#get-cats,#get-cat-ios{
-			background-position: 105% -95px; background-position: 105% -9.5rem;
-			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
-		}
-		.post.corner-stamp .meta .post-author .ico {
-			background-position: -23px -151px; background-position: -2.3rem -15.1rem;
-			background-size: 32px 284px; background-size: 3.2rem 28.4rem;
-		}
-		.post.corner-stamp .meta time .ico {
-			background-position: -20px -138px; background-position: -2.0rem -13.8rem;
-			background-size: 32px 283px; background-size: 3.2rem 28.3rem;
-		}
-		.post.corner-stamp .meta .cats .ico {
-			background-position: -20px -163px; background-position: -2.0rem -16.3rem;
-			background-size: 32px 284px; background-size: 3.2rem 28.4rem;
-		}
-		.post.corner-stamp .meta .tags .ico {
-			background-position: -20px -176px; background-position: -2.0rem -17.6rem;
-			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
-		}
-		.post.corner-stamp .meta .edit .ico {
-			background-position: -20px -188px; background-position: -2.0rem -18.8rem;
-			background-size: 32px 283px; background-size: 3.2rem 28.3rem;
-		}
-		.post-author .ico {
-			background-position: -2px -40px; background-position: -0.2rem -4.0rem;
-			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
-			margin-top: 4px; margin-top: 0.4rem;
-		}
 
-		.meta time .ico {
-			background-position: -16px -40px; background-position: -1.6rem -4rem;
-			background-size: 32px 284px; background-size: 3.2rem 28.4rem;
-			margin-top: 4px; margin-top: 0.4rem;
-		}
-		.cats .ico {
-			background-position: -2px -52px; background-position: -0.2rem -5.2rem;
-			background-size: 32px 284px; background-size: 3.2rem 28.4rem;
-		}
-		.tags .ico {
-			background-position: -17px -25px; background-position: -1.7rem -2.5rem;
-			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
-		}
-		.edit .ico {
-			background-position: -16px -54px; background-position: -1.6rem -5.4rem;
-			background-size: 32px 283px; background-size: 3.2rem 28.3rem;
-		}
-		.btn-top {
-			background-position: 7px -66px; background-position: 0.7rem -6.6rem;
-			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
-			background-color:#fff;
-		}
-		#primary-nav ul.nav-listing li a.selected span {
-			background-color: #8AB7AD;
-			background-position: -16px -85px;  background-position: -1.6rem -8.5rem; 
-			background-size: 33px 284px; background-size: 3.3rem 28.4rem;
-		}
-		.commentlist span.pointer {
-			background-position:-1px -147px; background-position:-0.1rem -14.7rem;
-			background-size: 33px 284px;
-		}
-		#btn-nav-opt {
-			background-position:0 -308px; background-position:0 -30.8rem;
-			background-position:-2px -223px; background-size: 30px 284px;
-		}
-		#btn-nav-opt.up {
-			background-position:-2px -237px; background-size: 30px 284px;
-		}
-		#btn-nav-opt:hover {
-			background-position:-2px -252px; background-size: 30px 284px;
-		}
-		#btn-nav-opt.up:hover {
-			background-position:-2px -266px; background-size: 30px 284px;
-		}
-		.count-comment .pointer{
-		background-position:-19px -212px; background-size: 33px 284px;
-		width: 5px; height: 3px;
-		}
-	}
-	
 

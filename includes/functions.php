@@ -85,7 +85,7 @@ if (!function_exists('sampression_setup')):
 
 			// Support flexible height and width.
 			'flex-height'            => true,
-			'flex-width'             => true
+			'flex-width'             => true,
 		) ); 
 		
 		/**
@@ -194,10 +194,10 @@ if (!function_exists('sampression_js')) {
 
 	function sampression_js() {
 		// JS at the bottom for fast page loading. 
-		wp_enqueue_script('sampression-modernizer', get_template_directory_uri() . '/lib/js/modernizr.custom.min.js', array('jquery'), '2.6.2', false);
-		wp_enqueue_script('sampression-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.js', array('jquery'), '', false);                
-		wp_enqueue_script('sampression-custom-script', get_template_directory_uri() . '/lib/js/scripts.js', array('jquery'), '1.1', true);
-        wp_enqueue_script('shuffle', get_template_directory_uri() . '/lib/js/shuffle.js', array('jquery'), '', false);
+		wp_enqueue_script('sampression-modernizer', get_template_directory_uri() . '/lib/js/modernizr.custom.min.js', '', '2.6.2', false);
+        wp_enqueue_script('jquery-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.js', array('jquery'), '', true);
+		wp_enqueue_script('sampression-script', get_template_directory_uri() . '/lib/js/scripts.js', array('jquery'), '1.1', true);
+        wp_enqueue_script('shuffle', get_template_directory_uri() . '/lib/js/shuffle.js', array('jquery', 'jquery-shuffle'), '', true);
 	}
 
 }
@@ -835,7 +835,22 @@ function sampression_custom_header_style() {
             h2.post-title {
 				color: #<?php echo $text_color; ?>;
 			}
-		<?php endif; ?>
+		<?php endif;
+        if(get_theme_mod('body_textcolor')) {
+            ?>
+            #post-listing article.post .entry p {
+                color: <?php echo get_theme_mod('body_textcolor') ?>;
+            }
+            <?php
+        }
+        if(get_theme_mod('link_color')) {
+            ?>
+            .meta a:link, .meta a:visited, .meta, .meta a, a:link, a:visited {
+                color: <?php echo get_theme_mod('link_color') ?>;
+            }
+            <?php
+        }
+        ?>
 	</style>
 	<?php
 }

@@ -31,7 +31,7 @@ function sampression_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'body_textcolor' )->transport = 'postMessage';
+    //$wp_customize->get_setting( 'body_textcolor' )->transport = 'postMessage';
     /**
      * Default Sections
      * ------------------------------------
@@ -404,20 +404,21 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Link color setting
      **************************/
-        $wp_customize->add_setting( 'link-color',
+        $wp_customize->add_setting( 'link_color',
             array(
                 'default' => '#444444',
                 'sanitize_callback' => 'sanitize_hex_color',
+                'transport' => 'postMessage'
             )
         );
         $wp_customize->add_control(
             new WP_Customize_Color_Control(
                 $wp_customize,
-                'link-color',
+                'link_color',
                 array(
                     'label' => 'Link Color',
                     'section' => 'colors',
-                    'settings' => 'link-color'
+                    'settings' => 'link_color'
                 )
             )
         );

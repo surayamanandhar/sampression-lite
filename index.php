@@ -49,7 +49,7 @@ get_header(); ?>
 	
 		endwhile;
 	
-	?>
+	?><div class="eight columns shuffle__sizer"></div>
 
      </div>
   <!-- #post-listing --> 
@@ -70,7 +70,7 @@ get_header(); ?>
 
 <?php endif; ?>
 
-  
+	
 </section>
 <!-- #content -->
 <?php get_sidebar(); ?>

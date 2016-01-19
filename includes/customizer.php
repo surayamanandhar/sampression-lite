@@ -31,7 +31,7 @@ function sampression_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'body_textcolor' )->transport = 'postMessage';
+    //$wp_customize->get_setting( 'body_textcolor' )->transport = 'postMessage';
     /**
      * Default Sections
      * ------------------------------------
@@ -378,7 +378,7 @@ function sampression_customize_register( $wp_customize ) {
         'priority'       => 1,
         'panel' => 'sampression_advance_panel'
     ) );
-
+    //background_image
     /**
      * Body text color setting
      **************************/
@@ -404,20 +404,21 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Link color setting
      **************************/
-        $wp_customize->add_setting( 'link-color',
+        $wp_customize->add_setting( 'link_color',
             array(
                 'default' => '#444444',
                 'sanitize_callback' => 'sanitize_hex_color',
+                'transport' => 'postMessage'
             )
         );
         $wp_customize->add_control(
             new WP_Customize_Color_Control(
                 $wp_customize,
-                'link-color',
+                'link_color',
                 array(
                     'label' => 'Link Color',
                     'section' => 'colors',
-                    'settings' => 'link-color'
+                    'settings' => 'link_color'
                 )
             )
         );
@@ -545,7 +546,7 @@ function sampression_customize_preview_js() {
 
 function sampression_customize_controls_js() {
 
-    wp_enqueue_script( 'sampression_customizer_script', get_template_directory_uri() . '/lib/js/sampression_customizer.js', array( 'jquery' ), '1.0', true  );
+    wp_enqueue_script( 'sampression_customizer_script', get_template_directory_uri() . '/lib/js/sampression.customizer.js', array( 'jquery' ), '1.0', true  );
 
     wp_localize_script( 'sampression_customizer_script', 'objectL10n', array(
         

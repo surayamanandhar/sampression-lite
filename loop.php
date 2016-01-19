@@ -31,25 +31,26 @@ if ( !defined('ABSPATH')) exit;
 
       <div class="meta clearfix">
 			<?php
-                printf( __( '%3$s <time class="col posted-on genericon-month" datetime="2011-09-28">%2$s</time> ', 'sampression' ),'meta-prep meta-prep-author',
+                printf( __( '<time class="col posted-on genericon-day" datetime="2011-09-28">%2$s</time> ', 'sampression' ),'meta-prep meta-prep-author',
 					sprintf( '<a href="%4$s" title="%2$s" rel="bookmark">%3$s</a>',
 						get_permalink(),
 						esc_attr( get_the_time() ),
 						get_the_date('d M Y'),
 						get_month_link( get_the_time('Y'), get_the_time('m'))
-					),
-					sprintf( '<div class="post-author genericon-user col"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></div>',
-						get_author_posts_url( get_the_author_meta( 'ID' ) ),
-					sprintf( esc_attr__( 'View all posts by %s', 'sampression' ), get_the_author() ),
-						get_the_author()
-						)
-                );
+					));
             ?>
             <?php if ( comments_open() ) : ?>
             <span class="col count-comment genericon-comment">
-            <?php comments_popup_link(__('0', 'sampression'), __('1', 'sampression'), __('%', 'sampression')); ?>
+            <?php comments_popup_link(__('', 'sampression'), __('1 Comment', 'sampression'), __('% Comments', 'sampression')); ?>
             </span>
          <?php endif; ?>
+      </div>
+      <div class="meta clearfix">
+<?php printf( '<div class="post-author genericon-user col"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></div>',
+            get_author_posts_url( get_the_author_meta( 'ID' ) ),
+          sprintf( esc_attr__( 'View all posts by %s', 'sampression' ), get_the_author() ),
+            get_the_author()
+            ); ?>
       </div>
      <?php if(get_post_type() == 'post'){?>
     <div class="meta">

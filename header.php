@@ -37,7 +37,7 @@
 <body <?php body_class('top'); ?>>
 <header id="header">
   <div class="container">
-    <div class="columns five">
+    <div class="columns six">
 	
 			<?php
         if(get_theme_mod('sampression_logo', get_option('opt_sam_logo')) != '' && get_theme_mod('sampression_remove_logo') != 1) {
@@ -55,7 +55,7 @@
 			</div>
         <?php } ?>
     </div>
-    <div class="columns eleven">
+    <div class="columns ten">
       <nav id="top-nav">
         <?php
 		//Check if the Custom Navigation is available
@@ -142,8 +142,8 @@
 <nav id="primary-nav">
   <div class="container">
   <a href="#" id="btn-nav-opt">
-    <i class="genericon-downarrow"></i>
-    <i class="genericon-uparrow"></i>
+    <i class="genericon-collapse"></i>
+    <i class="genericon-expand"></i>
   </a>
   <div class="columns sixteen">
     <div class="nav-label"><?php _e('Filter By:','sampression'); ?></div>

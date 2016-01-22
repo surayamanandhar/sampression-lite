@@ -1122,6 +1122,7 @@ img.logo-img {
     font-size: 13px;
     font-size: 1.3rem;
     margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Top Nav */
@@ -1962,7 +1963,7 @@ body.error404 #content {
 
     #primary-nav .nav-label {
         margin-top: 3px;
-        top: 25px;
+        top: 16px;
     }
 
    
@@ -1976,7 +1977,9 @@ body.error404 #content {
     .search-form input.search-field {
         width: 132px;
     }
-
+    article.post .featured-img {
+        height: auto !important;
+    }
 }
 
 /**

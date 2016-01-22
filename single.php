@@ -47,9 +47,9 @@ get_header(); ?>
 					));
             ?>
 	            <?php if ( comments_open() && get_comments_number() > 0 ) : ?>
-	            <span class="col count-comment genericon-comment">
+	            <div class="col count-comment genericon-comment">
 	            <?php comments_popup_link(__('No comments yet', 'sampression'), __('1 Comment', 'sampression'), __('% Comments', 'sampression')); ?>
-	            </span>
+	            </div>
 	         <?php endif; ?>
 	         <?php printf( '<div class="post-author genericon-user col"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></div>',
 	            get_author_posts_url( get_the_author_meta( 'ID' ) ),

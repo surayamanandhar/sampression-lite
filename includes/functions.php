@@ -819,6 +819,10 @@ function sampression_custom_header_style() {
             article.post .post-title a {
                 color: #<?php echo $text_color; ?>;
             }
+            #site-title a:hover,
+            article.post .post-title a:hover {
+                color: <?php echo get_theme_mod('body_textcolor') ?>;
+            }
         <?php
         }
         if(get_theme_mod('body_textcolor')) {

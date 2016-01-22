@@ -839,10 +839,7 @@ function sampression_custom_header_style() {
             a:link, a:visited,
             .meta, .meta a,
             #top-nav ul a:link, #top-nav ul a:visited,
-            #primary-nav ul.nav-listing li a,
-            .post-author:before, .posted-on:before, 
-            .edit:before, .cats:before, .tags:before, 
-            .cats:before, .count-comment:before{
+            #primary-nav ul.nav-listing li a{
                 color: <?php echo get_theme_mod('link_color') ?>;
             }
             .button, button, input[type="submit"], 

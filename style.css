@@ -1435,10 +1435,7 @@ img.logo-img {
     color: #1AB7EA;
 }
 
-.sm-top li.sm-top-fb a:hover,
-.sm-top li.sm-top-gplus a:hover,
-.sm-top li.sm-top-tw a:hover,
-.sm-top li.sm-top-youtube a:hover {
+.sm-top li a:hover{
     border-color: #B9B6B6;
     border-color: rgba(51, 51, 51, 0.3);
 }

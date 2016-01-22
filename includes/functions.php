@@ -163,7 +163,7 @@ function sampression_footer() {
 <div class="alignleft powered-wp">
     <?php
     if(!empty(get_theme_mod('sampression_copyright_text'))) {
-        echo get_theme_mod('sampression_copyright_text');
+        echo get_theme_mod('sampression_copyright_text') . ' ';
     } else {
     ?>
     <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved. </div>

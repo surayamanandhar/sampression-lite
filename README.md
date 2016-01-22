@@ -163,8 +163,10 @@ Please follow the steps below to install the theme.
   - Changed: Translation (.po and .mo files)
   - Changed: Theme description
   - Changed: Theme tags
+  - Changed: Icons
   - Removed: Theme Options page (Added options to Customizer)
   - Removed: Default widget (Most Popular Posts and Recent Comments) if not added
+  - Removed: favicon.png
 
 ## Child Theme Support
 Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

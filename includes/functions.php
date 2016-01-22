@@ -65,7 +65,7 @@ if (!function_exists('sampression_setup')):
 		 */
 		add_theme_support( 'custom-background', array(
 			'default-color' => 'F3F7F6',
-            'default-image' => get_template_directory_uri().'/images/content-bg-rpt.gif',
+            'default-image' => '',
             'wp-head-callback' => 'sampression_custom_background_cb'
 		) );
 		

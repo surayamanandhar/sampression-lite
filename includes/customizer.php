@@ -180,7 +180,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Favicon
      */
-        $f_icon = '#';
+        $f_icon = '';
         if(get_option('opt_sam_favicons'))
             $f_icon = get_option('opt_sam_favicons');
 
@@ -198,7 +198,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Apple Touch Icon 57x57
      */
-        $a_icon57 = '#';
+        $a_icon57 = '';
         if(get_option('opt_sam_apple_icons_57'))
             $a_icon57 = get_option('opt_sam_apple_icons_57');
 
@@ -216,7 +216,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Apple Touch Icon 72x72
      */
-        $a_icon72 = '#';
+        $a_icon72 = '';
         if(get_option('opt_sam_apple_icons_72'))
             $a_icon72 = get_option('opt_sam_apple_icons_72');
 
@@ -234,7 +234,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Apple Touch Icon 114x114
      */
-        $a_icon114 = '#';
+        $a_icon114 = '';
         if(get_option('opt_sam_apple_icons_114'))
             $a_icon114 = get_option('opt_sam_apple_icons_114');
 
@@ -252,7 +252,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Apple Touch Icon 144x144
      */
-        $a_icon144 = '#';
+        $a_icon144 = '';
         if(get_option('opt_sam_apple_icons_144'))
             $a_icon144 = get_option('opt_sam_apple_icons_144');
 

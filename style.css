@@ -2028,9 +2028,12 @@ body.error404 #content {
         float: none;
         text-align: center;
     }
-
-    .sm-top:after {
-        clear: both;
+    .sm-top{
+        margin-bottom: 10px;
+    }
+    .sm-top li {
+       margin-left: 0;
+       margin-right: 8px;
     }
 
     .search-form:before, .search-form:after {

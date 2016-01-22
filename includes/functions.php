@@ -65,7 +65,7 @@ if (!function_exists('sampression_setup')):
 		 */
 		add_theme_support( 'custom-background', array(
 			'default-color' => 'F3F7F6',
-            'default-image' => '',//get_template_directory_uri().'/images/content-bg-rpt.gif',
+            'default-image' => get_template_directory_uri().'/images/content-bg-rpt.gif',
             'wp-head-callback' => 'sampression_custom_background_cb'
 		) );
 		
@@ -85,7 +85,7 @@ if (!function_exists('sampression_setup')):
 
 			// Support flexible height and width.
 			'flex-height'            => true,
-			'flex-width'             => true,
+			'flex-width'             => true
 		) ); 
 		
 		/**
@@ -166,18 +166,18 @@ function sampression_footer() {
         echo get_theme_mod('sampression_copyright_text');
     } else {
     ?>
-    <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved.</div>
-    <?php } ?>
-</div>
-<div class="alignright credit">
-	<?php
+    <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved. </div>
+    <?php } 
     if(!empty(get_theme_mod('sampression_poweredby_text'))) {
         echo get_theme_mod('sampression_poweredby_text');
     } else {
-    _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>. <?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
+    _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
     <?php
     }
     ?>
+</div>
+<div class="alignright credit">
+	 <?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
 </div>
 <?php
 }
@@ -195,8 +195,8 @@ if (!function_exists('sampression_js')) {
 	function sampression_js() {
 		// JS at the bottom for fast page loading. 
 		wp_enqueue_script('sampression-modernizer', get_template_directory_uri() . '/lib/js/modernizr.custom.min.js', '', '2.6.2', false);
-        wp_enqueue_script('jquery-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.js', array('jquery'), '', true);
-		wp_enqueue_script('sampression-script', get_template_directory_uri() . '/lib/js/scripts.js', array('jquery'), '1.1', true);
+         wp_enqueue_script('jquery-shuffle', get_template_directory_uri() . '/lib/js/jquery.shuffle.js', array('jquery'), '', true);
+        wp_enqueue_script('sampression-script', get_template_directory_uri() . '/lib/js/scripts.js', array('jquery'), '1.1', true);
         wp_enqueue_script('shuffle', get_template_directory_uri() . '/lib/js/shuffle.js', array('jquery', 'jquery-shuffle'), '', true);
 	}
 
@@ -389,8 +389,8 @@ function sampression_widget_reset() {
 		'name' => __('Bottom Widget 1', 'sampression'),
 		'description' => __('Appears on bottom of the Page - First Widget - Please insert only one widget for better appearance.', 'sampression'),
 		'id' => 'bottom-widget-1',
-		'before_title' => '<header class="widget-title">',
-		'after_title' => '</header>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
 		'after_widget' => '</section>'
 	));
@@ -399,8 +399,8 @@ function sampression_widget_reset() {
 		'name' => __('Bottom Widget 2', 'sampression'),
 		'description' => __('Appears on bottom of the Page - Second Widget - Please insert only one widget for better appearance.', 'sampression'),
 		'id' => 'bottom-widget-2',
-		'before_title' => '<header class="widget-title">',
-		'after_title' => '</header>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
 		'after_widget' => '</section>'
 	));
@@ -409,8 +409,8 @@ function sampression_widget_reset() {
 		'name' => __('Bottom Widget 3', 'sampression'),
 		'description' => __('Appears on bottom of the Page - Third Widget - Please insert only one widget for better appearance.', 'sampression'),
 		'id' => 'bottom-widget-3',
-		'before_title' => '<header class="widget-title">',
-		'after_title' => '</header>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
 		'after_widget' => '</section>'
 	));
@@ -419,8 +419,8 @@ function sampression_widget_reset() {
 		'name' => __('Inner Sidebar', 'sampression'),
 		'description' => __('Appears on right of the Interior Pages - Can use as much widgets as you wish.', 'sampression'),
 		'id' => 'right-sidebar',
-		'before_title' => '<header class="widget-title">',
-		'after_title' => '</header>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
 		'after_widget' => '</section>'
 	));
@@ -757,7 +757,7 @@ function sampression_add_meta() {
 /**
  * Add google fonts, pingback url, etc.
  */ 
-add_action( 'sampression_links', 'sampression_add_links' );
+//add_action( 'sampression_links', 'sampression_add_links' );
 
 function sampression_add_links() {
 	?>
@@ -801,60 +801,50 @@ add_action('sampression_favicon','sampression_favicon');
 add_action( 'wp_enqueue_scripts', 'sampression_enqueue_styles' );
 
 function sampression_enqueue_styles(){
-	global $wp_styles;
-    // other style sheets...
+    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700', false, false, 'screen');
+    wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', false, false, 'screen');
 	wp_enqueue_style('sampression-style', get_stylesheet_uri(), false, '1.4');
-	wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', false, false, 'screen');
+	
 }
 
 add_action('sampression_custom_header_style','sampression_custom_header_style');
 
 function sampression_custom_header_style() {
-	$text_color = get_header_textcolor();
-	// If no custom options for text are set, do nothing
-	if ( $text_color == get_theme_support( 'custom-header', 'default-text-color' ) )
-		return;
-	// Else, we have custom styles.
-	?>
-	<style type="text/css">
-		<?php	// Is the text hidden?
-			if ( ! display_header_text() ) :
-		?>
-			.site-title,
-			.site-description {
-				position: absolute !important;
-				clip: rect(1px 1px 1px 1px); // IE7
-				clip: rect(1px, 1px, 1px, 1px);
-			}
-		<?php	// If the user has set a custom color for the text, lets use that.
-			else : 
-		?>
-			.site-title a,
-			.site-description,
-            h3.post-title a,
-            h2.post-title {
-				color: #<?php echo $text_color; ?>;
-			}
-		<?php endif;
+    ?>
+    <style type="text/css">
+        <?php   // Is the text hidden?
+        if ( $text_color = get_header_textcolor() ) {
+        ?>
+            #site-title a,
+            article.post .post-title a {
+                color: #<?php echo $text_color; ?>;
+            }
+        <?php
+        }
         if(get_theme_mod('body_textcolor')) {
-            ?>
-            #post-listing article.post .entry p {
+        ?>
+            body{
                 color: <?php echo get_theme_mod('body_textcolor') ?>;
             }
-            <?php
+        <?php
         }
         if(get_theme_mod('link_color')) {
-            ?>
-            .meta a:link, .meta a:visited, .meta, .meta a, a:link, a:visited {
+        ?>
+            a:link, a:visited,
+            .meta, .meta a,
+            #top-nav ul a:link, #top-nav ul a:visited,
+            #primary-nav ul.nav-listing li a{
                 color: <?php echo get_theme_mod('link_color') ?>;
             }
-            <?php
+            #primary-nav ul.nav-listing li a span{
+                background-color: <?php echo get_theme_mod('link_color') ?>;
+            }
+        <?php
         }
         ?>
-	</style>
-	<?php
+    </style>
+    <?php
 }
-
 add_action('sampression_footer', 'sampression_enqueue_conditional_scripts');
 
 function sampression_enqueue_conditional_scripts(){

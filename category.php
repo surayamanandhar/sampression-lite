@@ -30,14 +30,14 @@ get_header(); ?>
 <div id="post-listing" class="clearfix">
   <!-- Corner Stamp: It will always remaing to the right top of the page -->
   <section class="corner-stamp post columns four item">
-  <header><h3><?php _e('Categories', 'sampression'); ?></h3></header>
+  <header><h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3></header>
   <div class="entry">
     <ul class="categories">
     	<?php wp_list_categories('title_li'); ?> 
     </ul>
   </div>
   
-  <header><h3><?php _e('Archive', 'sampression'); ?></h3></header>
+  <header><h3 class="widget-title"><?php _e('Archive', 'sampression'); ?></h3></header>
   <div class="entry">
     <ul class="categories archives">
     	<?php wp_get_archives( '' ); ?>  

@@ -25,12 +25,11 @@
 		do_action( 'sampression_favicon' );
 		// CSS
 		do_action( 'sampression_styles' );
-		// Custom header styles
-		do_action('sampression_custom_header_style');
 		// Links
 		do_action( 'sampression_links' );
-		
 		wp_head();
+    // Custom header styles
+    do_action('sampression_custom_header_style');
 	?>
 </head>
 

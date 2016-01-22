@@ -10,7 +10,7 @@ if ( !defined('ABSPATH')) exit;
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="post columns item <?php echo sampression_cat_slug(); ?> <?php if ( is_sticky() && is_home() ) { echo 'sticky corner-stamp eight'; } else { echo 'four'; } ?>" data-groups='["all", <?php $count = sampression_cat_count(); $i=1; foreach((get_the_category()) as $category) { if($i< $count) { $item = ', '; } else{ $item =''; } echo "\"".$category->slug."\"".$item; $i++; } ?>]'>
+<article id="post-<?php the_ID(); ?>" class="post four columns item <?php echo sampression_cat_slug(); ?> <?php if ( is_sticky() && is_home() ) { echo 'sticky corner-stamp'; } else { echo 'four'; } ?>" data-groups='["all", <?php $count = sampression_cat_count(); $i=1; foreach((get_the_category()) as $category) { if($i< $count) { $item = ', '; } else{ $item =''; } echo "\"".$category->slug."\"".$item; $i++; } ?>]'>
 
       <h3 class="post-title"><a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="bookmark" ><?php the_title(); ?></a></h3>
 
@@ -35,13 +35,13 @@ if ( !defined('ABSPATH')) exit;
 					sprintf( '<a href="%4$s" title="%2$s" rel="bookmark">%3$s</a>',
 						get_permalink(),
 						esc_attr( get_the_time() ),
-						get_the_date('d M Y'),
+						get_the_date('M d, Y'),
 						get_month_link( get_the_time('Y'), get_the_time('m'))
 					));
             ?>
-            <?php if ( comments_open() ) : ?>
+            <?php if ( comments_open() && get_comments_number() > 0 ) : ?>
             <span class="col count-comment genericon-comment">
-            <?php comments_popup_link(__('', 'sampression'), __('1 Comment', 'sampression'), __('% Comments', 'sampression')); ?>
+            <?php comments_popup_link(__('No comments yet', 'sampression'), __('1 Comment', 'sampression'), __('% Comments', 'sampression')); ?>
             </span>
          <?php endif; ?>
       </div>

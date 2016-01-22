@@ -10,13 +10,13 @@ if ( !defined('ABSPATH')) exit;
  * @since Sampression Lite 1.0
  */
 ?>
-<aside id="sidebar" class="clearfix" role="complementary">
+<aside id="sidebar" class="clearfix">
 	<?php
 	// Showing Popular Posts untill the user put any widget in Bottom widget 1
 	 if (!dynamic_sidebar('bottom-widget-1')) : ?>
             <section class="column one-third widget">
             
-                <header class="widget-title"><?php _e('Most Popular Posts', 'sampression'); ?></header>
+                <h3 class="widget-title"><?php _e('Most Popular Posts', 'sampression'); ?></h3>
                 <div class="widget-entry">
 				<?php $args = array(
 								'showposts' => 5,
@@ -40,7 +40,7 @@ if ( !defined('ABSPATH')) exit;
 	// Showing Latest Comments untill the user put any widget in Bottom widget 2
 	 if (!dynamic_sidebar('bottom-widget-2')) : ?>
     <section class="column one-third widget">
-    <header class="widget-title"><?php _e('Recent Comments', 'sampression'); ?></header>
+    <h3 class="widget-title"><?php _e('Recent Comments', 'sampression'); ?></h3>
     <div class="widget-entry">
     <ul class="widget-commentlist">
 	<?php

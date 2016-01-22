@@ -384,7 +384,7 @@ function sampression_customize_register( $wp_customize ) {
      **************************/
         $wp_customize->add_setting( 'body_textcolor',
             array(
-                'default' => '#444444',
+                'default' => '#333333',
                 'sanitize_callback' => 'sanitize_hex_color',
                 'transport' => 'postMessage'
             )
@@ -406,7 +406,7 @@ function sampression_customize_register( $wp_customize ) {
      **************************/
         $wp_customize->add_setting( 'link_color',
             array(
-                'default' => '#444444',
+                'default' => '#8AB7AD',
                 'sanitize_callback' => 'sanitize_hex_color',
                 'transport' => 'postMessage'
             )

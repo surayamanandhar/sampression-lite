@@ -820,7 +820,6 @@ function sampression_custom_header_style() {
             }
             #site-title a:hover,
             article.post .post-title a:hover,
-            a:hover,
             .meta a:hover,
             #top-nav ul a:link,
             .overflow-hidden.cat-listing > a:hover, .url.fn.n:hover, .col > a:hover{
@@ -853,6 +852,9 @@ function sampression_custom_header_style() {
             }
             #primary-nav ul.nav-listing li a span{
                 background-color: <?php echo get_theme_mod('link_color') ?>;
+            }
+            a:hover{
+                color: <?php echo get_theme_mod('body_textcolor') ?>;
             }
         <?php
         }

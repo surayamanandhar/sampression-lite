@@ -1764,7 +1764,6 @@ img.avatar {
 #comment-header h3, #comments-title, #comment-form-title, #reply-title {
     font-size: 20px;
     font-size: 2rem;
-    text-shadow: 1px 1px 1px #fff;
     margin-bottom: 40px;
 }
 

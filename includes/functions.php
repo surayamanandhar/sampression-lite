@@ -107,6 +107,15 @@ if (!function_exists('sampression_setup')):
 endif;
 
 /**
+ * Redirect to About Theme page after Sampression Lite activation.
+ */
+global $pagenow;
+if ( is_admin() && isset( $_GET['activated'] ) && $pagenow == 'themes.php' ) {
+    wp_redirect( admin_url( 'themes.php?page=about-sampression' ) );
+    exit;
+}
+
+/**
  * Sampression theme background image css callback
  */
 if(!function_exists( 'sampression_custom_background_cb' )):
@@ -669,32 +678,6 @@ function sampression_filter_cat_callback() {
 	endwhile;
 	wp_reset_query();
 	die();
-}
-
-/*=======================================================================
-* Get an IP of USER
-*=======================================================================*/
-
-function sampression_get_ip() {
-	if (getenv('HTTP_CLIENT_IP')) {
-		$ip = getenv('HTTP_CLIENT_IP');
-	}
-	elseif (getenv('HTTP_X_FORWARDED_FOR')) {
-		$ip = getenv('HTTP_X_FORWARDED_FOR');
-	}
-	elseif (getenv('HTTP_X_FORWARDED')) {
-		$ip = getenv('HTTP_X_FORWARDED');
-	}
-	elseif (getenv('HTTP_FORWARDED_FOR')) {
-		$ip = getenv('HTTP_FORWARDED_FOR');
-	}
-	elseif (getenv('HTTP_FORWARDED')) {
-		$ip = getenv('HTTP_FORWARDED');
-	}
-	else {
-		$ip = $_SERVER['REMOTE_ADDR'];
-	}
-	return $ip;
 }
 
 /*=======================================================================

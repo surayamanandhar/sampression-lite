@@ -649,7 +649,7 @@ function sampression_customize_controls_js() {
     wp_localize_script( 'sampression_customizer_script', 'objectL10n', array(
         
         'documentation' => __( 'Documentation', 'sampression' ),
-        'pro' => __('Upgrade to Pro', 'sampression'),
+        'pro' => __('Upgrade to PRO', 'sampression'),
         'knowledge_base' => __('Knowledge Base', 'sampression'),
         'community' => __('Community', 'sampression')
 

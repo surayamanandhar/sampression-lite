@@ -156,8 +156,12 @@ Please follow the steps below to install the theme.
 ### Version 2.0
   - Added: All options to Customizer
   - Added: About Theme pages under Appearance menu
+  - Added: Social Media Links (Tumblr, Pinterest, Linkedin, Github, Instagram, Flickr, Vimeo)
+  - Added: Color options (Body text color and Link color)
+  - Fixed: Responsive issues
   - Changed: Translation (.po and .mo files)
   - Changed: Theme description
+  - Changed: Theme tags
   - Removed: Theme Options page (Added options to Customizer)
 
 ## Child Theme Support

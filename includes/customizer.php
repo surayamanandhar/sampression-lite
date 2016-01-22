@@ -289,7 +289,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Facebook URL
      */
-    $fb_icon = '#';
+    $fb_icon = '';
     if(get_option('opt_get_facebook'))
         $fb_icon = get_option('opt_get_facebook');
 
@@ -307,7 +307,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Twitter URL
      */
-    $tw_icon = '#';
+    $tw_icon = '';
     if(get_option('opt_get_twitter'))
         $tw_icon = get_option('opt_get_twitter');
 
@@ -325,7 +325,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Youtube URL
      */
-    $yt_icon = '#';
+    $yt_icon = '';
     if(get_option('opt_get_youtube'))
         $yt_icon = get_option('opt_get_youtube');
 
@@ -343,7 +343,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Google+ URL
      */
-        $gp_icon = '#';
+        $gp_icon = '';
         if(get_option('opt_get_gplus'))
             $gp_icon = get_option('opt_get_gplus');
 
@@ -361,7 +361,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Tumblr URL
      */
-        $wp_customize->add_setting( 'sampression_socials_tumblr', array('sanitize_callback' => 'esc_url_raw','default' => '#'));
+        $wp_customize->add_setting( 'sampression_socials_tumblr', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(
             'sampression_socials_tumblr',
             array(
@@ -375,7 +375,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Pinterest URL
      */
-        $wp_customize->add_setting( 'sampression_socials_pinterest', array('sanitize_callback' => 'esc_url_raw','default' => '#'));
+        $wp_customize->add_setting( 'sampression_socials_pinterest', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(
             'sampression_socials_pinterest',
             array(
@@ -389,7 +389,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Linkedin URL
      */
-        $wp_customize->add_setting( 'sampression_socials_linkedin', array('sanitize_callback' => 'esc_url_raw','default' => '#'));
+        $wp_customize->add_setting( 'sampression_socials_linkedin', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(
             'sampression_socials_linkedin',
             array(
@@ -403,7 +403,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Github URL
      */
-        $wp_customize->add_setting( 'sampression_socials_github', array('sanitize_callback' => 'esc_url_raw','default' => '#'));
+        $wp_customize->add_setting( 'sampression_socials_github', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(
             'sampression_socials_github',
             array(
@@ -417,7 +417,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Instagram URL
      */
-        $wp_customize->add_setting( 'sampression_socials_instagram', array('sanitize_callback' => 'esc_url_raw','default' => '#'));
+        $wp_customize->add_setting( 'sampression_socials_instagram', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(
             'sampression_socials_instagram',
             array(
@@ -431,7 +431,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Flickr URL
      */
-        $wp_customize->add_setting( 'sampression_socials_flickr', array('sanitize_callback' => 'esc_url_raw','default' => '#'));
+        $wp_customize->add_setting( 'sampression_socials_flickr', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(
             'sampression_socials_flickr',
             array(
@@ -445,7 +445,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Vimeo URL
      */
-        $wp_customize->add_setting( 'sampression_socials_vimeo', array('sanitize_callback' => 'esc_url_raw','default' => '#'));
+        $wp_customize->add_setting( 'sampression_socials_vimeo', array('sanitize_callback' => 'esc_url_raw'));
         $wp_customize->add_control(
             'sampression_socials_vimeo',
             array(

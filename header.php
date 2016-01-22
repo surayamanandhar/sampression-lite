@@ -86,7 +86,7 @@
        <ul class="sm-top">
        <?php // Being Social
 	   //Facebook
-       $fb_icon = '#';
+       $fb_icon = '';
        if(get_option('opt_get_facebook'))
            $fb_icon = get_option('opt_get_facebook');
 
@@ -94,7 +94,7 @@
           <li class="sm-top-fb"><a class="genericon-facebook-alt" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_facebook', $fb_icon )); ?>" target="_blank"></a></li>
        <?php }
 		// Twitter
-       $tw_icon = '#';
+       $tw_icon = '';
        if(get_option('opt_get_twitter'))
            $tw_icon = get_option('opt_get_twitter');
 
@@ -103,7 +103,7 @@
           <li class="sm-top-tw"><a class="genericon-twitter" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_twitter', $tw_icon ) ); ?>" target="_blank"></a></li>
          <?php }
 		// Google plus
-       $gp_icon = '#';
+       $gp_icon = '';
        if(get_option('opt_get_gplus'))
            $gp_icon = get_option('opt_get_gplus');
 
@@ -112,7 +112,7 @@
           <li class="sm-top-gplus"><a class="genericon-googleplus" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_googleplus', $gp_icon ) ); ?>" target="_blank"></a></li>
           <?php } 
 		// Youtube
-       $yt_icon = '#';
+       $yt_icon = '';
        if(get_option('opt_get_youtube'))
            $yt_icon = get_option('opt_get_youtube');
 

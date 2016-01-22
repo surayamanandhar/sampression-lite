@@ -1417,6 +1417,27 @@ img.logo-img {
 .sm-top li.sm-top-gplus a {
     color: #d73d32;
 }
+.sm-top li.sm-top-tumblr a {
+    color: #2B4661;
+}
+.sm-top li.sm-top-linkedin a {
+    color: #006699;
+}
+.sm-top li.sm-top-pinterest a {
+    color: #DF0000;
+}
+.sm-top li.sm-top-github a {
+    color: #171515;
+}
+.sm-top li.sm-top-instagram a {
+    color: #2C6287;
+}
+.sm-top li.sm-top-flickr a {
+    color: #FF0084;
+}
+.sm-top li.sm-top-vimeo a {
+    color: #1AB7EA;
+}
 
 .sm-top li.sm-top-fb a:hover,
 .sm-top li.sm-top-gplus a:hover,

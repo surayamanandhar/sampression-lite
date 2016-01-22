@@ -81,11 +81,7 @@
 	  </div> 
       <!-- #top-nav-mobile-->
       <div id="interaction-sec" class="clearfix <?php echo getnoofclass(); ?>">
-        <?php
-        if( get_theme_mod( 'sampression_remove_search' ) != 1 ) {
-            get_search_form();
-        }
-        ?>
+       
      
        <ul class="sm-top">
        <?php // Being Social
@@ -126,6 +122,11 @@
           <?php } ?> 
        </ul>
         <!-- .sm-top --> 
+         <?php
+        if( get_theme_mod( 'sampression_remove_search' ) != 1 ) {
+            get_search_form();
+        }
+        ?>
       </div>
       <!-- #interaction-sec -->
     </div>

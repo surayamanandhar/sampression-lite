@@ -846,6 +846,14 @@ function sampression_custom_header_style() {
             .cats:before, .count-comment:before{
                 color: <?php echo get_theme_mod('link_color') ?>;
             }
+            .button, button, input[type="submit"], 
+            input[type="reset"], input[type="button"]{
+                background-color: <?php echo get_theme_mod('link_color') ?>;
+            }
+            .button:hover, button:hover, input[type="submit"]:hover, 
+            input[type="reset"]:hover, input[type="button"]:hover{
+                background-color: <?php echo get_theme_mod('body_textcolor') ?>;
+            }
             #primary-nav ul.nav-listing li a span{
                 background-color: <?php echo get_theme_mod('link_color') ?>;
             }

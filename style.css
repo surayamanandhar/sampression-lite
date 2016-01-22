@@ -846,10 +846,6 @@ or wrap each row of columns in a <div class="row"> */
  * 9.0 - Widgets
  */
 
-.sidebar-right {
-    padding-top: 50px;
-}
-
 .widget {
     margin-bottom: 20px;
 }
@@ -1889,6 +1885,7 @@ img.avatar {
     right: 0;
     top: 0;
     width: 30px;
+    margin-right: -50px;
 }
 
 .btn-top.fixed {

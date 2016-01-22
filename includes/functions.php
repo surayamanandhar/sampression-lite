@@ -820,6 +820,7 @@ function sampression_custom_header_style() {
             }
             #site-title a:hover,
             article.post .post-title a:hover,
+            a:hover,
             .meta a:hover,
             #top-nav ul a:link,
             .overflow-hidden.cat-listing > a:hover, .url.fn.n:hover, .col > a:hover{

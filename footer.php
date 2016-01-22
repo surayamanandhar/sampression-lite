@@ -17,15 +17,12 @@
 </div><!-- .footer-widget -->
 <footer id="footer">
 	<div class="container">
-		<div class="columns fourteen">
+		<div class="columns sixteen">
             <?php do_action( 'sampression_credits' ); ?>
-		</div>
-
-		<div class="columns two footer-right">
-			<div id="btn-top-wrapper">
+            <div id="btn-top-wrapper">
 			<a href="javascript:pageScroll('.top');" class="btn-top"></a>
 			</div>
-		</div><!--/footer-right-->
+		</div>
 
 	</div><!--.container-->
 </footer><!--#footer-->

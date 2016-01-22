@@ -119,7 +119,50 @@
 		if( !empty(get_theme_mod( 'sampression_socials_youtube', $yt_icon )) ) {
 	    ?>
           <li class="sm-top-youtube"><a class="genericon-youtube" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_youtube', $yt_icon ) ); ?>" target="_blank"></a></li>
-          <?php } ?> 
+          <?php }
+        // Tumblr
+        if( !empty( get_theme_mod( 'sampression_socials_tumblr' ) ) ) {
+        ?>
+          <li class="sm-top-tumblr"><a class="genericon-tumblr" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_tumblr' ) ); ?>" target="_blank"></a></li>
+        <?php
+        }
+        // Pinterest
+        if( !empty( get_theme_mod( 'sampression_socials_pinterest' ) ) ) {
+        ?>
+          <li class="sm-top-pinterest"><a class="genericon-pinterest" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_pinterest' ) ); ?>" target="_blank"></a></li>
+        <?php
+        }
+        // Linkedin
+        if( !empty( get_theme_mod( 'sampression_socials_linkedin' ) ) ) {
+        ?>
+          <li class="sm-top-linkedin"><a class="genericon-linkedin" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_linkedin' ) ); ?>" target="_blank"></a></li>
+        <?php
+        }
+        // Github
+        if( !empty( get_theme_mod( 'sampression_socials_github' ) ) ) {
+        ?>
+          <li class="sm-top-github"><a class="genericon-github" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_github' ) ); ?>" target="_blank"></a></li>
+        <?php
+        }
+        // Instagram
+        if( !empty( get_theme_mod( 'sampression_socials_instagram' ) ) ) {
+        ?>
+          <li class="sm-top-instagram"><a class="genericon-instagram" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_instagram' ) ); ?>" target="_blank"></a></li>
+        <?php
+        }
+        // Flickr
+        if( !empty( get_theme_mod( 'sampression_socials_flickr' ) ) ) {
+        ?>
+          <li class="sm-top-flickr"><a class="genericon-flickr" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_flickr' ) ); ?>" target="_blank"></a></li>
+        <?php
+        }
+        // Vimeo
+        if( !empty( get_theme_mod( 'sampression_socials_vimeo' ) ) ) {
+        ?>
+          <li class="sm-top-vimeo"><a class="genericon-vimeo" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_vimeo' ) ); ?>" target="_blank"></a></li>
+        <?php
+        }
+        ?> 
        </ul>
         <!-- .sm-top --> 
          <?php

@@ -1,18 +1,19 @@
 # [Sampression Lite](http://www.sampression.com/sampression-lite/)
-Not just another responsive theme
+Pinterest Style WordPress Theme
 
 ##Download Link:
 Sampression lite is available to download on http://wordpress.org/themes/sampression-lite
 
 ## Theme Description
-The first theme for Sampression is clean, lightweight and fully responsive. Its not just another responsive theme - its a unique responsive theme with an attractive masonry blog layout. On the back-end it has a user friendly theme options panel which allows you to easily customize your blog’s header, menus, widgets, background color and image. Upfront its a retina ready, four-column, state-of-the-art blog that will help you reach out to your target audience and their various internet-enabled devices.
+Sampression Lite is a free, Pinterest inspired responsive WordPress theme with an attractive masonry blog layout. The theme has a clean and lightweight design. It boasts of user-friendly customizing options making it very easy to customize your blog’s header, menus, widgets, background color, and images. The theme is also SEO friendly and translation ready, allowing you the freedom of expressing in your native language.
 
 
 ## Features 
-Responsive design, Theme Options, Custom Logo, Fav Icons, Apple Touch Icons, Custom Widgets, Custom Menu, shuffle jQuery, Sticky Post, W3C validated, supports social media, supports webmaster tools.
+Responsive Design, Cross Browser Compatibility, Custom Code, Custom Logo & Favicon, Theme Options Powered by WordPress’ Customizer, Options to fine tune the theme to your exacting requirement, Easy Customization, Easy Installation, Retina Ready, Same text as used for Sampression Pro, Search Engine Optimized, Translation Ready, RTL Language Support, Social Media
+
 
 ## Tags
-white, orange, green, one-column, two-columns, flexible-width, custom-menu, featured-image-header, featured-images, post-formats, sticky-post, theme-options, threaded-comments, right-sidebar
+orange, green, mint, white, light, one column, two columns, right sidebar, fixed layout, responsive layout, custom background, custom colors, custom header, custom menu, featured image header, featured images, post formats, sticky post, theme options, threaded comments, translation ready, rtl language support
 
 ## Installation 
 Please follow the steps below to install the theme.

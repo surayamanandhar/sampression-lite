@@ -1563,7 +1563,8 @@ body.single article.post .meta .col {
 }
 
 body.single article.post .meta > div,
-body.single article.post .meta > time {
+body.single article.post .meta > time,
+ {
     margin-bottom: 5px;
 }
 
@@ -1702,15 +1703,17 @@ ol.commentlist ul.children {
     margin-left: 30px;
     list-style: none;
     margin-top: 20px;
+    margin-bottom: 0;
 }
 
 ol.commentlist ul.children ul ul ul ul {
     margin-left: 0;
 }
 
-ol.commentlist li.comment {
+.commentlist article {
     margin-bottom: 20px;
 }
+ol.commentlist li.comment,
 ol.commentlist .children li.comment{
     margin-bottom: 0;
 }
@@ -1776,7 +1779,6 @@ img.avatar {
     border-radius: 3px;
     background-color: #fff;
     position: relative;
-    box-shadow: -1px -1px 1px #A6BBB7;
 }
 
 .widget-commentlist img {

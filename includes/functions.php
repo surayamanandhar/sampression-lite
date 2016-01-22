@@ -816,11 +816,14 @@ function sampression_custom_header_style() {
         if ( $text_color = get_header_textcolor() ) {
         ?>
             #site-title a,
-            article.post .post-title a {
+            article.post .post-title a{
                 color: #<?php echo $text_color; ?>;
             }
             #site-title a:hover,
-            article.post .post-title a:hover {
+            article.post .post-title a:hover,
+            .meta a:hover,
+            #top-nav ul a:link,
+            .overflow-hidden.cat-listing > a:hover, .url.fn.n:hover, .col > a:hover{
                 color: <?php echo get_theme_mod('body_textcolor') ?>;
             }
         <?php
@@ -837,7 +840,10 @@ function sampression_custom_header_style() {
             a:link, a:visited,
             .meta, .meta a,
             #top-nav ul a:link, #top-nav ul a:visited,
-            #primary-nav ul.nav-listing li a{
+            #primary-nav ul.nav-listing li a,
+            .post-author:before, .posted-on:before, 
+            .edit:before, .cats:before, .tags:before, 
+            .cats:before, .count-comment:before{
                 color: <?php echo get_theme_mod('link_color') ?>;
             }
             #primary-nav ul.nav-listing li a span{

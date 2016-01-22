@@ -202,33 +202,6 @@ if (!function_exists('sampression_js')) {
 
 }
 
-/**
- * Widget Scripts
- * @since version 1.6
- */
-
-add_action('customize_controls_enqueue_scripts', 'sampression_widget_scripts');
-if( !function_exists( 'sampression_widget_scripts' ) ):
-
-    function sampression_widget_scripts() {
-        wp_enqueue_media();
-        wp_enqueue_script('sampression_widget_script', get_template_directory_uri() . '/lib/js/widget.js', false, '1.0', true);
-    }
-
-endif;
-
-add_action( 'admin_enqueue_scripts', 'sampression_admin_widget_scripts');
-if( !function_exists( 'sampression_admin_widget_scripts' ) ):
-
-    function sampression_admin_widget_scripts($hook) {
-        if($hook === 'widgets.php') {
-            wp_enqueue_media();
-            wp_enqueue_script('sampression_widget_script', get_template_directory_uri() . '/lib/js/widget.js', false, '1.0', true);
-        }
-    }
-
-endif;
-
 /*=======================================================================
  * Comment Reply
  *=======================================================================*/

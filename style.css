@@ -1952,7 +1952,16 @@ body.error404 #content {
 #page-not-found-message h3 a {
     text-decoration: none;
 }
-
+form.post-password-form input[type="submit"] {
+    margin-left: 10px;
+    padding: 7px 12px;
+}
+body.single .entry.clearfix form.post-password-form input[type="submit"]{
+    margin-top: 19px;
+}
+.entry-caption{
+    margin-top: 10px;
+}
 /**
  * 13.0 - Media Queries
  */
@@ -2216,8 +2225,10 @@ body.error404 #content {
     }
 
     #btn-top-wrapper {
-        right: inherit;
-        left: 0;
+        right: 0;
+        margin-right: 0;
+        bottom: 0;
+        top: auto;
     }
 
     input[type="text"], input[type="email"], textarea {

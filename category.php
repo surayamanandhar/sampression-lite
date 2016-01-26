@@ -72,8 +72,5 @@ get_header(); ?>
 
 </section>
 <!-- #content -->
-<?php
-// Getting Bottom Sidebar
- get_sidebar(); ?>
 
 <?php get_footer(); ?>

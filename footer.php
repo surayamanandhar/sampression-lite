@@ -10,11 +10,9 @@
  </div>
 </div>
 <!-- #content-wrapper -->
-<div class="footer-widget">
-   <div class="container">
+
    <?php get_sidebar(); ?>
-   </div>
-</div><!-- .footer-widget -->
+
 <footer id="footer">
 	<div class="container">
 		<div class="columns sixteen">

@@ -47,11 +47,6 @@ get_header(); ?>
                 get_the_author()
             ); ?>
                 
-                <div class="cats genericon-category"><?php printf(__('%s', 'sampression'), get_the_category_list(', ')); ?></div>
-                
-                <?php if(has_tag()) {?>
-                        <div class="tags genericon-tag"><?php the_tags(' ', ', '); ?> </div>
-                <?php } ?>
             
                 <?php if(is_user_logged_in()){ ?>
               

@@ -18,7 +18,7 @@ function sampression_customize_register( $wp_customize ) {
         protected function render_content() {
             switch( $this->type ) {
                 case 'pro-version':
-                    echo __('The <a href="http://www.demo.sampression.com/sampression-pro/" target="_blank">PRO version</a> offers various additional features including:<ul class="layouts-features"><li>Multiple layouts</li><li>Child theme compatibility</li><li>Google fonts support</li><li>Icons Mind icon set</li><li>Unlimited color</li><li>Premium customer support</li><li>Social media integration</li><li>Search engine friendly</li></ul>', 'sampression');
+                    echo __('The <a href="http://www.demo.sampression.com/sampression-pro/" target="_blank">PRO version</a> offers various additional features including:<ul class="layouts-features"><li>Multiple layouts</li><li>Google fonts support</li><li>Icons Mind icon set</li><li>Unlimited color</li><li>Premium customer support</li></ul>', 'sampression');
                     echo "<style>ul.layouts-features{ list-style: initial; padding-top: 10px; }ul.layouts-features li{ margin-left: 30px; }</style>";
                     break;
                 case 'description' :
@@ -48,6 +48,97 @@ function sampression_customize_register( $wp_customize ) {
     $wp_customize->remove_section('background_image');
 
     /*********************************************************************
+     * Site Identity - Section
+     *********************************************************************/
+
+    /*
+     * Logo Setting
+     */
+        $wp_customize->add_setting(
+            'sampression_logo', array('sanitize_callback' => 'esc_url_raw', 'default' => get_option('opt_sam_logo')));
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+                'sam_theme_logo',
+                array(
+                    'label'    => __( 'Logo', 'sampression' ),
+                    'section'  => 'title_tagline',
+                    'settings' => 'sampression_logo',
+                    'priority'    => 1,
+                    'description' => 'We recommend logo sizes within 220px x 120px.'
+                )
+            )
+        );
+
+    /*
+     * Remove Logo Setting
+     */
+        $wp_customize->add_setting( 'sampression_remove_logo', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_remove_logo',
+                array(
+                    'type' => 'checkbox',
+                    'label' => __('Remove Logo?', 'sampression'),
+                    'section' => 'title_tagline',
+                    'priority'    => 2,
+                )
+        );
+
+    /*
+     * Remove tagline Setting
+     */
+        $wp_customize->add_setting( 'sampression_remove_tagline', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_remove_tagline',
+                array(
+                    'type' => 'checkbox',
+                    'label' => __('Remove Tagline?', 'sampression'),
+                    'section' => 'title_tagline',
+                    'priority'    => 3,
+                )
+        );
+
+    /*
+     * Remove search box Setting
+     */
+        $wp_customize->add_setting( 'sampression_remove_search', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_remove_search',
+                array(
+                    'type' => 'checkbox',
+                    'label' => __('Remove Search Box?', 'sampression'),
+                    'section' => 'title_tagline',
+                    'priority'    => 20,
+                )
+        );
+
+    /*
+     * Copyright text Setting
+     */
+        $wp_customize->add_setting( 'sampression_copyright_text', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_copyright_text',
+                array(
+                    'label' => __('Copyright Text', 'sampression'),
+                    'section' => 'title_tagline',
+                    'priority'    => 21,
+                )
+        );
+
+    /*
+     * Powered by text Setting
+     */
+        $wp_customize->add_setting( 'sampression_poweredby_text', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_poweredby_text',
+                array(
+                    'label' => __('Powered by Text', 'sampression'),
+                    'section' => 'title_tagline',
+                    'priority'    => 22,
+                )
+        );
+
+    /*********************************************************************
      * Layout, Typography and Advance sections
      *********************************************************************/
     
@@ -55,7 +146,7 @@ function sampression_customize_register( $wp_customize ) {
         'sampression_layout_section',
         array(
             'title' => __( 'Layout, Typography & Blog Options', 'sampression' ),
-            'priority' => 30,
+            'priority' => 35,
             'theme_supports' => '',
             'capability' => 'edit_theme_options',
         )
@@ -81,7 +172,7 @@ function sampression_customize_register( $wp_customize ) {
      *********************************************************************/
 
     $wp_customize->add_panel( 'sampression_general_panel', array(
-        'priority' => 35,
+        'priority' => 30,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
         'title' => __( 'General Settings', 'sampression' )
@@ -90,84 +181,11 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * General Section
      **************************/
-    $wp_customize->add_section( 'sampression_general_section' , array(
-        'title' => __( 'General', 'sampression' ),
-        'priority' => 1,
-        'panel' => 'sampression_general_panel'
-    ));
-
-    /*
-     * Logo Setting
-     */
-        $wp_customize->add_setting(
-            'sampression_logo', array('sanitize_callback' => 'esc_url_raw', 'default' => get_option('opt_sam_logo')));
-        $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-                $wp_customize,
-                'sam_theme_logo',
-                array(
-                    'label'    => __( 'Logo', 'sampression' ),
-                    'section'  => 'sampression_general_section',
-                    'settings' => 'sampression_logo',
-                    'priority'    => 1,
-                    'description' => 'We recommend logo sizes within 220px x 120px.'
-                )
-            )
-        );
-
-    /*
-     * Remove Logo Setting
-     */
-        $wp_customize->add_setting( 'sampression_remove_logo', array('sanitize_callback' => 'sampression_sanitize_text'));
-        $wp_customize->add_control(
-                'sampression_remove_logo',
-                array(
-                    'type' => 'checkbox',
-                    'label' => __('Remove Logo?', 'sampression'),
-                    'section' => 'sampression_general_section',
-                    'priority'    => 2,
-                )
-        );
-
-    /*
-     * Remove search box Setting
-     */
-        $wp_customize->add_setting( 'sampression_remove_search', array('sanitize_callback' => 'sampression_sanitize_text'));
-        $wp_customize->add_control(
-                'sampression_remove_search',
-                array(
-                    'type' => 'checkbox',
-                    'label' => __('Remove Search Box?', 'sampression'),
-                    'section' => 'sampression_general_section',
-                    'priority'    => 3,
-                )
-        );
-
-    /*
-     * Copyright text Setting
-     */
-        $wp_customize->add_setting( 'sampression_copyright_text', array('sanitize_callback' => 'sampression_sanitize_text'));
-        $wp_customize->add_control(
-                'sampression_copyright_text',
-                array(
-                    'label' => __('Copyright Text', 'sampression'),
-                    'section' => 'sampression_general_section',
-                    'priority'    => 4,
-                )
-        );
-
-    /*
-     * Powered by text Setting
-     */
-        $wp_customize->add_setting( 'sampression_poweredby_text', array('sanitize_callback' => 'sampression_sanitize_text'));
-        $wp_customize->add_control(
-                'sampression_poweredby_text',
-                array(
-                    'label' => __('Powered by Text', 'sampression'),
-                    'section' => 'sampression_general_section',
-                    'priority'    => 5,
-                )
-        );
+    // $wp_customize->add_section( 'sampression_general_section' , array(
+    //     'title' => __( 'General', 'sampression' ),
+    //     'priority' => 1,
+    //     'panel' => 'sampression_general_panel'
+    // ));
 
     /**
      * Header Image Section
@@ -175,7 +193,7 @@ function sampression_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'header_image', array(
         'title'          => __( 'Header Image', 'sampression' ),
         'theme_supports' => 'custom-header',
-        'priority'       => 2,
+        'priority'       => 1,
         'panel' => 'sampression_general_panel'
     ) );
 
@@ -184,7 +202,7 @@ function sampression_customize_register( $wp_customize ) {
      **************************/
     $wp_customize->add_section( 'sampression_social_section' , array(
         'title' => __( 'Social Media Links', 'sampression' ),
-        'priority' => 3,
+        'priority' => 2,
         'panel' => 'sampression_general_panel'
     ));
 
@@ -358,25 +376,14 @@ function sampression_customize_register( $wp_customize ) {
             )
         );
 
-    /*********************************************************************
-     * Advance panel
-     *********************************************************************/
-
-    $wp_customize->add_panel( 'sampression_advance_panel', array(
-        'priority' => 40,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __( 'Advance Settings', 'sampression' )
-    ) );
-
     /**
      * Colors Section
      **************************/
     $wp_customize->add_section( 'colors', array(
         'title'          => __( 'Colors', 'sampression' ),
         'theme_supports' => 'custom-background',
-        'priority'       => 1,
-        'panel' => 'sampression_advance_panel'
+        'priority'       => 3,
+        'panel' => 'sampression_general_panel'
     ) );
     
     /**
@@ -452,7 +459,7 @@ function sampression_customize_register( $wp_customize ) {
         'title'          => __( 'Background Image', 'sampression' ),
         'theme_supports' => 'custom-background',
         'priority'       => 2,
-        'panel' => 'sampression_advance_panel'
+        'panel' => 'sampression_general_panel'
     ) );
     /*
      * Background Image Cover
@@ -466,7 +473,7 @@ function sampression_customize_register( $wp_customize ) {
                 'section'  => 'background_image',
                 'settings' => 'sampression_background_cover',
             )
-        );
+        );    
     
     /**
      * Custom code Section
@@ -474,7 +481,7 @@ function sampression_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'sampression_custom_code_section' , array(
         'title' => __( 'Custom Code', 'sampression' ),
         'priority' => 3,
-        'panel' => 'sampression_advance_panel'
+        'panel' => 'sampression_general_panel'
     ));
 
     /*

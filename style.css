@@ -1089,7 +1089,7 @@ a#logo-area:link {
 img.logo-img {
     float: left;
     display: inline;
-    margin: 13px 10px 0 0;
+    margin: 13px 10px 8px 0;
 }
 
 .logo-txt {

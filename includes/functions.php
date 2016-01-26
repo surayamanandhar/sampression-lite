@@ -617,7 +617,9 @@ function sampression_show_logo() {
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( ucwords(get_bloginfo( 'name', 'display' )) ); ?>" rel="home" id="logo-area">
 			<img class="logo-img" src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>">
 		</a>
+        <?php if(get_theme_mod('sampression_remove_tagline') != 1) { ?>
         <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
+        <?php } ?>
     <?php
 	}
 }

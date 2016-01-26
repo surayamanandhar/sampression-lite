@@ -50,7 +50,9 @@
 			  <?php bloginfo( 'name' ); ?>
 			  </a>
 			  </h1>
+        <?php if(get_theme_mod('sampression_remove_tagline') != 1) { ?>
 			  <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
+        <?php } ?>
 			</div>
         <?php } ?>
     </div>

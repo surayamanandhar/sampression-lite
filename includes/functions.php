@@ -85,9 +85,10 @@ if (!function_exists('sampression_setup')):
 
 			// Support flexible height and width.
 			'flex-height'            => true,
-			'flex-width'             => true
+			'flex-width'             => true,
+            'header-text' => false
 		) ); 
-		
+		//define( 'NO_HEADER_TEXT', true );
 		/**
 		 * remove wordpress version from header 
 		 */
@@ -553,13 +554,13 @@ endif; // ends check for sampression_comment()
  
 function sampression_favicon() {
 
-	//apple touch icon 16x16
+	//favicon 16x16
 	if(!empty(get_theme_mod('sampression_favicon', get_option('opt_sam_favicons')))) {
-		if(get_option('opt_sam_favicons')) { 
+		//if(get_option('opt_sam_favicons')) { 
 		?>
 			<link rel="shortcut icon" href="<?php echo get_theme_mod('sampression_favicon', get_option('opt_sam_favicons')); ?>">
 		<?php
-		}
+		//}
 	}
 	
 	//apple touch icon 57x57
@@ -611,6 +612,7 @@ function sampression_show_logo() {
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( ucwords(get_bloginfo( 'name', 'display' )) ); ?>" rel="home" id="logo-area">
 			<img class="logo-img" src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>">
 		</a>
+        <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
     <?php
 	}
 }
@@ -796,7 +798,7 @@ function sampression_custom_header_style() {
     ?>
     <style type="text/css">
         <?php   // Is the text hidden?
-        if ( $text_color = get_header_textcolor() ) {
+        if ( $text_color = get_theme_mod('body_textcolor') ) {
         ?>
             #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title{
                 color: #<?php echo $text_color; ?>;

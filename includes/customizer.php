@@ -18,7 +18,7 @@ function sampression_customize_register( $wp_customize ) {
         protected function render_content() {
             switch( $this->type ) {
                 case 'pro-version':
-                    echo __('Please check <a href="http://www.demo.sampression.com/sampression-pro/">Pro Version</a> for full control over the frontpage Layout, Typography & Blog Options.', 'sampression');
+                    echo __('Please check <a href="http://www.demo.sampression.com/sampression-pro/">PRO Version</a> for full control over the frontpage Layout, Typography & Blog Options.', 'sampression');
                     break;
                 case 'description' :
                     echo '<p class="description">' . $this->description . '</p>';
@@ -169,111 +169,12 @@ function sampression_customize_register( $wp_customize ) {
         );
 
     /**
-     * Favicon Section
-     **************************/
-    $wp_customize->add_section( 'sampression_favicon_section' , array(
-        'title' => __( 'Favicon', 'sampression' ),
-        'priority' => 2,
-        'panel' => 'sampression_general_panel'
-    ));
-
-    /**
-     * Favicon
-     */
-        $f_icon = '';
-        if(get_option('opt_sam_favicons'))
-            $f_icon = get_option('opt_sam_favicons');
-
-        $wp_customize->add_setting( 'sampression_favicon', array('sanitize_callback' => 'esc_url_raw','default' => $f_icon));
-        $wp_customize->add_control(
-            'sampression_favicon',
-            array(
-                'label'    => __( 'Favicon', 'sampression' ),
-                'section'  => 'sampression_favicon_section',
-                'settings' => 'sampression_favicon',
-                'priority'    => 1,
-            )
-        );
-
-    /**
-     * Apple Touch Icon 57x57
-     */
-        $a_icon57 = '';
-        if(get_option('opt_sam_apple_icons_57'))
-            $a_icon57 = get_option('opt_sam_apple_icons_57');
-
-        $wp_customize->add_setting( 'sampression_appletouch_57', array('sanitize_callback' => 'esc_url_raw','default' => $a_icon57));
-        $wp_customize->add_control(
-            'sampression_appletouch_57',
-            array(
-                'label'    => __( 'Apple Touch Icon 57x57', 'sampression' ),
-                'section'  => 'sampression_favicon_section',
-                'settings' => 'sampression_appletouch_57',
-                'priority'    => 2,
-            )
-        );
-
-    /**
-     * Apple Touch Icon 72x72
-     */
-        $a_icon72 = '';
-        if(get_option('opt_sam_apple_icons_72'))
-            $a_icon72 = get_option('opt_sam_apple_icons_72');
-
-        $wp_customize->add_setting( 'sampression_appletouch_72', array('sanitize_callback' => 'esc_url_raw','default' => $a_icon72));
-        $wp_customize->add_control(
-            'sampression_appletouch_72',
-            array(
-                'label'    => __( 'Apple Touch Icon 72x72', 'sampression' ),
-                'section'  => 'sampression_favicon_section',
-                'settings' => 'sampression_appletouch_72',
-                'priority'    => 3,
-            )
-        );
-
-    /**
-     * Apple Touch Icon 114x114
-     */
-        $a_icon114 = '';
-        if(get_option('opt_sam_apple_icons_114'))
-            $a_icon114 = get_option('opt_sam_apple_icons_114');
-
-        $wp_customize->add_setting( 'sampression_appletouch_114', array('sanitize_callback' => 'esc_url_raw','default' => $a_icon114));
-        $wp_customize->add_control(
-            'sampression_appletouch_114',
-            array(
-                'label'    => __( 'Apple Touch Icon 114x114', 'sampression' ),
-                'section'  => 'sampression_favicon_section',
-                'settings' => 'sampression_appletouch_114',
-                'priority'    => 4,
-            )
-        );
-
-    /**
-     * Apple Touch Icon 144x144
-     */
-        $a_icon144 = '';
-        if(get_option('opt_sam_apple_icons_144'))
-            $a_icon144 = get_option('opt_sam_apple_icons_144');
-
-        $wp_customize->add_setting( 'sampression_appletouch_144', array('sanitize_callback' => 'esc_url_raw','default' => $a_icon144));
-        $wp_customize->add_control(
-            'sampression_appletouch_144',
-            array(
-                'label'    => __( 'Apple Touch Icon 144x144', 'sampression' ),
-                'section'  => 'sampression_favicon_section',
-                'settings' => 'sampression_appletouch_144',
-                'priority'    => 5,
-            )
-        );
-
-    /**
      * Header Image Section
      **************************/
     $wp_customize->add_section( 'header_image', array(
         'title'          => __( 'Header Image', 'sampression' ),
         'theme_supports' => 'custom-header',
-        'priority'       => 3,
+        'priority'       => 2,
         'panel' => 'sampression_general_panel'
     ) );
 
@@ -282,7 +183,7 @@ function sampression_customize_register( $wp_customize ) {
      **************************/
     $wp_customize->add_section( 'sampression_social_section' , array(
         'title' => __( 'Social Media Links', 'sampression' ),
-        'priority' => 4,
+        'priority' => 3,
         'panel' => 'sampression_general_panel'
     ));
 
@@ -476,7 +377,29 @@ function sampression_customize_register( $wp_customize ) {
         'priority'       => 1,
         'panel' => 'sampression_advance_panel'
     ) );
-    //background_image
+    
+    /**
+     * Header/Title text color setting
+     **************************/
+        $wp_customize->add_setting( 'header_textcolor',
+            array(
+                'default' => '#FE6E41',
+                'sanitize_callback' => 'sanitize_hex_color',
+                'transport' => 'postMessage'
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'header_textcolor',
+                array(
+                    'label' => 'Header/Title Text Color',
+                    'section' => 'colors',
+                    'settings' => 'header_textcolor'
+                )
+            )
+        );
+
     /**
      * Body text color setting
      **************************/

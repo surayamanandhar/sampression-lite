@@ -849,7 +849,9 @@ or wrap each row of columns in a <div class="row"> */
 .widget {
     margin-bottom: 20px;
 }
-
+.footer-widget .widget:nth-child(3n+1){
+       clear: left;
+    }
 .sidebar-right .widget .widget-title,
 .corner-stamp .widget-title{
     margin-bottom: 15px;
@@ -1962,6 +1964,7 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
 .entry-caption{
     margin-top: 10px;
 }
+
 /**
  * 13.0 - Media Queries
  */
@@ -2182,6 +2185,7 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
     #sidebar .widget{
         margin-bottom: 20px;
     }
+    
     .sidebar-right .search-form input.search-field {
         width: 100%;
     }

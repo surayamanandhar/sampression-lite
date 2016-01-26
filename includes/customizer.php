@@ -18,7 +18,8 @@ function sampression_customize_register( $wp_customize ) {
         protected function render_content() {
             switch( $this->type ) {
                 case 'pro-version':
-                    echo __('Please check <a href="http://www.demo.sampression.com/sampression-pro/">PRO Version</a> for full control over the frontpage Layout, Typography & Blog Options.', 'sampression');
+                    echo __('The <a href="http://www.demo.sampression.com/sampression-pro/" target="_blank">PRO version</a> offers various additional features including:<ul class="layouts-features"><li>Multiple layouts</li><li>Child theme compatibility</li><li>Google fonts support</li><li>Icons Mind icon set</li><li>Unlimited color</li><li>Premium customer support</li><li>Social media integration</li><li>Search engine friendly</li></ul>', 'sampression');
+                    echo "<style>ul.layouts-features{ list-style: initial; padding-top: 10px; }ul.layouts-features li{ margin-left: 15px; }</style>";
                     break;
                 case 'description' :
                     echo '<p class="description">' . $this->description . '</p>';
@@ -136,7 +137,7 @@ function sampression_customize_register( $wp_customize ) {
                 'sampression_remove_search',
                 array(
                     'type' => 'checkbox',
-                    'label' => __('Remove search box?', 'sampression'),
+                    'label' => __('Remove Search Box?', 'sampression'),
                     'section' => 'sampression_general_section',
                     'priority'    => 3,
                 )

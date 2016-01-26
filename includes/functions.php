@@ -153,8 +153,13 @@ if(!function_exists( 'sampression_custom_background_cb' )):
                 $attachment = 'scroll';
      
             $attachment = " background-attachment: $attachment;";
+
+            $cover = '';
+            if(get_theme_mod( 'sampression_background_cover' )) {
+                $cover = ' background-size: cover;';
+            }
      
-            $style .= $image . $repeat . $position . $attachment;
+            $style .= $image . $repeat . $position . $attachment . $cover;
         }
     ?>
     <style type="text/css">
@@ -797,7 +802,7 @@ add_action('sampression_custom_header_style','sampression_custom_header_style');
 function sampression_custom_header_style() {
     ?>
     <style type="text/css">
-        <?php   // Is the text hidden?
+        <?php
         if ( $text_color = get_theme_mod('title_textcolor') ) {
         ?>
             #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title{

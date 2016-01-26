@@ -454,6 +454,19 @@ function sampression_customize_register( $wp_customize ) {
         'priority'       => 2,
         'panel' => 'sampression_advance_panel'
     ) );
+    /*
+     * Background Image Cover
+     */
+        $wp_customize->add_setting( 'sampression_background_cover', array('transport' => 'postMessage') );
+        $wp_customize->add_control(
+            'sampression_background_cover',
+            array(
+                'type' => 'checkbox',
+                'label'    => __( 'Use Background as Cover', 'sampression' ),
+                'section'  => 'background_image',
+                'settings' => 'sampression_background_cover',
+            )
+        );
     
     /**
      * Custom code Section

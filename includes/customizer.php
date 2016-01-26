@@ -19,7 +19,7 @@ function sampression_customize_register( $wp_customize ) {
             switch( $this->type ) {
                 case 'pro-version':
                     echo __('The <a href="http://www.demo.sampression.com/sampression-pro/" target="_blank">PRO version</a> offers various additional features including:<ul class="layouts-features"><li>Multiple layouts</li><li>Child theme compatibility</li><li>Google fonts support</li><li>Icons Mind icon set</li><li>Unlimited color</li><li>Premium customer support</li><li>Social media integration</li><li>Search engine friendly</li></ul>', 'sampression');
-                    echo "<style>ul.layouts-features{ list-style: initial; padding-top: 10px; }ul.layouts-features li{ margin-left: 15px; }</style>";
+                    echo "<style>ul.layouts-features{ list-style: initial; padding-top: 10px; }ul.layouts-features li{ margin-left: 30px; }</style>";
                     break;
                 case 'description' :
                     echo '<p class="description">' . $this->description . '</p>';
@@ -31,7 +31,7 @@ function sampression_customize_register( $wp_customize ) {
 
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-    $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+    //$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
     //$wp_customize->get_setting( 'body_textcolor' )->transport = 'postMessage';
     /**
      * Default Sections
@@ -382,7 +382,7 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Header/Title text color setting
      **************************/
-        $wp_customize->add_setting( 'header_textcolor',
+        $wp_customize->add_setting( 'title_textcolor',
             array(
                 'default' => '#FE6E41',
                 'sanitize_callback' => 'sanitize_hex_color',
@@ -392,11 +392,11 @@ function sampression_customize_register( $wp_customize ) {
         $wp_customize->add_control(
             new WP_Customize_Color_Control(
                 $wp_customize,
-                'header_textcolor',
+                'title_textcolor',
                 array(
                     'label' => 'Header/Title Text Color',
                     'section' => 'colors',
-                    'settings' => 'header_textcolor'
+                    'settings' => 'title_textcolor'
                 )
             )
         );

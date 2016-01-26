@@ -798,10 +798,10 @@ function sampression_custom_header_style() {
     ?>
     <style type="text/css">
         <?php   // Is the text hidden?
-        if ( $text_color = get_theme_mod('body_textcolor') ) {
+        if ( $text_color = get_theme_mod('title_textcolor') ) {
         ?>
             #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title{
-                color: #<?php echo $text_color; ?>;
+                color: <?php echo $text_color; ?>;
             }
             #site-title a:hover,
             article.post .post-title a:hover,

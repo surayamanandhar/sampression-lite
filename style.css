@@ -2037,6 +2037,7 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
     }
     .sm-top{
         margin-bottom: 10px;
+        float: left;
     }
     .sm-top li {
        margin-left: 0;

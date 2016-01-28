@@ -47,6 +47,5 @@ get_header(); ?>
   
 </section>
 <!-- #content -->
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

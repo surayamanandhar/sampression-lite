@@ -20,9 +20,7 @@
 		// Metas
 		do_action( 'sampression_meta' );
 		// Title
-		do_action( 'sampression_title' );
-		// Favicons
-		do_action( 'sampression_favicon' );
+		//do_action( 'sampression_title' );
 		// CSS
 		do_action( 'sampression_styles' );
 		// Links

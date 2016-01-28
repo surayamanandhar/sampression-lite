@@ -1391,17 +1391,16 @@ img.logo-img {
 .sm-top li a {
     background: #fff;
     background: rgba(255, 255, 255, 0.5);
-    width: 28px;
-    padding: 5px 0 5px;
+    width: 26px;
+    padding:4px 0 3px;
 }
 
 .sm-top li a:before {
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 16px;
+    font-size: 1.6rem;
 }
 .sm-top li.sm-top-fb a {
     color: #3a5795;
-    padding: 5px 0;
 }
 
 .sm-top li.sm-top-youtube a {
@@ -1416,7 +1415,7 @@ img.logo-img {
     color: #d73d32;
 }
 .sm-top li.sm-top-tumblr a {
-    color: #2B4661;
+    color: #0070B3;
 }
 .sm-top li.sm-top-linkedin a {
     color: #006699;

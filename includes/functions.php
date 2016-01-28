@@ -51,6 +51,14 @@ if (!function_exists('sampression_setup')):
          */
         add_theme_support('automatic-feed-links');
 
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
+
         /**
          * This feature enables post-thumbnail support for a theme.
          * @see http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
@@ -554,59 +562,6 @@ function sampression_comment( $comment, $args, $depth ) {
 endif; // ends check for sampression_comment()
 
 /*=======================================================================
- * Function to get favicon and different sizes of apple touch icons
- *=======================================================================*/
- 
-function sampression_favicon() {
-
-	//favicon 16x16
-	if(!empty(get_theme_mod('sampression_favicon', get_option('opt_sam_favicons')))) {
-		//if(get_option('opt_sam_favicons')) { 
-		?>
-			<link rel="shortcut icon" href="<?php echo get_theme_mod('sampression_favicon', get_option('opt_sam_favicons')); ?>">
-		<?php
-		//}
-	}
-	
-	//apple touch icon 57x57
-	if(!empty(get_theme_mod('sampression_appletouch_57', get_option('opt_sam_apple_icons_57')))) {
-		if(get_option('opt_sam_apple_icons_57')) {
-		?>
-			<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_theme_mod('sampression_appletouch_57', get_option('opt_sam_apple_icons_57')); ?>">
-		<?php
-		} 
-	}
-	
-	//apple touch icon 72x72
-	if(!empty(get_theme_mod('sampression_appletouch_72', get_option('opt_sam_apple_icons_72')))) {
-		if(get_option('opt_sam_apple_icons_72')) {
-		?>
-			<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_theme_mod('sampression_appletouch_72', get_option('opt_sam_apple_icons_72')); ?>">
-		<?php
-		} 
-	}
-	
-	//apple touch icon 114x114
-	if(!empty(get_theme_mod('sampression_appletouch_114', get_option('opt_sam_apple_icons_114')))) {
-		if(get_option('opt_sam_apple_icons_114')) {
-		?>
-			
-			<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_theme_mod('sampression_appletouch_114', get_option('opt_sam_apple_icons_114')); ?>">
-		<?php
-		}
-	}
-	
-	// apple touch icon 144x144
-	if(!empty(get_theme_mod('sampression_appletouch_144', get_option('opt_sam_apple_icons_144')))) {
-		if(get_option('opt_sam_apple_icons_144')) {
-		?>
-			
-			<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_theme_mod('sampression_appletouch_144', get_option('opt_sam_apple_icons_144')); ?>">
-		<?php
-		}
-	}
-}
-/*=======================================================================
  * Function to get default logo by Sampression theme
  *=======================================================================*/
 add_action('sampression_logo', 'sampression_show_logo');
@@ -759,36 +714,6 @@ function sampression_add_links() {
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php
 }
-/**
- * Displays title. @uses wp_title() 
- */
-add_action( 'sampression_title', 'sampression_title' );
-
-function sampression_title() {
-	?>
-	<title>
-		<?php wp_title( '|', true, 'right' ); ?>
-	</title>
-	<?php
-}
-
-add_filter( 'wp_title', 'sampression_filter_wp_title' );
-
-function sampression_filter_wp_title() {
-	
-	// Print the <title> tag based on what is being viewed.
-	global $page, $paged;
-	
-	// Add the blog name.
-	 bloginfo( 'name' ); 
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ){
-		echo " | $site_description"; 
-	}
-}
-add_action('sampression_favicon','sampression_favicon');
 
 add_action( 'wp_enqueue_scripts', 'sampression_enqueue_styles' );
 

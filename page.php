@@ -36,7 +36,7 @@ get_header(); ?>
       
       <?php if(is_user_logged_in()){ ?>
        <div class="meta">
-      	<div class="edit"><span class="ico">Edit</span> <?php edit_post_link( __( 'Edit', 'sampression' ) ); ?> </div>
+      	<div class="edit genericon-edit"><?php edit_post_link( __( 'Edit', 'sampression' ) ); ?> </div>
        </div>
 	  <?php } ?>
     </div>

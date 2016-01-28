@@ -10,13 +10,13 @@ if ( !defined('ABSPATH')) exit;
  * @since Sampression Lite 1.0
  */
 ?>
-<aside id="sidebar" class="columns four sidebar-right" role="complementary">
+<aside class="columns four sidebar sidebar-right">
 
 	<?php
 	// Showing Default Widgets untill User put any widget in "Right Sidebar"
 	 if (!dynamic_sidebar('right-sidebar')) : ?>
             <section class="widget">
-                <header class="widget-title"><?php _e('Most Popular', 'sampression'); ?></header>
+                <h3 class="widget-title"><?php _e('Most Popular', 'sampression'); ?></h3>
                 <div class="widget-entry">
 				<?php $args = array(
 								'showposts' => 5,
@@ -36,7 +36,7 @@ if ( !defined('ABSPATH')) exit;
 			</section><!--.widget-->
             
             <section class="widget">
-                <header class="widget-title"><?php _e('Categories', 'sampression'); ?></header>
+                <h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3>
                 <div class="widget-entry">
                 
                 <ul class="widget-categories">
@@ -46,7 +46,7 @@ if ( !defined('ABSPATH')) exit;
 			</section><!--.widget -->
             
               <section class="widget">
-                <header class="widget-title"><?php _e('Archive', 'sampression'); ?></header>
+                <h3 class="widget-title"><?php _e('Archive', 'sampression'); ?></h3>
                 <div class="widget-entry">
                 
                 <ul class="widget-categories">

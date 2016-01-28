@@ -1945,7 +1945,7 @@ body.error404 #content {
     font-size: 16px;
     font-size: 1.6rem;
     padding: 0 0 10px 0;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 #page-not-found-message h3.separator {

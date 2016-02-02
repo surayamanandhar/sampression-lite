@@ -708,8 +708,6 @@ function sampression_add_meta() {
 
 function sampression_add_links() {
 	?>
-	<!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:700,400,400italic,700italic' rel='stylesheet' type='text/css'>
 	<!-- Pingback Url -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php
@@ -717,8 +715,34 @@ function sampression_add_links() {
 
 add_action( 'wp_enqueue_scripts', 'sampression_enqueue_styles' );
 
+function sampression_create_font_url( $family ) {
+    $family = explode( '=', $family );
+    return $family[0];
+}
+
+function sampression_fonts_url() {
+    $fonts_url = '';
+    $fonts     = array();
+    $subsets   = 'latin';
+    if($title = get_theme_mod( 'title_font', 'Roboto+Slab:400,700=serif' )) {
+        $fonts[] = sampression_create_font_url( $title );
+    }
+    if($body = get_theme_mod( 'body_font', 'Roboto=sans-serif' )) {
+        $fonts[] = sampression_create_font_url( $body );
+    }
+    if ( $fonts ) {
+        $fonts_url = add_query_arg( array(
+            'family' => urlencode( implode( '|', $fonts ) ),
+            'subset' => urlencode( $subsets ),
+        ), 'https://fonts.googleapis.com/css' );
+    }
+
+    return $fonts_url;
+}
+
 function sampression_enqueue_styles(){
-    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700', false, false, 'screen');
+    // Add custom fonts, used in the main stylesheet.
+    wp_enqueue_style( 'sampression-fonts', sampression_fonts_url(), array(), null );
     wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', false, false, 'screen');
 	wp_enqueue_style('sampression-style', get_stylesheet_uri(), false, '1.4');
 	
@@ -743,6 +767,24 @@ function sampression_custom_header_style() {
                 color: <?php echo get_theme_mod('body_textcolor') ?>;
             }
         <?php
+        }
+        if(get_theme_mod('title_font')) {
+            $title_font = get_theme_mod('title_font');
+            $title_family = sampression_font_family($title_font);
+            ?>
+            #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title {
+                font-family: <?php echo $title_family ?>;
+            }
+            <?php
+        }
+        if(get_theme_mod('body_font')) {
+            $body_font = get_theme_mod('body_font');
+            $body_family = sampression_font_family($body_font);
+            ?>
+            p {
+                font-family: <?php echo $body_family ?>;
+            }
+            <?php
         }
         if(get_theme_mod('body_textcolor')) {
         ?>
@@ -792,6 +834,20 @@ function sampression_enqueue_conditional_scripts(){
 		<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
 	<![endif]-->
 	<?php
+}
+
+function sampression_font_family( $family ) {
+    if(strpos($family, ':') === false) {
+        $font_ = explode('=', $family);
+        $font = str_replace('+', ' ', $font_[0]);
+        $style = $font_[1];
+    } else {
+        $font_ = explode(':', $family);
+        $font = str_replace('+', ' ', $font_[0]);
+        $style_ = explode('=', $font_[1]);
+        $style = $style_[1];
+    }
+    return '"'.$font.'", '.$style;
 }
 
 if(!function_exists('sampression_insert_into_header')) {

@@ -723,20 +723,21 @@ function sampression_create_font_url( $family ) {
 function sampression_fonts_url() {
     $fonts_url = '';
     $fonts     = array();
-    $subsets   = 'latin';
-    if($title = get_theme_mod( 'title_font', 'Roboto+Slab:400,700=serif' )) {
-        $fonts[] = sampression_create_font_url( $title );
+
+    $title_font = get_theme_mod( 'title_font', 'Roboto+Slab:400,700=serif' );
+    $fonts[] = sampression_create_font_url( $title_font );
+
+    $body_font = get_theme_mod( 'body_font', 'Roboto=sans-serif' );
+    if($body_font != $title_font) {
+        $fonts[] = sampression_create_font_url( $body_font );
     }
-    if($body = get_theme_mod( 'body_font', 'Roboto=sans-serif' )) {
-        $fonts[] = sampression_create_font_url( $body );
-    }
+    
     if ( $fonts ) {
         $fonts_url = add_query_arg( array(
-            'family' => urlencode( implode( '|', $fonts ) ),
-            'subset' => urlencode( $subsets ),
-        ), 'https://fonts.googleapis.com/css' );
+            'family' => implode( '|', $fonts )
+        ), '//fonts.googleapis.com/css' );
     }
-
+    
     return $fonts_url;
 }
 

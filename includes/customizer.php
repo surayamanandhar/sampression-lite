@@ -146,11 +146,10 @@ function sampression_customize_register( $wp_customize ) {
     $google_fonts = array(
         'Roboto=sans-serif' => 'Roboto',
         'Roboto+Slab:400,700=serif' => 'Roboto Slab',
-        'Droid+Serif:700,400,400italic,700italic=serif' => 'Droid Serif',
-        'Open Sans:400italic,700italic,400,700=sans-serif' => 'Open Sans',
-        'Droid Sans:400,700=sans-serif' => 'Droid Sans',
+        'Droid+Sans=sans-serif' => 'Droid Sans',
+        'Droid+Serif:400,700=serif' => 'Open Serif',
+        'Open+Sans=sans-serif' => 'Open Sans',
     );
-
     /**
      * Typography - Section
      */
@@ -379,9 +378,9 @@ function sampression_sanitize_fonts( $input ) {
     $valid = array(
         'Roboto=sans-serif' => 'Roboto',
         'Roboto+Slab:400,700=serif' => 'Roboto Slab',
-        'Droid+Serif:700,400,400italic,700italic=serif' => 'Droid Serif',
-        'Open Sans:400italic,700italic,400,700=sans-serif' => 'Open Sans',
-        'Droid Sans:400,700=sans-serif' => 'Droid Sans',
+        'Droid+Sans=sans-serif' => 'Droid Sans',
+        'Droid+Serif:400,700=serif' => 'Open Serif',
+        'Open+Sans=sans-serif' => 'Open Sans',
     );
  
     if ( array_key_exists( $input, $valid ) ) {

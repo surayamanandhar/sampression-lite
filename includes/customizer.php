@@ -53,8 +53,8 @@ function sampression_customize_register( $wp_customize ) {
         'priority' => 10,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __( 'General Setting', 'textdomain' ),
-        'description' => __( 'Description of what this panel does.', 'textdomain' ),
+        'title' => __( 'General Setting', 'sampression' ),
+        'description' => __( 'Description of what this panel does.', 'sampression' ),
     ) );
 
     /**
@@ -113,6 +113,32 @@ function sampression_customize_register( $wp_customize ) {
                     'label' => __('Remove Tagline?', 'sampression'),
                     'section' => 'title_tagline',
                     'priority'    => 62,
+                )
+        );
+
+    /*
+     * Copyright text Setting
+     */
+        $wp_customize->add_setting( 'sampression_copyright_text', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_copyright_text',
+                array(
+                    'label' => __('Copyright Text', 'sampression'),
+                    'section' => 'title_tagline',
+                    'priority'    => 63,
+                )
+        );
+
+    /*
+     * Powered by text Setting
+     */
+        $wp_customize->add_setting( 'sampression_poweredby_text', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_poweredby_text',
+                array(
+                    'label' => __('Powered by Text', 'sampression'),
+                    'section' => 'title_tagline',
+                    'priority'    => 64,
                 )
         );
 
@@ -255,6 +281,33 @@ function sampression_customize_register( $wp_customize ) {
         );
 
     /**
+     * Layout - Section
+     */
+    $wp_customize->add_section(
+        'sampression_layout_section',
+        array(
+            'title' => __( 'Layout', 'sampression' ),
+            'priority' => 12,
+            'panel' => 'sampression_general_setting_panel',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'sampression_layout_section',
+        array(
+            'sanitize_callback' => 'sampression_sanitize_pro_version'
+        )
+    );
+
+    $wp_customize->add_control(
+        new Sampression_Theme_Support( $wp_customize, 'sampression_layout_section',
+        array(
+            'type' => 'pro-version',
+            'section' => 'sampression_layout_section',
+       )
+    ));
+
+    /**
      * Link color setting
      **************************/
         $wp_customize->add_setting( 'link_color',
@@ -287,7 +340,375 @@ function sampression_customize_register( $wp_customize ) {
         'priority'       => 3,
     ) );
 
+    /*********************************************************************
+     * Header & Navigation - Panel
+     *********************************************************************/
+
+    $wp_customize->add_panel( 'sampression_header_nav_panel', array(
+        'priority' => 20,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __( 'Header &amp; Navigation', 'sampression' ),
+        'description' => __( 'Description of what this panel does.', 'sampression' ),
+    ) );
+
+    /**
+     * Social - Section
+     */
+    $wp_customize->add_section(
+        'sampression_social_section',
+        array(
+            'title' => __( 'Social Media', 'sampression' ),
+            'priority' => 1,
+            'panel' => 'sampression_header_nav_panel',
+        )
+    );
+
+    /**
+     * Facebook URL
+     */
+    $fb_icon = '';
+    if(get_option('opt_get_facebook'))
+        $fb_icon = get_option('opt_get_facebook');
+
+        $wp_customize->add_setting( 'sampression_socials_facebook', array('sanitize_callback' => 'esc_url_raw','default' => $fb_icon));
+        $wp_customize->add_control(
+            'sampression_socials_facebook',
+            array(
+                'label'    => __( 'Facebook link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_facebook',
+                'priority'    => 1,
+            )
+        );
+
+    /**
+     * Twitter URL
+     */
+    $tw_icon = '';
+    if(get_option('opt_get_twitter'))
+        $tw_icon = get_option('opt_get_twitter');
+
+        $wp_customize->add_setting( 'sampression_socials_twitter', array('sanitize_callback' => 'esc_url_raw','default' => $tw_icon));
+        $wp_customize->add_control(
+            'sampression_socials_twitter',
+            array(
+                'label'    => __( 'Twitter link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_twitter',
+                'priority'    => 2,
+            )
+        );
+
+    /**
+     * Youtube URL
+     */
+    $yt_icon = '';
+    if(get_option('opt_get_youtube'))
+        $yt_icon = get_option('opt_get_youtube');
+
+        $wp_customize->add_setting( 'sampression_socials_youtube', array('sanitize_callback' => 'esc_url_raw','default' => $yt_icon));
+        $wp_customize->add_control(
+            'sampression_socials_youtube',
+            array(
+                'label'    => __( 'Youtube link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_youtube',
+                'priority'    => 3,
+            )
+        );
+
+    /**
+     * Google+ URL
+     */
+        $gp_icon = '';
+        if(get_option('opt_get_gplus'))
+            $gp_icon = get_option('opt_get_gplus');
+
+        $wp_customize->add_setting( 'sampression_socials_googleplus', array('sanitize_callback' => 'esc_url_raw','default' => $gp_icon));
+        $wp_customize->add_control(
+            'sampression_socials_googleplus',
+            array(
+                'label'    => __( 'Google+ link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_googleplus',
+                'priority'    => 4,
+            )
+        );
+
+    /**
+     * Tumblr URL
+     */
+        $wp_customize->add_setting( 'sampression_socials_tumblr', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(
+            'sampression_socials_tumblr',
+            array(
+                'label'    => __( 'Tumblr link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_tumblr',
+                'priority'    => 5,
+            )
+        );
+
+    /**
+     * Pinterest URL
+     */
+        $wp_customize->add_setting( 'sampression_socials_pinterest', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(
+            'sampression_socials_pinterest',
+            array(
+                'label'    => __( 'Pinterest link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_pinterest',
+                'priority'    => 6,
+            )
+        );
+
+    /**
+     * Linkedin URL
+     */
+        $wp_customize->add_setting( 'sampression_socials_linkedin', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(
+            'sampression_socials_linkedin',
+            array(
+                'label'    => __( 'Linkedin link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_linkedin',
+                'priority'    => 7,
+            )
+        );
+
+    /**
+     * Github URL
+     */
+        $wp_customize->add_setting( 'sampression_socials_github', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(
+            'sampression_socials_github',
+            array(
+                'label'    => __( 'Github link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_github',
+                'priority'    => 8,
+            )
+        );
+
+    /**
+     * Instagram URL
+     */
+        $wp_customize->add_setting( 'sampression_socials_instagram', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(
+            'sampression_socials_instagram',
+            array(
+                'label'    => __( 'Instagram link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_instagram',
+                'priority'    => 9,
+            )
+        );
+
+    /**
+     * Flickr URL
+     */
+        $wp_customize->add_setting( 'sampression_socials_flickr', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(
+            'sampression_socials_flickr',
+            array(
+                'label'    => __( 'Flickr link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_flickr',
+                'priority'    => 10,
+            )
+        );
+
+    /**
+     * Vimeo URL
+     */
+        $wp_customize->add_setting( 'sampression_socials_vimeo', array('sanitize_callback' => 'esc_url_raw'));
+        $wp_customize->add_control(
+            'sampression_socials_vimeo',
+            array(
+                'label'    => __( 'Vimeo link', 'sampression' ),
+                'section'  => 'sampression_social_section',
+                'settings' => 'sampression_socials_vimeo',
+                'priority'    => 11,
+            )
+        );
+
+    /**
+     * Primary Navigation - Section
+     */
+    $wp_customize->add_section(
+        'sampression_primary_nav_section',
+        array(
+            'title' => __( 'Primary Navigation', 'sampression' ),
+            'priority' => 2,
+            'panel' => 'sampression_header_nav_panel',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'sampression_primary_nav',
+        array(
+            'sanitize_callback' => 'sampression_sanitize_pro_version'
+        )
+    );
     
+    $wp_customize->add_control(
+        new Sampression_Theme_Support( $wp_customize, 'sampression_primary_nav',
+        array(
+            'type' => 'pro-version',
+            'section' => 'sampression_primary_nav_section',
+       )
+    ));
+
+    /**
+     * Search Option - Section
+     */
+    $wp_customize->add_section(
+        'sampression_search_section',
+        array(
+            'title' => __( 'Search Option', 'sampression' ),
+            'priority' => 3,
+            'panel' => 'sampression_header_nav_panel',
+        )
+    );
+
+    /*
+     * Remove search box Setting
+     */
+        $wp_customize->add_setting( 'sampression_remove_search', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_control(
+                'sampression_remove_search',
+                array(
+                    'type' => 'checkbox',
+                    'label' => __('Remove Search Box?', 'sampression'),
+                    'section' => 'sampression_search_section',
+                    'priority'    => 1,
+                )
+        );
+
+    /*********************************************************************
+     * Banner Options - Panel
+     *********************************************************************/
+
+    $wp_customize->add_section(
+        'sampression_banner_option_panel',
+        array(
+            'title' => __( 'Banner Options', 'sampression' ),
+            'priority' => 30,
+            'theme_supports' => '',
+            'capability' => 'edit_theme_options',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'sampression_banner_option',
+        array(
+            'sanitize_callback' => 'sampression_sanitize_pro_version'
+        )
+    );
+    
+    $wp_customize->add_control(
+        new Sampression_Theme_Support( $wp_customize, 'sampression_banner_option',
+        array(
+            'type' => 'pro-version',
+            'section' => 'sampression_banner_option_panel',
+       )
+    ));
+
+    /*********************************************************************
+     * Blog Options - Panel
+     *********************************************************************/
+
+    $wp_customize->add_section(
+        'sampression_blog_option_panel',
+        array(
+            'title' => __( 'Blog Options', 'sampression' ),
+            'priority' => 40,
+            'theme_supports' => '',
+            'capability' => 'edit_theme_options',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'sampression_blog_option',
+        array(
+            'sanitize_callback' => 'sampression_sanitize_pro_version'
+        )
+    );
+    
+    $wp_customize->add_control(
+        new Sampression_Theme_Support( $wp_customize, 'sampression_blog_option',
+        array(
+            'type' => 'pro-version',
+            'section' => 'sampression_blog_option_panel',
+       )
+    ));
+
+    /**
+     * Custom code Section
+     **************************/
+    $wp_customize->add_section( 'sampression_custom_code_section' , array(
+        'title' => __( 'Custom Code', 'sampression' ),
+        'priority' => 50,
+        'capability' => 'edit_theme_options',
+    ));
+
+    /*
+     * Header Code Setting
+     */
+        $wp_customize->add_setting( 'sampression_header_code', array('sanitize_callback' => 'sampression_sanitize_html','default' => ''));
+        $wp_customize->add_control(
+        'sampression_header_code',
+        array(
+            'label'      => __( 'To insert into Header', 'sampression' ),
+            'section'    => 'sampression_custom_code_section',
+            'settings'   => 'sampression_header_code',
+            'type'       => 'textarea',
+        )
+    );
+        $wp_customize->add_setting(
+            'sampression_header_code_desc',
+            array(
+                'sanitize_callback' => 'sampression_sanitize_pro_version'
+            )
+        );
+        $wp_customize->add_control(
+            new Sampression_Theme_Support( $wp_customize, 'sampression_header_code_desc',
+            array(
+                'type' => 'description',
+                'section' => 'sampression_custom_code_section',
+                'description' => __('Write/Paste the codes which you want to insert in Header. For eg. custom styles, scripts, etc. This will be inserted before the  &#060;/head&#062; tag in the header of the document.', 'sampression')
+           )
+        ));
+
+    /*
+     * Footer Code Setting
+     */
+        $wp_customize->add_setting( 'sampression_footer_code', array('sanitize_callback' => 'sampression_sanitize_html','default' => ''));
+        $wp_customize->add_control(
+        'sampression_footer_code',
+        array(
+            'label'      => __( 'To insert into Footer', 'sampression' ),
+            'section'    => 'sampression_custom_code_section',
+            'settings'   => 'sampression_footer_code',
+            'type'       => 'textarea',
+        )
+    );
+        $wp_customize->add_setting(
+            'sampression_footer_code_desc',
+            array(
+                'sanitize_callback' => 'sampression_sanitize_pro_version'
+            )
+        );
+        $wp_customize->add_control(
+            new Sampression_Theme_Support( $wp_customize, 'sampression_footer_code_desc',
+            array(
+                'type' => 'description',
+                'section' => 'sampression_custom_code_section',
+                'description' => __('Write/Paste the codes which you want to insert in Footer. For eg. custom styles, scripts, etc. This will be inserted before the  &#060;/body&#062; tag in the footer of the document.', 'sampression')
+           )
+        ));
 
     /*********************************************************************
      * Custom CSS - Panel
@@ -297,7 +718,7 @@ function sampression_customize_register( $wp_customize ) {
         'sampression_customcss_panel',
         array(
             'title' => __( 'Custom CSS', 'sampression' ),
-            'priority' => 20,
+            'priority' => 60,
             'theme_supports' => '',
             'capability' => 'edit_theme_options',
         )

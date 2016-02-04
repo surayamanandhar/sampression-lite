@@ -186,17 +186,16 @@ function sampression_footer() {
 
 <div class="alignleft powered-wp">
     <?php
-    if(!empty(get_theme_mod('sampression_copyright_text'))) {
-        echo get_theme_mod('sampression_copyright_text') . ' ';
-    } else {
-    ?>
-    <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved. </div>
-    <?php } 
-    if(!empty(get_theme_mod('sampression_poweredby_text'))) {
-        echo get_theme_mod('sampression_poweredby_text');
-    } else {
-    _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
-    <?php
+    if( get_theme_mod('sampression_remove_copyright_text') != 1 ) {
+        if(!empty(get_theme_mod('sampression_copyright_text'))) {
+            echo get_theme_mod('sampression_copyright_text') . ' ';
+        } else {
+        ?>
+        <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved. </div>
+        <?php
+            _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
+        <?php
+        }
     }
     ?>
 </div>

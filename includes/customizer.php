@@ -135,19 +135,21 @@ function sampression_customize_register( $wp_customize ) {
                     'label' => __('Copyright Text', 'sampression'),
                     'section' => 'title_tagline',
                     'priority'    => 63,
+                    'type' => 'textarea'
                 )
         );
 
     /*
-     * Powered by text Setting
+     * Remove Copyright Text Setting
      */
-        $wp_customize->add_setting( 'sampression_poweredby_text', array('sanitize_callback' => 'sampression_sanitize_text'));
+        $wp_customize->add_setting( 'sampression_remove_copyright_text', array('sanitize_callback' => 'sampression_sanitize_text'));
         $wp_customize->add_control(
-                'sampression_poweredby_text',
+                'sampression_remove_copyright_text',
                 array(
-                    'label' => __('Powered by Text', 'sampression'),
+                    'label' => __('Remove Copyright Text?', 'sampression'),
                     'section' => 'title_tagline',
                     'priority'    => 64,
+                    'type' => 'checkbox'
                 )
         );
 

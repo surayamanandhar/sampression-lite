@@ -226,33 +226,6 @@ if (!function_exists('sampression_js')) {
 
 }
 
-/**
- * Widget Scripts
- * @since version 1.6
- */
-
-add_action('customize_controls_enqueue_scripts', 'sampression_widget_scripts');
-if( !function_exists( 'sampression_widget_scripts' ) ):
-
-    function sampression_widget_scripts() {
-        wp_enqueue_media();
-        wp_enqueue_script('sampression_widget_script', get_template_directory_uri() . '/lib/js/widget.js', false, '1.0', true);
-    }
-
-endif;
-
-add_action( 'admin_enqueue_scripts', 'sampression_admin_widget_scripts');
-if( !function_exists( 'sampression_admin_widget_scripts' ) ):
-
-    function sampression_admin_widget_scripts($hook) {
-        if($hook === 'widgets.php') {
-            wp_enqueue_media();
-            wp_enqueue_script('sampression_widget_script', get_template_directory_uri() . '/lib/js/widget.js', false, '1.0', true);
-        }
-    }
-
-endif;
-
 /*=======================================================================
  * Comment Reply
  *=======================================================================*/
@@ -409,7 +382,7 @@ function sampression_widget_reset() {
  function sampression_widgets_init() {
 	
 	register_sidebar(array(
-		'name' => __('Bottom Widget 1', 'sampression'),
+		'name' => __('Bottom Widget One', 'sampression'),
 		'description' => __('Appears on bottom of the Page - First Widget - Please insert only one widget for better appearance.', 'sampression'),
 		'id' => 'bottom-widget-1',
 		'before_title' => '<h3 class="widget-title">',
@@ -419,7 +392,7 @@ function sampression_widget_reset() {
 	));
 	
 	register_sidebar(array(
-		'name' => __('Bottom Widget 2', 'sampression'),
+		'name' => __('Bottom Widget Two', 'sampression'),
 		'description' => __('Appears on bottom of the Page - Second Widget - Please insert only one widget for better appearance.', 'sampression'),
 		'id' => 'bottom-widget-2',
 		'before_title' => '<h3 class="widget-title">',
@@ -429,7 +402,7 @@ function sampression_widget_reset() {
 	));
 	
 	register_sidebar(array(
-		'name' => __('Bottom Widget 3', 'sampression'),
+		'name' => __('Bottom Widget Three', 'sampression'),
 		'description' => __('Appears on bottom of the Page - Third Widget - Please insert only one widget for better appearance.', 'sampression'),
 		'id' => 'bottom-widget-3',
 		'before_title' => '<h3 class="widget-title">',

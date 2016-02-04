@@ -14,7 +14,7 @@ get_header(); ?>
 <section id="content"  class="clearfix">
   <?php if (have_posts()) : ?>
 
-<header class="page-header columns sixteen">
+<header class="page-header columns twelve">
     <h2 class="page-title quick-note"><?php
         printf( __( 'Category Archives: %s', 'sampression' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
     </h2>
@@ -29,7 +29,7 @@ get_header(); ?>
   
 <div id="post-listing" class="clearfix">
   <!-- Corner Stamp: It will always remaing to the right top of the page -->
-  <section class="corner-stamp post columns four item">
+  <section class="corner-stamp post columns three item">
   <header><h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3></header>
   <div class="entry">
     <ul class="categories">

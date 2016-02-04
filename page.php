@@ -14,7 +14,7 @@
 get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<section id="content" class="columns twelve" role="main">
+<section id="content" class="columns nine" role="main">
   <article <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
     <?php if ( has_post_thumbnail() ) { ?>
     <div class="featured-img">

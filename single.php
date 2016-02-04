@@ -13,14 +13,14 @@ get_header(); ?>
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         
-        <nav id="nav-above" class="post-navigation clearfix columns twelve">
+        <nav id="nav-above" class="post-navigation clearfix columns nine">
             <h3 class="assistive-text hidden"><?php _e( 'Post navigation', 'sampression' ); ?></h3>
             <div class="nav-previous alignleft"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'sampression' ) ); ?></div>
             <div class="nav-next alignright"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'sampression' ) ); ?></div>
         </nav><!-- #nav-above -->
                     
         
-        <section id="content" class="columns twelve" role="main">
+        <section id="content" class="columns nine" role="main">
 		
 		<article <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
 			

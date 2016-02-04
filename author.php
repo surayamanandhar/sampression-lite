@@ -24,8 +24,8 @@ get_header(); ?>
 	the_post();
 ?>
                 
-<header class="page-header columns sixteen">
-    <h2 class="quick-note columns sixteen">
+<header class="page-header columns twelve">
+    <h2 class="quick-note columns twelve">
         <?php _e( 'Author Archives: ', 'sampression' ); echo get_the_author(); ?>
     </h2>
 </header>
@@ -40,7 +40,7 @@ get_header(); ?>
 ?>
 <div id="post-listing" class="clearfix">
     <!-- Corner Stamp: It will always remaing to the right top of the page -->
-    <section class="corner-stamp post columns four item">
+    <section class="corner-stamp post columns three item">
         <header>
             <h3 class="widget-title"><?php _e('Archives', 'sampression'); ?></h3>
         </header>

@@ -15,7 +15,7 @@
 
 	<footer id="footer">
 		<div class="container">
-			<div class="columns sixteen">
+			<div class="columns twelve">
 	            <?php do_action( 'sampression_credits' ); ?>
 	            <div id="btn-top-wrapper">
 				<a href="javascript:pageScroll('.top');" class="btn-top"></a>

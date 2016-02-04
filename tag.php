@@ -12,7 +12,7 @@ get_header(); ?>
 <section id="content"  class="clearfix">
   <?php if (have_posts()) : ?>
 
-<header class="page-header columns sixteen">
+<header class="page-header columns twelve">
     <h2 class="page-title quick-note">
 	<?php printf( __( 'Tag Archives: %s', 'sampression' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
     </h2>

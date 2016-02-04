@@ -10,7 +10,7 @@ if ( !defined('ABSPATH')) exit;
  * @since Sampression Lite 1.0
  */
 ?>
-<aside class="columns four sidebar sidebar-right">
+<aside class="columns three sidebar sidebar-right">
 
 	<?php
 	// Showing Default Widgets untill User put any widget in "Right Sidebar"

@@ -14,7 +14,7 @@ get_header(); ?>
 <section id="content" class="clearfix">
   <?php if (have_posts()) : ?>
 
-<header class="page-header columns sixteen">
+<header class="page-header columns twelve">
     <h2 class="page-title quick-note search-title"><?php
         printf( __( 'Search Results for: %s', 'sampression' ), '<span>' . get_search_query() . '</span>' ); ?>
     </h2>

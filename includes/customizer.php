@@ -596,6 +596,16 @@ function sampression_customize_register( $wp_customize ) {
                 )
         );
 
+    /**
+     * Header Image Section
+     **************************/
+    $wp_customize->add_section( 'header_image', array(
+        'title'          => __( 'Header Image', 'sampression' ),
+        'theme_supports' => 'custom-header',
+        'priority'       => 4,
+        'panel' => 'sampression_header_nav_panel'
+    ) );
+
     /*********************************************************************
      * Banner Options - Panel
      *********************************************************************/
@@ -626,6 +636,35 @@ function sampression_customize_register( $wp_customize ) {
     ));
 
     /*********************************************************************
+     * Blog Layout - Panel
+     *********************************************************************/
+
+    $wp_customize->add_section(
+        'sampression_blog_layout_panel',
+        array(
+            'title' => __( 'Blog Layout', 'sampression' ),
+            'priority' => 40,
+            'theme_supports' => '',
+            'capability' => 'edit_theme_options',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'sampression_blog_layout',
+        array(
+            'sanitize_callback' => 'sampression_sanitize_pro_version'
+        )
+    );
+    
+    $wp_customize->add_control(
+        new Sampression_Theme_Support( $wp_customize, 'sampression_blog_layout',
+        array(
+            'type' => 'pro-version',
+            'section' => 'sampression_blog_layout_panel',
+       )
+    ));
+
+    /*********************************************************************
      * Blog Options - Panel
      *********************************************************************/
 
@@ -633,7 +672,7 @@ function sampression_customize_register( $wp_customize ) {
         'sampression_blog_option_panel',
         array(
             'title' => __( 'Blog Options', 'sampression' ),
-            'priority' => 40,
+            'priority' => 50,
             'theme_supports' => '',
             'capability' => 'edit_theme_options',
         )
@@ -659,7 +698,7 @@ function sampression_customize_register( $wp_customize ) {
      **************************/
     $wp_customize->add_section( 'sampression_custom_code_section' , array(
         'title' => __( 'Custom Code', 'sampression' ),
-        'priority' => 50,
+        'priority' => 60,
         'capability' => 'edit_theme_options',
     ));
 
@@ -727,7 +766,7 @@ function sampression_customize_register( $wp_customize ) {
         'sampression_customcss_panel',
         array(
             'title' => __( 'Custom CSS', 'sampression' ),
-            'priority' => 60,
+            'priority' => 70,
             'theme_supports' => '',
             'capability' => 'edit_theme_options',
         )

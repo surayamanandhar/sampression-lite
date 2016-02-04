@@ -38,55 +38,53 @@ get_header(); ?>
      */
     rewind_posts();
 ?>
-
-
-  <div id="post-listing" class="clearfix">
-  <!-- Corner Stamp: It will always remaing to the right top of the page -->
-  <section class="corner-stamp post columns four item">
-  <header><h3 class="widget-title"><?php _e('Archives', 'sampression'); ?></h3></header>
-  <div class="entry">
-    <ul class="categories archives">
-        <?php
-		// Getting Archive Lists
-		 wp_get_archives( '' ); ?>  
-    </ul>
-  </div>
-  
-   <header><h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3></header>
-  <div class="entry">
-    <ul class="categories">
-    	<?php
-		// Getting Categories Lists
-		 wp_list_categories('title_li'); ?> 
-    </ul>
-  </div>
-  </section>
-  <!-- corner-stamp -->
-  
-  <?php
-  	while (have_posts()) : the_post(); 
-    get_template_part( 'loop', 'archive' );
+<div id="post-listing" class="clearfix">
+    <!-- Corner Stamp: It will always remaing to the right top of the page -->
+    <section class="corner-stamp post columns four item">
+        <header>
+            <h3 class="widget-title"><?php _e('Archives', 'sampression'); ?></h3>
+        </header>
+        <div class="entry">
+            <ul class="categories archives">
+            <?php
+                // Getting Archive Lists
+                wp_get_archives( '' ); ?>  
+            </ul>
+        </div>
+        <header>
+            <h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3>
+        </header>
+        <div class="entry">
+            <ul class="categories">
+            <?php
+                // Getting Categories Lists
+                wp_list_categories('title_li'); ?> 
+            </ul>
+        </div>
+    </section>
+    <!-- corner-stamp -->
+    <?php
+    while (have_posts()) : the_post(); 
+        get_template_part( 'loop', 'archive' );
     endwhile;
-	?>
-     </div>
-  <!-- #post-listing --> 
-  <?php sampression_content_nav( 'nav-below' ); ?>
-  <?php  else: ?>
-    
+    ?>
+</div>
+<!-- #post-listing --> 
+<?php sampression_content_nav( 'nav-below' ); ?>
+<?php  else: ?>
+
     <article id="post-0" class="no-results not-found">
-					<header class="entry-header">
-						<h2 class="entry-title"><?php _e( 'Nothing Found', 'sampression' ); ?></h2>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'sampression' ); ?></p>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
-
+        <header class="entry-header">
+            <h2 class="entry-title"><?php _e( 'Nothing Found', 'sampression' ); ?></h2>
+        </header>
+        <!-- .entry-header -->
+        <div class="entry-content">
+            <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'sampression' ); ?></p>
+        </div>
+        <!-- .entry-content -->
+    </article>
+    <!-- #post-0 -->
 <?php endif; ?>
-  
 </section>
 <!-- #content -->
-
-
 <?php get_footer(); ?>

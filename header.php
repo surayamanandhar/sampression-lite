@@ -15,16 +15,13 @@
 <!--[if IE 9 ]> <html <?php language_attributes(); ?> class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"> <!--<![endif]-->
 <head>
-	<?php		
+	<?php
 		/** sampression hooks **/
 		// Metas
 		do_action( 'sampression_meta' );
-		// Title
-		//do_action( 'sampression_title' );
-		// CSS
-		do_action( 'sampression_styles' );
 		// Links
 		do_action( 'sampression_links' );
+    
 		wp_head();
     // Custom header styles
     do_action('sampression_custom_header_style');

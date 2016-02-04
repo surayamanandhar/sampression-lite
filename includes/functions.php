@@ -180,6 +180,7 @@ endif;
 /*=======================================================================
  * Shows footer credits
  *=======================================================================*/
+
 function sampression_footer() {
 ?>
 
@@ -386,7 +387,6 @@ if(!function_exists('sampression_cat_count')){
     }
 
 }
-
 
 /*=======================================================================
  * Run function during a themes initialization. It clear all widgets
@@ -644,32 +644,6 @@ function sampression_filter_cat_callback() {
 	die();
 }
 
-/*=======================================================================
-* Display notification/message in admin.
-*=======================================================================*/
-function sampression_showMessage($message='', $errormsg = false) {
-	if($message!='') {
-		if ($errormsg) {
-			echo '<div id="message" class="error">';
-		} else {
-			echo '<div id="message" class="updated fade">';
-		}
-		echo "<p><strong>$message</strong></p></div>";
-	}
-}
-function sampression_showNotices() {
-    if(function_exists('showMessage')) {
-		showMessage();
-	}
-}
-add_action('admin_notices', 'sampression_showNotices');
-
-function sampression_check($opt_field){
-	$use_logo = get_option($opt_field);
-		if($use_logo == 'yes') 
-			return ' checked="checked" ';
-}
-
 /* function to echo number of class  depending on number of social media link set */
 function getnoofclass(){
 		$noofclass=0;
@@ -697,14 +671,13 @@ function sampression_add_meta() {
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<!-- Mobile Specific Metas  -->
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<!-- <meta name="viewport" content="width=1024" />-->
 	<?php
 }
 
 /**
  * Add google fonts, pingback url, etc.
  */ 
-//add_action( 'sampression_links', 'sampression_add_links' );
+add_action( 'sampression_links', 'sampression_add_links' );
 
 function sampression_add_links() {
 	?>
@@ -712,8 +685,6 @@ function sampression_add_links() {
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php
 }
-
-add_action( 'wp_enqueue_scripts', 'sampression_enqueue_styles' );
 
 function sampression_create_font_url( $family ) {
     $family = explode( '=', $family );
@@ -746,10 +717,13 @@ function sampression_enqueue_styles(){
     wp_enqueue_style( 'sampression-fonts', sampression_fonts_url(), array(), null );
     wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', false, false, 'screen');
 	wp_enqueue_style('sampression-style', get_stylesheet_uri(), false, '1.4');
+
+    // Load selectivizr.js
+    wp_enqueue_script( 'sampression-selectivizr', get_template_directory_uri() . '/lib/js/selectivizr.js', array(), '1.0.2', true );
+    wp_script_add_data( 'sampression-selectivizr', 'conditional', 'lt IE 9' );
 	
 }
-
-add_action('sampression_custom_header_style','sampression_custom_header_style');
+add_action( 'wp_enqueue_scripts', 'sampression_enqueue_styles' );
 
 function sampression_custom_header_style() {
     ?>
@@ -822,20 +796,7 @@ function sampression_custom_header_style() {
     </style>
     <?php
 }
-add_action('sampression_footer', 'sampression_enqueue_conditional_scripts');
-
-function sampression_enqueue_conditional_scripts(){
-	?>
-	<!-- Enables advanced css selectors in IE, must be used with a JavaScript library (jQuery Enabled in functions.php) -->
-	<!--[if lt IE 9]>
-		<script src="<?php echo get_template_directory_uri(); ?>/lib/js/selectivizr.js"></script>
-	<![endif]-->
-	<!--[if lt IE 7 ]>
-		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
-	<![endif]-->
-	<?php
-}
+add_action('sampression_custom_header_style','sampression_custom_header_style');
 
 function sampression_font_family( $family ) {
     if(strpos($family, ':') === false) {

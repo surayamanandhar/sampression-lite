@@ -181,6 +181,8 @@ Version 2.0
 = Removed: Default widget (Most Popular Posts and Recent Comments) if not added
 = Removed: favicon.png
 = Removed: Hook - sampression_favicon
+= Removed: Hook - sampression_title
+= Removed: Hook - sampression_footer
 
  == Child Theme Support ===
  Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

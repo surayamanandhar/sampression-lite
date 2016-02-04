@@ -17,6 +17,15 @@ function sampression_customize_register( $wp_customize ) {
 
         protected function render_content() {
             switch( $this->type ) {
+                case 'textarea':
+                    ?>
+                    <label>
+                        <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                        <span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+                        <textarea rows="20" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+                    </label>
+                    <?php
+                    break;
                 case 'pro-version':
                     echo __('The <a href="http://www.demo.sampression.com/sampression-pro/" target="_blank">PRO version</a> offers various additional features including:<ul class="layouts-features"><li>Multiple layouts</li><li>Google fonts support</li><li>Icons Mind icon set</li><li>Unlimited color</li><li>Premium customer support</li></ul>', 'sampression');
                     echo "<style>ul.layouts-features{ list-style: initial; padding-top: 10px; }ul.layouts-features li{ margin-left: 30px; }</style>";
@@ -738,13 +747,14 @@ function sampression_customize_register( $wp_customize ) {
         )
     );
     $wp_customize->add_control(
-        'sampression_custom_css',
+        new Sampression_Theme_Support( $wp_customize, 'sampression_blog_option',
         array(
-            'label'      => __( 'Custom CSS', 'sampression' ),
-            'section'    => 'sampression_customcss_panel',
-            'settings'   => 'sampression_custom_css',
-            'type'       => 'textarea',
-        )
+            'type' => 'textarea',
+            'label' => __( 'Custom CSS', 'sampression' ),
+            'settings' => 'sampression_custom_css',
+            'section' => 'sampression_customcss_panel',
+            'description' => 'Custom CSS description to users.'
+        ))
     );
 
 }

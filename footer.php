@@ -13,23 +13,16 @@
 
    <?php get_sidebar(); ?>
 
-<footer id="footer">
-	<div class="container">
-		<div class="columns sixteen">
-            <?php do_action( 'sampression_credits' ); ?>
-            <div id="btn-top-wrapper">
-			<a href="javascript:pageScroll('.top');" class="btn-top"></a>
+	<footer id="footer">
+		<div class="container">
+			<div class="columns sixteen">
+	            <?php do_action( 'sampression_credits' ); ?>
+	            <div id="btn-top-wrapper">
+				<a href="javascript:pageScroll('.top');" class="btn-top"></a>
+				</div>
 			</div>
-		</div>
-
-	</div><!--.container-->
-</footer><!--#footer-->
-
-<?php 
-	   	/** sampression_footer hook **/
-	   	do_action( 'sampression_footer' );
-	   ?>	
-  
-<?php wp_footer(); ?>
+		</div><!--.container-->
+	</footer><!--#footer-->
+	<?php wp_footer(); ?>
 </body>
 </html>

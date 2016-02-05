@@ -180,12 +180,69 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Google Fonts Choices
      */
+    /*
+    Playfair+Display:400,700,400italic,700italic=serif
+    Work+Sans:400,700=sans-serif
+    Alegreya:400,400italic,700,700italic=serif
+    Alegreya+Sans:400,400italic,700,700italic=sans-serif
+    Fira+Sans:400,400italic,700,700italic=sans-serif
+    Droid+Sans:400,700=sans-serif
+    Source+Sans+Pro:400,400italic,700,700italic=sans-serif
+    Source+Serif+Pro:400,700=serif
+    Lora:400,700=serif
+    Neuton:400,700=serif
+    Poppins:400,700=sans-serif
+    Karla:400,700=sans-serif
+    Merriweather:400,400italic,700,700italic=serif
+    Open+Sans:400,400italic,700,700italic=sans-serif
+    Roboto:400,400italic,700,700italic=sans-serif
+    Roboto+Slab:400,700=serif
+    Lato:400,400italic,700,700italic=sans-serif
+    Droid+Serif:400,400italic,700,700italic=serif
+    Archivo+Narrow:400,400italic,700,700italic=sans-serif
+    Libre+Baskerville:400,700,400italic=serif
+    Crimson+Text:400,400italic,700,700italic=serif
+    Montserrat:400,700=sans-serif
+    Chivo:400,400italic=sans-serif
+    Old+Standard+TT:400,400italic,700=serif
+    Domine:400,700=serif
+    Varela+Round=sans-serif
+    Bitter:400,700=serif
+    Cardo:400,700,400italic=serif
+    Arvo:400,400italic,700,700italic=serif
+    PT+Serif:400,400italic,700,700italic=serif
+     */
     $google_fonts = array(
-        'Roboto=sans-serif' => 'Roboto',
+        'Playfair+Display:400,700,400italic,700italic=serif' => 'Playfair Display',
+        'Work+Sans:400,700=sans-serif' => 'Work Sans',
+        'Alegreya:400,400italic,700,700italic=serif' => 'Alegreya',
+        'Alegreya+Sans:400,400italic,700,700italic=sans-serif' => 'Alegreya Sans',
+        'Fira+Sans:400,400italic,700,700italic=sans-serif' => 'Fira Sans',
+        'Droid+Sans:400,700=sans-serif' => 'Droid Sans',
+        'Source+Sans+Pro:400,400italic,700,700italic=sans-serif' => 'Source Sans Pro',
+        'Source+Serif+Pro:400,700=serif' => 'Source Serif Pro',
+        'Lora:400,700=serif' => 'Lora',
+        'Neuton:400,700=serif' => 'Neuton',
+        'Poppins:400,700=sans-serif' => 'Poppins',
+        'Karla:400,700=sans-serif' => 'Karla',
+        'Merriweather:400,400italic,700,700italic=serif' => 'Merriweather',
+        'Open+Sans:400,400italic,700,700italic=sans-serif' => 'Open Sans',
+        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
         'Roboto+Slab:400,700=serif' => 'Roboto Slab',
-        'Droid+Sans=sans-serif' => 'Droid Sans',
-        'Droid+Serif:400,700=serif' => 'Open Serif',
-        'Open+Sans=sans-serif' => 'Open Sans',
+        'Lato:400,400italic,700,700italic=sans-serif' => 'Lato',
+        'Droid+Serif:400,400italic,700,700italic=serif' => 'Droid Serif',
+        'Archivo+Narrow:400,400italic,700,700italic=sans-serif' => 'Archivo Narrow',
+        'Libre+Baskerville:400,700,400italic=serif' => 'Libre Baskerville',
+        'Crimson+Text:400,400italic,700,700italic=serif' => 'Crimson Text',
+        'Montserrat:400,700=sans-serif' => 'Montserrat',
+        'Chivo:400,400italic=sans-serif' => 'Chivo',
+        'Old+Standard+TT:400,400italic,700=serif' => 'Old Standard TT',
+        'Domine:400,700=serif' => 'Domine',
+        'Varela+Round=sans-serif' => 'Varela Round',
+        'Bitter:400,700=serif' => 'Bitter',
+        'Cardo:400,700,400italic=serif' => 'Cardo',
+        'Arvo:400,400italic,700,700italic=serif' => 'Arvo',
+        'PT+Serif:400,400italic,700,700italic=serif' => 'PT Serif',
     );
     /**
      * Typography - Section
@@ -252,7 +309,7 @@ function sampression_customize_register( $wp_customize ) {
         'body_font',
         array(
             'sanitize_callback' => 'sampression_sanitize_fonts',
-            'default' => 'Roboto=sans-serif',
+            'default' => 'Roboto:400,400italic,700,700italic=sans-serif',
             'transport' => 'postMessage'
     ));
     
@@ -848,11 +905,36 @@ function sampression_sanitize_html( $input ) {
 //Sanitizes Fonts 
 function sampression_sanitize_fonts( $input ) {  
     $valid = array(
-        'Roboto=sans-serif' => 'Roboto',
+        'Playfair+Display:400,700,400italic,700italic=serif' => 'Playfair Display',
+        'Work+Sans:400,700=sans-serif' => 'Work Sans',
+        'Alegreya:400,400italic,700,700italic=serif' => 'Alegreya',
+        'Alegreya+Sans:400,400italic,700,700italic=sans-serif' => 'Alegreya Sans',
+        'Fira+Sans:400,400italic,700,700italic=sans-serif' => 'Fira Sans',
+        'Droid+Sans:400,700=sans-serif' => 'Droid Sans',
+        'Source+Sans+Pro:400,400italic,700,700italic=sans-serif' => 'Source Sans Pro',
+        'Source+Serif+Pro:400,700=serif' => 'Source Serif Pro',
+        'Lora:400,700=serif' => 'Lora',
+        'Neuton:400,700=serif' => 'Neuton',
+        'Poppins:400,700=sans-serif' => 'Poppins',
+        'Karla:400,700=sans-serif' => 'Karla',
+        'Merriweather:400,400italic,700,700italic=serif' => 'Merriweather',
+        'Open+Sans:400,400italic,700,700italic=sans-serif' => 'Open Sans',
+        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
         'Roboto+Slab:400,700=serif' => 'Roboto Slab',
-        'Droid+Sans=sans-serif' => 'Droid Sans',
-        'Droid+Serif:400,700=serif' => 'Open Serif',
-        'Open+Sans=sans-serif' => 'Open Sans',
+        'Lato:400,400italic,700,700italic=sans-serif' => 'Lato',
+        'Droid+Serif:400,400italic,700,700italic=serif' => 'Droid Serif',
+        'Archivo+Narrow:400,400italic,700,700italic=sans-serif' => 'Archivo Narrow',
+        'Libre+Baskerville:400,700,400italic=serif' => 'Libre Baskerville',
+        'Crimson+Text:400,400italic,700,700italic=serif' => 'Crimson Text',
+        'Montserrat:400,700=sans-serif' => 'Montserrat',
+        'Chivo:400,400italic=sans-serif' => 'Chivo',
+        'Old+Standard+TT:400,400italic,700=serif' => 'Old Standard TT',
+        'Domine:400,700=serif' => 'Domine',
+        'Varela+Round=sans-serif' => 'Varela Round',
+        'Bitter:400,700=serif' => 'Bitter',
+        'Cardo:400,700,400italic=serif' => 'Cardo',
+        'Arvo:400,400italic,700,700italic=serif' => 'Arvo',
+        'PT+Serif:400,400italic,700,700italic=serif' => 'PT Serif',
     );
  
     if ( array_key_exists( $input, $valid ) ) {

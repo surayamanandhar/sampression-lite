@@ -670,7 +670,7 @@ function sampression_fonts_url() {
     $title_font = get_theme_mod( 'title_font', 'Roboto+Slab:400,700=serif' );
     $fonts[] = sampression_create_font_url( $title_font );
 
-    $body_font = get_theme_mod( 'body_font', 'Roboto=sans-serif' );
+    $body_font = get_theme_mod( 'body_font', 'Roboto:400,400italic,700,700italic=sans-serif' );
     if($body_font != $title_font) {
         $fonts[] = sampression_create_font_url( $body_font );
     }

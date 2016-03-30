@@ -8,7 +8,6 @@ if ( !defined('ABSPATH')) exit;
  * @package Sampression-Lite
  * @since Sampression Lite 1.0
  */
-
 get_header(); ?>
 
 <section id="content" class="clearfix">

@@ -34,14 +34,14 @@ function about_sampression_theme_page() {
             <h4>Customize everything in a single place.</h4>
             <p>Using the WordPress Customizer, you can easily customize every aspect of the theme.</p>
             <p><a class="button button-primary" href="customize.php?return=%2Fwp-admin%2Fthemes.php%3Fpage%3Dabout-sampression">Go to Customizer</a> <a class="button button-primary" href="<?php bloginfo('wpurl') ?>" target="_blank">Visit <?php bloginfo('name') ?></a></p>
-            <p>For further help, please visit our support page at: <a href="https://support.sampression.com/hc/en-us" target="_blank">https://support.sampression.com/hc/en-us</a></p>
+            <p>For further help, please visit our support page at: <a href="<?php echo esc_url( 'https://support.sampression.com/hc/en-us' ); ?>" target="_blank">https://support.sampression.com/hc/en-us</a></p>
         </div>
         <div>
             <h2>Sampression PRO</h2>
             <p>We also have a PRO version of Sampression Lite, featuring more customizable features like multiple homepage layouts, block page layout, typography options and many more.</p>
             <p>
-                <a target="_blank" class="button button-primary" href="http://www.sampression.com/themes/sampression-pro/">Upgrade to PRO</a>
-                <a target="_blank" class="button button-primary" href="http://www.demo.sampression.com/sampression-pro/">Live Theme Demo</a>
+                <a target="_blank" class="button button-primary" href="<?php echo esc_url( 'http://www.sampression.com/themes/sampression-pro/' ); ?>">Upgrade to PRO</a>
+                <a target="_blank" class="button button-primary" href="<?php echo esc_url( 'http://www.demo.sampression.com/sampression-pro/' ); ?>">Live Theme Demo</a>
             </p>
         </div>
     </div>

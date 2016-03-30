@@ -97,6 +97,7 @@ if (!function_exists('sampression_setup')):
             'header-text' => false
 		) ); 
 		//define( 'NO_HEADER_TEXT', true );
+        
 		/**
 		 * remove wordpress version from header 
 		 */
@@ -181,37 +182,35 @@ endif;
  * Shows footer credits
  *=======================================================================*/
 
-function sampression_footer() {
-?>
-
-<div class="alignleft powered-wp">
-    <?php
-    if( get_theme_mod('sampression_remove_copyright_text') != 1 ) {
-        if(!empty(get_theme_mod('sampression_copyright_text'))) {
-            echo get_theme_mod('sampression_copyright_text') . ' ';
-        } else {
-        ?>
-        <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved. </div>
-        <?php
-            _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
-        <?php
-        }
-    }
+if( ! function_exists( 'sampression_footer' ) ) {
+    function sampression_footer() {
     ?>
-</div>
-<div class="alignright credit">
-	 <?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
-</div>
-<?php
+    <div class="alignleft powered-wp">
+        <?php
+        if( get_theme_mod('sampression_remove_copyright_text') != 1 ) {
+            if(!empty(get_theme_mod('sampression_copyright_text'))) {
+                echo get_theme_mod('sampression_copyright_text') . ' ';
+            } else {
+            ?>
+            <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved. </div>
+            <?php
+                _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
+            <?php
+            }
+        }
+        ?>
+    </div>
+    <div class="alignright credit">
+    	 <?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
+    </div>
+    <?php
+    }
 }
 add_filter( 'sampression_credits', 'sampression_footer' );
 
 /*=======================================================================
  * A safe way of adding JavaScripts to a WordPress generated page.
  *=======================================================================*/
-if (!is_admin())
-	add_action('wp_enqueue_scripts', 'sampression_js');
-	
 
 if (!function_exists('sampression_js')) {
 
@@ -224,6 +223,7 @@ if (!function_exists('sampression_js')) {
 	}
 
 }
+add_action('wp_enqueue_scripts', 'sampression_js');
 
 /*=======================================================================
  * Comment Reply
@@ -290,9 +290,11 @@ function sampression_comment_list_pings( $comment ) {
  * Sets the post excerpt length to 40 characters.
  * Next few lines are adopted from Coraline
  *=======================================================================*/
-function sampression_excerpt_length($length) {
-    return 40;
-}
+if( ! function_exists( 'sampression_excerpt_length' ) ):
+    function sampression_excerpt_length($length) {
+        return 40;
+    }
+endif;
 
 add_filter('excerpt_length', 'sampression_excerpt_length');
 
@@ -305,21 +307,24 @@ function sampression_read_more() {
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and sampression_read_more_link().
  */
-function sampression_auto_excerpt_more($more) {
-    return '<span class="ellipsis">&hellip;</span>' . sampression_read_more();
-}
+if( ! function_exists( 'sampression_auto_excerpt_more' ) ):
+    function sampression_auto_excerpt_more($more) {
+        return '<span class="ellipsis">&hellip;</span>' . sampression_read_more();
+    }
+endif;
 add_filter('excerpt_more', 'sampression_auto_excerpt_more');
 
 /**
  * Adds a pretty "Read more" link to custom post excerpts.
  */
-function sampression_custom_excerpt_more($output) {
-    if (has_excerpt() && !is_attachment()) {
-        $output .= sampression_read_more();
+if( ! function_exists( 'sampression_custom_excerpt_more' ) ):
+    function sampression_custom_excerpt_more($output) {
+        if (has_excerpt() && !is_attachment()) {
+            $output .= sampression_read_more();
+        }
+        return $output;
     }
-    return $output;
-}
-
+endif;
 add_filter('get_the_excerpt', 'sampression_custom_excerpt_more');
 
 /*=======================================================================
@@ -363,7 +368,7 @@ if(!function_exists('sampression_cat_count')){
 /*=======================================================================
  * Run function during a themes initialization. It clear all widgets
  *=======================================================================*/
-add_action( 'setup_theme', 'sampression_widget_reset' );
+
 function sampression_widget_reset() {
     if(isset( $_GET['activated'] )) {
         add_filter( 'sidebars_widgets', 'disable_all_widgets' );
@@ -373,53 +378,55 @@ function sampression_widget_reset() {
         }
     }
 }
+add_action( 'setup_theme', 'sampression_widget_reset' );
 
 /*=======================================================================
  * WordPress Widgets start right here.
  *=======================================================================*/
- 
- function sampression_widgets_init() {
-	
-	register_sidebar(array(
-		'name' => __('Bottom Widget One', 'sampression'),
-		'description' => __('Appears on bottom of the Page - First Widget - Please insert only one widget for better appearance.', 'sampression'),
-		'id' => 'bottom-widget-1',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
-		'after_widget' => '</section>'
-	));
-	
-	register_sidebar(array(
-		'name' => __('Bottom Widget Two', 'sampression'),
-		'description' => __('Appears on bottom of the Page - Second Widget - Please insert only one widget for better appearance.', 'sampression'),
-		'id' => 'bottom-widget-2',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
-		'after_widget' => '</section>'
-	));
-	
-	register_sidebar(array(
-		'name' => __('Bottom Widget Three', 'sampression'),
-		'description' => __('Appears on bottom of the Page - Third Widget - Please insert only one widget for better appearance.', 'sampression'),
-		'id' => 'bottom-widget-3',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
-		'after_widget' => '</section>'
-	));
-	
-	register_sidebar(array(
-		'name' => __('Inner Sidebar', 'sampression'),
-		'description' => __('Appears on right of the Interior Pages - Can use as much widgets as you wish.', 'sampression'),
-		'id' => 'right-sidebar',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
-		'after_widget' => '</section>'
-	));
-}
+if( ! function_exists( 'sampression_widgets_init' ) ) :
+    function sampression_widgets_init() {
+    	
+    	register_sidebar(array(
+    		'name' => __('Bottom Widget One', 'sampression'),
+    		'description' => __('Appears on bottom of the Page - First Widget - Please insert only one widget for better appearance.', 'sampression'),
+    		'id' => 'bottom-widget-1',
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
+    		'after_widget' => '</section>'
+    	));
+    	
+    	register_sidebar(array(
+    		'name' => __('Bottom Widget Two', 'sampression'),
+    		'description' => __('Appears on bottom of the Page - Second Widget - Please insert only one widget for better appearance.', 'sampression'),
+    		'id' => 'bottom-widget-2',
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
+    		'after_widget' => '</section>'
+    	));
+    	
+    	register_sidebar(array(
+    		'name' => __('Bottom Widget Three', 'sampression'),
+    		'description' => __('Appears on bottom of the Page - Third Widget - Please insert only one widget for better appearance.', 'sampression'),
+    		'id' => 'bottom-widget-3',
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    		'before_widget' => '<section id="%1$s" class="column one-third widget %2$s">',
+    		'after_widget' => '</section>'
+    	));
+    	
+    	register_sidebar(array(
+    		'name' => __('Inner Sidebar', 'sampression'),
+    		'description' => __('Appears on right of the Interior Pages - Can use as much widgets as you wish.', 'sampression'),
+    		'id' => 'right-sidebar',
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    		'before_widget' => '<section id="%1$s" class="widget clearfix %2$s">',
+    		'after_widget' => '</section>'
+    	));
+    }
+endif;
 add_action('widgets_init', 'sampression_widgets_init'); 
 
 function sampression_default_widgets() {
@@ -667,34 +674,32 @@ function sampression_fonts_url() {
     $fonts_url = '';
     $fonts     = array();
 
-    $title_font = get_theme_mod( 'title_font', 'Roboto+Slab:400,700=serif' );
-    $fonts[] = sampression_create_font_url( $title_font );
+    $fonts[] = sampression_create_font_url( get_theme_mod( 'title_font', 'Roboto+Slab:400,700=serif' ) );
+    $fonts[] = sampression_create_font_url( get_theme_mod( 'body_font', 'Roboto:400,400italic,700,700italic=sans-serif' ) );
 
-    $body_font = get_theme_mod( 'body_font', 'Roboto:400,400italic,700,700italic=sans-serif' );
-    if($body_font != $title_font) {
-        $fonts[] = sampression_create_font_url( $body_font );
-    }
+    $fonts = array_unique( $fonts );
     
     if ( $fonts ) {
         $fonts_url = add_query_arg( array(
             'family' => implode( '|', $fonts )
         ), '//fonts.googleapis.com/css' );
     }
-    
     return $fonts_url;
 }
 
-function sampression_enqueue_styles(){
-    // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style( 'sampression-fonts', sampression_fonts_url(), array(), null );
-    wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', false, false, 'screen');
-	wp_enqueue_style('sampression-style', get_stylesheet_uri(), false, '1.4');
+if( ! function_exists( 'sampression_enqueue_styles' ) ):
+    function sampression_enqueue_styles(){
+        // Add custom fonts, used in the main stylesheet.
+        wp_enqueue_style( 'sampression-fonts', sampression_fonts_url(), array(), null );
+        wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', false, false, 'screen');
+    	wp_enqueue_style('sampression-style', get_stylesheet_uri(), false, '1.4');
 
-    // Load selectivizr.js
-    wp_enqueue_script( 'sampression-selectivizr', get_template_directory_uri() . '/lib/js/selectivizr.js', array(), '1.0.2', true );
-    wp_script_add_data( 'sampression-selectivizr', 'conditional', 'lt IE 9' );
-	
-}
+        // Load selectivizr.js
+        wp_enqueue_script( 'sampression-selectivizr', get_template_directory_uri() . '/lib/js/selectivizr.js', array(), '1.0.2', true );
+        wp_script_add_data( 'sampression-selectivizr', 'conditional', 'lt IE 9' );
+    	
+    }
+endif;
 add_action( 'wp_enqueue_scripts', 'sampression_enqueue_styles' );
 
 function sampression_custom_header_style() {

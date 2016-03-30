@@ -1,4 +1,6 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
 /**
  * Sampression Theme Customizer
  *
@@ -25,10 +27,6 @@ function sampression_customize_register( $wp_customize ) {
                         <textarea rows="20" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
                     </label>
                     <?php
-                    break;
-                case 'pro-version':
-                    echo __('The <a href="http://www.demo.sampression.com/sampression-pro/" target="_blank">PRO version</a> offers various additional features including:<ul class="layouts-features"><li>Multiple layouts</li><li>Google fonts support</li><li>Icons Mind icon set</li><li>Unlimited color</li><li>Premium customer support</li></ul>', 'sampression');
-                    echo "<style>ul.layouts-features{ list-style: initial; padding-top: 10px; }ul.layouts-features li{ margin-left: 30px; }</style>";
                     break;
                 case 'description' :
                     echo '<p class="description">' . $this->description . '</p>';
@@ -92,7 +90,7 @@ function sampression_customize_register( $wp_customize ) {
                     'section'  => 'title_tagline',
                     'settings' => 'sampression_logo',
                     'priority'    => 60,
-                    'description' => 'We recommend logo sizes within 220px x 120px.'
+                    'description' => __( 'We recommend logo sizes within 220px x 120px.', 'sampression' )
                 )
             )
         );
@@ -177,41 +175,6 @@ function sampression_customize_register( $wp_customize ) {
             )
         );
 
-    /**
-     * Google Fonts Choices
-     */
-    /*
-    Playfair+Display:400,700,400italic,700italic=serif
-    Work+Sans:400,700=sans-serif
-    Alegreya:400,400italic,700,700italic=serif
-    Alegreya+Sans:400,400italic,700,700italic=sans-serif
-    Fira+Sans:400,400italic,700,700italic=sans-serif
-    Droid+Sans:400,700=sans-serif
-    Source+Sans+Pro:400,400italic,700,700italic=sans-serif
-    Source+Serif+Pro:400,700=serif
-    Lora:400,700=serif
-    Neuton:400,700=serif
-    Poppins:400,700=sans-serif
-    Karla:400,700=sans-serif
-    Merriweather:400,400italic,700,700italic=serif
-    Open+Sans:400,400italic,700,700italic=sans-serif
-    Roboto:400,400italic,700,700italic=sans-serif
-    Roboto+Slab:400,700=serif
-    Lato:400,400italic,700,700italic=sans-serif
-    Droid+Serif:400,400italic,700,700italic=serif
-    Archivo+Narrow:400,400italic,700,700italic=sans-serif
-    Libre+Baskerville:400,700,400italic=serif
-    Crimson+Text:400,400italic,700,700italic=serif
-    Montserrat:400,700=sans-serif
-    Chivo:400,400italic=sans-serif
-    Old+Standard+TT:400,400italic,700=serif
-    Domine:400,700=serif
-    Varela+Round=sans-serif
-    Bitter:400,700=serif
-    Cardo:400,700,400italic=serif
-    Arvo:400,400italic,700,700italic=serif
-    PT+Serif:400,400italic,700,700italic=serif
-     */
     $google_fonts = array(
         'Playfair+Display:400,700,400italic,700italic=serif' => 'Playfair Display',
         'Work+Sans:400,700=sans-serif' => 'Work Sans',
@@ -276,7 +239,7 @@ function sampression_customize_register( $wp_customize ) {
             'section' => 'sampression_typography_section',
             'choices' => $google_fonts,
             'settings' => 'title_font',
-            'label' => 'Header Text Font'
+            'label' => __( 'Header Text Font', 'sampression' )
     ));
 
     /**
@@ -294,7 +257,7 @@ function sampression_customize_register( $wp_customize ) {
                 $wp_customize,
                 'title_textcolor',
                 array(
-                    'label' => 'Header Text Color',
+                    'label' => __( 'Header Text Color', 'sampression' ),
                     'priority' => '2', 
                     'section' => 'sampression_typography_section',
                     'settings' => 'title_textcolor'
@@ -322,7 +285,7 @@ function sampression_customize_register( $wp_customize ) {
             'section' => 'sampression_typography_section',
             'choices' => $google_fonts,
             'settings' => 'body_font',
-            'label' => 'Body Text Font'
+            'label' => __( 'Body Text Font', 'sampression' )
     ));
 
     /**
@@ -340,40 +303,13 @@ function sampression_customize_register( $wp_customize ) {
                 $wp_customize,
                 'body_textcolor',
                 array(
-                    'label' => 'Body Text Color',
+                    'label' => __( 'Body Text Color', 'sampression' ),
                     'priority' => '4', 
                     'section' => 'sampression_typography_section',
                     'settings' => 'body_textcolor'
                 )
             )
         );
-
-    /**
-     * Layout - Section
-     */
-    $wp_customize->add_section(
-        'sampression_layout_section',
-        array(
-            'title' => __( 'Layout', 'sampression' ),
-            'priority' => 12,
-            'panel' => 'sampression_general_setting_panel',
-        )
-    );
-
-    $wp_customize->add_setting(
-        'sampression_layout_section',
-        array(
-            'sanitize_callback' => 'sampression_sanitize_pro_version'
-        )
-    );
-
-    $wp_customize->add_control(
-        new Sampression_Theme_Support( $wp_customize, 'sampression_layout_section',
-        array(
-            'type' => 'pro-version',
-            'section' => 'sampression_layout_section',
-       )
-    ));
 
     /**
      * Link color setting
@@ -390,7 +326,7 @@ function sampression_customize_register( $wp_customize ) {
                 $wp_customize,
                 'link_color',
                 array(
-                    'label' => 'Link Color',
+                    'label' => __( 'Link Color', 'sampression' ),
                     'priority' => '5', 
                     'section' => 'sampression_typography_section',
                     'settings' => 'link_color'
@@ -603,40 +539,13 @@ function sampression_customize_register( $wp_customize ) {
         );
 
     /**
-     * Primary Navigation - Section
-     */
-    $wp_customize->add_section(
-        'sampression_primary_nav_section',
-        array(
-            'title' => __( 'Primary Navigation', 'sampression' ),
-            'priority' => 2,
-            'panel' => 'sampression_header_nav_panel',
-        )
-    );
-
-    $wp_customize->add_setting(
-        'sampression_primary_nav',
-        array(
-            'sanitize_callback' => 'sampression_sanitize_pro_version'
-        )
-    );
-    
-    $wp_customize->add_control(
-        new Sampression_Theme_Support( $wp_customize, 'sampression_primary_nav',
-        array(
-            'type' => 'pro-version',
-            'section' => 'sampression_primary_nav_section',
-       )
-    ));
-
-    /**
      * Search Option - Section
      */
     $wp_customize->add_section(
         'sampression_search_section',
         array(
             'title' => __( 'Search Option', 'sampression' ),
-            'priority' => 3,
+            'priority' => 2,
             'panel' => 'sampression_header_nav_panel',
         )
     );
@@ -661,103 +570,16 @@ function sampression_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'header_image', array(
         'title'          => __( 'Header Image', 'sampression' ),
         'theme_supports' => 'custom-header',
-        'priority'       => 4,
+        'priority'       => 3,
         'panel' => 'sampression_header_nav_panel'
     ) );
-
-    /*********************************************************************
-     * Banner Options - Panel
-     *********************************************************************/
-
-    $wp_customize->add_section(
-        'sampression_banner_option_panel',
-        array(
-            'title' => __( 'Banner Options', 'sampression' ),
-            'priority' => 30,
-            'theme_supports' => '',
-            'capability' => 'edit_theme_options',
-        )
-    );
-
-    $wp_customize->add_setting(
-        'sampression_banner_option',
-        array(
-            'sanitize_callback' => 'sampression_sanitize_pro_version'
-        )
-    );
-    
-    $wp_customize->add_control(
-        new Sampression_Theme_Support( $wp_customize, 'sampression_banner_option',
-        array(
-            'type' => 'pro-version',
-            'section' => 'sampression_banner_option_panel',
-       )
-    ));
-
-    /*********************************************************************
-     * Blog Layout - Panel
-     *********************************************************************/
-
-    $wp_customize->add_section(
-        'sampression_blog_layout_panel',
-        array(
-            'title' => __( 'Blog Layout', 'sampression' ),
-            'priority' => 40,
-            'theme_supports' => '',
-            'capability' => 'edit_theme_options',
-        )
-    );
-
-    $wp_customize->add_setting(
-        'sampression_blog_layout',
-        array(
-            'sanitize_callback' => 'sampression_sanitize_pro_version'
-        )
-    );
-    
-    $wp_customize->add_control(
-        new Sampression_Theme_Support( $wp_customize, 'sampression_blog_layout',
-        array(
-            'type' => 'pro-version',
-            'section' => 'sampression_blog_layout_panel',
-       )
-    ));
-
-    /*********************************************************************
-     * Blog Options - Panel
-     *********************************************************************/
-
-    $wp_customize->add_section(
-        'sampression_blog_option_panel',
-        array(
-            'title' => __( 'Blog Options', 'sampression' ),
-            'priority' => 50,
-            'theme_supports' => '',
-            'capability' => 'edit_theme_options',
-        )
-    );
-
-    $wp_customize->add_setting(
-        'sampression_blog_option',
-        array(
-            'sanitize_callback' => 'sampression_sanitize_pro_version'
-        )
-    );
-    
-    $wp_customize->add_control(
-        new Sampression_Theme_Support( $wp_customize, 'sampression_blog_option',
-        array(
-            'type' => 'pro-version',
-            'section' => 'sampression_blog_option_panel',
-       )
-    ));
 
     /**
      * Custom code Section
      **************************/
     $wp_customize->add_section( 'sampression_custom_code_section' , array(
         'title' => __( 'Custom Code', 'sampression' ),
-        'priority' => 60,
+        'priority' => 30,
         'capability' => 'edit_theme_options',
     ));
 
@@ -825,7 +647,7 @@ function sampression_customize_register( $wp_customize ) {
         'sampression_customcss_panel',
         array(
             'title' => __( 'Custom CSS', 'sampression' ),
-            'priority' => 70,
+            'priority' => 40,
             'theme_supports' => '',
             'capability' => 'edit_theme_options',
         )
@@ -851,7 +673,7 @@ function sampression_customize_register( $wp_customize ) {
             'label' => __( 'Custom CSS', 'sampression' ),
             'settings' => 'sampression_custom_css',
             'section' => 'sampression_customcss_panel',
-            'description' => 'Custom CSS description to users.'
+            'description' => __( 'Custom CSS description to users', 'sampression' )
         ))
     );
 

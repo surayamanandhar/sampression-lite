@@ -27,7 +27,7 @@ get_header(); ?>
 
 			endwhile;
 			?>
-			<div class="eight columns shuffle__sizer"></div>
+			<div class="three columns shuffle__sizer"></div>
 		</div>
 		<!-- #post-listing --> 
 		<?php

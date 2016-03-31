@@ -1395,7 +1395,7 @@ img.logo-img {
     background: #fff;
     background: rgba(255, 255, 255, 0.5);
     width: 26px;
-    padding:4px 0 4px;
+    padding:4px 0 2px;
 }
 
 .sm-top li a:before {
@@ -1443,10 +1443,13 @@ img.logo-img {
     border-color: #B9B6B6;
     border-color: rgba(51, 51, 51, 0.3);
 }
-.header-image{
-    padding: 20px 0 10px;
+.header-image {
+    border-radius: 4px;
+    float: left;
+    margin: 20px 0 10px;
+    overflow: hidden;
+    width: 100%;
 }
-
 
 /**
  * 12.2 - Posts and pages
@@ -2029,6 +2032,11 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
  */
 @media only screen and (max-width: 767px) {
 
+    .container,
+    #primary-nav > .container {
+        padding: 0 15px;
+    }
+
     #logo-wrapper .logo-img, #logo-wrapper .logo-txt {
         display: block;
         float: none;
@@ -2054,6 +2062,10 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
     .sm-top li {
        margin-left: 0;
        margin-right: 8px;
+    }
+
+    .sm-top li a {
+       padding:5px 0 1px;
     }
 
     .search-form:before, .search-form:after {

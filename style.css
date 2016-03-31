@@ -2,7 +2,7 @@
 Theme Name: Sampression Lite
 Theme URI: http://sampression.com/themes/sampression-lite/
 Author: Sampression
-Author URI: http://www.sampression.com 
+Author URI: http://www.sampression.com
 Description: Sampression Lite is a free, Pinterest inspired responsive WordPress theme with an attractive masonry blog layout. The theme has clean and lightweight design. It boasts of user friendly customizing options making it very easy to customize your blog’s header, menus, widgets, background color and images. The theme is also SEO friendly and translation ready, allowing you the freedom of expressing in your native language.
 Version: 2.0
 License: GNU General Public License v2 or later
@@ -52,8 +52,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /**
 * 1.0 - Reset
-* 
-* http://meyerweb.com/eric/tools/css/reset/ 
+*
+* http://meyerweb.com/eric/tools/css/reset/
 * v2.0 | 20110126
 * License: none (public domain)
 */
@@ -576,7 +576,7 @@ input[type="button"] {
     text-decoration: none;
     cursor: pointer;
     -webkit-appearance:none;
-    
+
 }
 
 .button:hover,
@@ -1039,11 +1039,11 @@ or wrap each row of columns in a <div class="row"> */
 
 /* Common Styles */
 
-article.post, 
-.sm-top li a, 
-.btn-top, 
-.cancel-comment-reply a, 
-.post-navigation .wp-pagenavi a, 
+article.post,
+.sm-top li a,
+.btn-top,
+.cancel-comment-reply a,
+.post-navigation .wp-pagenavi a,
 .post-navigation .wp-pagenavi span {
     border-radius: 3px;
 }
@@ -1395,7 +1395,7 @@ img.logo-img {
     background: #fff;
     background: rgba(255, 255, 255, 0.5);
     width: 26px;
-    padding:4px 0 3px;
+    padding:4px 0 4px;
 }
 
 .sm-top li a:before {
@@ -1672,7 +1672,7 @@ body.single .featured-img img {
     padding: 5px 0;
 }
 
-.post-navigation .wp-pagenavi a, 
+.post-navigation .wp-pagenavi a,
 .post-navigation .wp-pagenavi span {
     background-color: #fff;
     border-color: #C2CFCC;
@@ -1680,7 +1680,7 @@ body.single .featured-img img {
     padding: 5px 10px;
 }
 
-.post-navigation .wp-pagenavi a:hover, 
+.post-navigation .wp-pagenavi a:hover,
 .post-navigation .wp-pagenavi span.current {
     border-color: #8AB7AC;
     color: #666;
@@ -1697,8 +1697,8 @@ section.corner-stamp {
     margin-left: 0;
 }
 
-.corner-stamp .categories, 
-.corner-stamp .categories ul, 
+.corner-stamp .categories,
+.corner-stamp .categories ul,
 .corner-stamp .categories ol {
     margin: 0;
     padding: 0;
@@ -1998,7 +1998,7 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
  * 13.1 - <= 1025px
  */
 @media only screen and (max-width: 1025px) {
- 
+
     #primary-nav .twelve {
         height: 34px;
     }
@@ -2008,7 +2008,7 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
         top: 16px;
     }
 
-   
+
 }
 
 /**
@@ -2197,7 +2197,7 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
     .sidebar .widget{
         margin-bottom: 20px;
     }
-    
+
     .sidebar-right .search-form input.search-field {
         width: 100%;
     }

@@ -112,12 +112,12 @@ get_header(); ?>
                        
 	</div>
 <!-- .entry -->
-
+<?php comments_template( '', true ); ?>
 </article><!-- .post -->
 
         <?php endwhile; ?>
       
-        	<?php comments_template( '', true ); ?>
+        	
  
 </section>
 <!-- #content -->

@@ -42,8 +42,9 @@ get_header(); ?>
        </div>
 	  <?php } ?>
     </div>
+    <?php comments_template( '', true ); ?>
   </article>
-  <?php comments_template( '', true ); ?>
+  
 </section>
 <!-- #content -->
 

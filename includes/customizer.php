@@ -176,8 +176,8 @@ function sampression_customize_register( $wp_customize ) {
         );
 
     $google_fonts = array(
-        'Roboto+Slab:400,700=serif' => 'Roboto Slab',
-        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
+        'Roboto+Slab:400,700=serif' => 'Roboto Slab - Default Header',
+        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto - Default Body',
         'Playfair+Display:400,700,400italic,700italic=serif' => 'Playfair Display',
         'Work+Sans:400,700=sans-serif' => 'Work Sans',
         'Alegreya:400,400italic,700,700italic=serif' => 'Alegreya',
@@ -727,8 +727,8 @@ function sampression_sanitize_html( $input ) {
 //Sanitizes Fonts 
 function sampression_sanitize_fonts( $input ) {  
     $valid = array(
-        'Roboto+Slab:400,700=serif' => 'Roboto Slab',
-        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
+        'Roboto+Slab:400,700=serif' => 'Roboto Slab - Default Header',
+        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto - Default Body',
         'Playfair+Display:400,700,400italic,700italic=serif' => 'Playfair Display',
         'Work+Sans:400,700=sans-serif' => 'Work Sans',
         'Alegreya:400,400italic,700,700italic=serif' => 'Alegreya',

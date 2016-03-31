@@ -95,7 +95,7 @@ function about_sampression_theme_page() {
                     </ul>
                 </li>
             </ul>
-            <p>
+            <p style="clear: both;">
                 <a target="_blank" class="button button-primary" href="<?php echo esc_url( 'http://www.sampression.com/themes/sampression-pro/' ); ?>">Upgrade to PRO</a>
                 <a target="_blank" class="button button-primary" href="<?php echo esc_url( 'http://www.demo.sampression.com/sampression-pro/' ); ?>">Live Theme Demo</a>
             </p>
@@ -104,19 +104,22 @@ function about_sampression_theme_page() {
     <style>
         ul.pro-feature-list {
             list-style: inherit;
-            padding-left: 30px;
             margin-bottom: 50px;
         }
-        ul.pro-feature-list li {
+        ul.pro-feature-list > li {
+            display: inline-block;
+            float: left;
             font-weight: bold;
+            height: 130px;
+            padding: 10px;
+            width: 325px;
         }
-        ul.pro-feature-sub-list {
-            list-style: initial;
-            padding-left: 30px;
-            margin-top: 10px;
+        .pro-feature-sub-list {
+            padding-top: 10px;
         }
         ul.pro-feature-sub-list li {
             font-weight: normal;
+            line-height: 22px;
         }
     </style>
     <?php

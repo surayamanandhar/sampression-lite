@@ -176,6 +176,8 @@ function sampression_customize_register( $wp_customize ) {
         );
 
     $google_fonts = array(
+        'Roboto+Slab:400,700=serif' => 'Roboto Slab',
+        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
         'Playfair+Display:400,700,400italic,700italic=serif' => 'Playfair Display',
         'Work+Sans:400,700=sans-serif' => 'Work Sans',
         'Alegreya:400,400italic,700,700italic=serif' => 'Alegreya',
@@ -190,8 +192,6 @@ function sampression_customize_register( $wp_customize ) {
         'Karla:400,700=sans-serif' => 'Karla',
         'Merriweather:400,400italic,700,700italic=serif' => 'Merriweather',
         'Open+Sans:400,400italic,700,700italic=sans-serif' => 'Open Sans',
-        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
-        'Roboto+Slab:400,700=serif' => 'Roboto Slab',
         'Lato:400,400italic,700,700italic=sans-serif' => 'Lato',
         'Droid+Serif:400,400italic,700,700italic=serif' => 'Droid Serif',
         'Archivo+Narrow:400,400italic,700,700italic=sans-serif' => 'Archivo Narrow',
@@ -727,6 +727,8 @@ function sampression_sanitize_html( $input ) {
 //Sanitizes Fonts 
 function sampression_sanitize_fonts( $input ) {  
     $valid = array(
+        'Roboto+Slab:400,700=serif' => 'Roboto Slab',
+        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
         'Playfair+Display:400,700,400italic,700italic=serif' => 'Playfair Display',
         'Work+Sans:400,700=sans-serif' => 'Work Sans',
         'Alegreya:400,400italic,700,700italic=serif' => 'Alegreya',
@@ -741,8 +743,6 @@ function sampression_sanitize_fonts( $input ) {
         'Karla:400,700=sans-serif' => 'Karla',
         'Merriweather:400,400italic,700,700italic=serif' => 'Merriweather',
         'Open+Sans:400,400italic,700,700italic=sans-serif' => 'Open Sans',
-        'Roboto:400,400italic,700,700italic=sans-serif' => 'Roboto',
-        'Roboto+Slab:400,700=serif' => 'Roboto Slab',
         'Lato:400,400italic,700,700italic=sans-serif' => 'Lato',
         'Droid+Serif:400,400italic,700,700italic=serif' => 'Droid Serif',
         'Archivo+Narrow:400,400italic,700,700italic=sans-serif' => 'Archivo Narrow',

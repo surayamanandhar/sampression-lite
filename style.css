@@ -733,7 +733,6 @@ body.admin-bar #primary-nav.fixed {
 #primary-nav .nav-label {
     margin-right: 10px;
     position: absolute;
-    left: 10px;
     top: 20px;
 }
 
@@ -1485,7 +1484,8 @@ body.single #content, body.page #content {
 #post-listing {
     width: 100%;
     float: left;
-    padding: 0 1px 8px 0;
+    padding: 0 0 8px 0;
+    overflow: visible !important;
 }
 
 body.home {
@@ -1500,7 +1500,7 @@ article.post {
     margin-top: 1px;
 }
 article.columns.item {
-    margin: 1px 0 0 1px;
+    margin: 1px 0 0 0;
 }
 
 .sticky{

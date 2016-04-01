@@ -559,7 +559,6 @@ legend span {
     font-weight: normal;
     font-size: 13px;
     font-size: 1.3rem;
-    color: #444;
 }
 
 .button,
@@ -1125,7 +1124,6 @@ img.logo-img {
     font-size: 13px;
     font-size: 1.3rem;
     margin-bottom: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 /* Top Nav */

@@ -79,7 +79,7 @@ if ( !defined('ABSPATH')) exit;
 				
 	  </div> 
       <!-- #top-nav-mobile-->
-      <div id="interaction-sec" class="clearfix <?php echo getnoofclass(); ?>">
+      <div id="interaction-sec" class="clearfix">
        
      
        <ul class="sm-top">

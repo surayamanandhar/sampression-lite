@@ -112,7 +112,7 @@ function about_sampression_theme_page() {
             font-weight: bold;
             height: 130px;
             padding: 10px;
-            width: 325px;
+            width: 30%;
         }
         .pro-feature-sub-list {
             padding-top: 10px;

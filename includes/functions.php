@@ -623,22 +623,6 @@ function sampression_filter_cat_callback() {
 	die();
 }
 
-/* function to echo number of class  depending on number of social media link set */
-function getnoofclass(){
-		$noofclass=0;
-		$class = 'socialzero';
-		 if( get_option( 'opt_get_facebook' ) !=''){ $noofclass++; }
-		 if( get_option( 'opt_get_twitter' ) !=''){ $noofclass++; }
-		 if( get_option( 'opt_get_gplus' ) !=''){ $noofclass++; }
-		 if( get_option( 'opt_get_youtube' ) !=''){ $noofclass++; }
-		 switch($noofclass){
-			case 1: $class='socialone'; break;
-			case 2: $class='socialtwo'; break;
-			case 3: $class='socialthree'; break;
-			case 4: $class='socialfour'; break;
-		 }
-		return $class;
-	  }
 /**
  * Add meta tags.
  */ 
@@ -708,7 +692,7 @@ function sampression_custom_header_style() {
         <?php
         if ( $text_color = get_theme_mod('title_textcolor') ) {
         ?>
-            #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title{
+            #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title, h1, h2, h3, h4, h5, h6 {
                 color: <?php echo $text_color; ?>;
             }
             #site-title a:hover,
@@ -724,7 +708,7 @@ function sampression_custom_header_style() {
             $title_font = get_theme_mod('title_font');
             $title_family = sampression_font_family($title_font);
             ?>
-            #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title {
+            #site-title a, article.post .post-title a, body.single article.post .post-title, body.page article.post .post-title, h1, h2, h3, h4, h5, h6 {
                 font-family: <?php echo $title_family ?>;
             }
             <?php

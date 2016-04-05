@@ -97,11 +97,6 @@ if (!function_exists('sampression_setup')):
             'header-text' => false
 		) ); 
 		//define( 'NO_HEADER_TEXT', true );
-        
-		/**
-		 * remove wordpress version from header 
-		 */
-		remove_action( 'wp_head', 'wp_generator' );
 		
         /**
          * This feature enables custom-menus support for a theme.

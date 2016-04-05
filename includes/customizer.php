@@ -163,7 +163,11 @@ function sampression_customize_register( $wp_customize ) {
     /**
      * Background Image Cover
      */
-        $wp_customize->add_setting( 'sampression_background_cover', array('transport' => 'postMessage') );
+        $wp_customize->add_setting( 'sampression_background_cover', array(
+                'sanitize_callback' => 'sampression_sanitize_checkbox',
+                'transport' => 'postMessage'
+            )
+        );
         $wp_customize->add_control(
             'sampression_background_cover',
             array(
@@ -764,6 +768,11 @@ function sampression_sanitize_fonts( $input ) {
     } else {
         return '';
     }
+}
+
+function sampression_sanitize_checkbox( $checked ) {
+    // Boolean check.
+    return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
 function sampression_sanitize_pro_version( $input ) {

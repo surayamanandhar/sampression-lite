@@ -2,7 +2,7 @@
 Pinterest Style WordPress Theme
 
 ##Download Link:
-Sampression lite is available to download on http://wordpress.org/themes/sampression-lite
+Sampression Lite is available to download on http://wordpress.org/themes/sampression-lite
 
 ## Theme Description
 Sampression Lite is a free, Pinterest inspired responsive WordPress theme with an attractive masonry blog layout. The theme has clean and lightweight design. It boasts of user friendly customizing options making it very easy to customize your blog’s header, menus, widgets, background color and images. The theme is also SEO friendly and translation ready, allowing you the freedom of expressing in your native language.
@@ -21,7 +21,7 @@ Please follow the steps below to install the theme.
 1. Primary:
   - Login to your wp-admin account and go to Appearance -> Themes.
   - Select "Install" tab and click on the "Upload" link.
-  - Select "theme .zip" and click on "Install Now" button.
+  - Select "theme.zip" and click on "Install Now" button.
   - In case of errors, use an alternate method.
 
 2. Alternate:
@@ -39,11 +39,11 @@ Please follow the steps below to install the theme.
 
 6. Change Background
  = Login to your wp-admin are and go to Appearance -> Customize -> General Settings -> 
- = You can upload backgground image or set background colour here.
+ = You can upload background image or set background colour here.
 
-7. Change display Fontface
+7. Change display Font-face
  = Login to your wp-admin are and go to Appearance -> Customize -> General Settings -> Typography
- = You can set your font’s color and Fontface for both header and body text here.
+ = You can set your font’s color and Font-face for both header and body text here.
  = Sampression Lite now has inbuilt support for 30 popular Google Fonts.
 
 8. Social Media:
@@ -64,36 +64,36 @@ Please follow the steps below to install the theme.
 
 ### Fonts & Icons
   - Genericons: https://github.com/Automattic/Genericons/blob/master/LICENSE.txt
-  - Google Webfonts: Roboto+Slab (https://www.google.com/fonts/specimen/Roboto+Slab) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-  - Google Webfonts: Roboto (https://www.google.com/fonts/specimen/Roboto) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-  - Google Webfonts: Playfair+Display (https://www.google.com/fonts/specimen/Playfair+Display) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Work+Sans (https://www.google.com/fonts/specimen/Work+Sans) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Alegreya (https://www.google.com/fonts/specimen/Alegreya) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Alegreya+Sans (https://www.google.com/fonts/specimen/Alegreya+Sans) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Fira+Sans (https://www.google.com/fonts/specimen/Fira+Sans) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Droid+Sans (https://www.google.com/fonts/specimen/Droid+Sans) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-  - Google Webfonts: Source+Sans+Pro (https://www.google.com/fonts/specimen/Source+Sans+Pro) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Source+Serif+Pro (https://www.google.com/fonts/specimen/Source+Serif+Pro) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Lora (https://www.google.com/fonts/specimen/Lora) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Neuton (https://www.google.com/fonts/specimen/Neuton) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Poppins (https://www.google.com/fonts/specimen/Poppins) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Karla (https://www.google.com/fonts/specimen/Karla) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Merriweather (https://www.google.com/fonts/specimen/Merriweather) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Open+Sans (https://www.google.com/fonts/specimen/Open+Sans) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-  - Google Webfonts: Lato (https://www.google.com/fonts/specimen/Lato) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Droid+Serif (https://www.google.com/fonts/specimen/Droid+Serif) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
-  - Google Webfonts: Archivo+Narrow (https://www.google.com/fonts/specimen/Archivo+Narrow) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Libre+Baskerville (https://www.google.com/fonts/specimen/Libre+Baskerville) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Crimson+Text (https://www.google.com/fonts/specimen/Crimson+Text) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Montserrat (https://www.google.com/fonts/specimen/Montserrat) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Chivo (https://www.google.com/fonts/specimen/Chivo) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Old+Standard+TT (https://www.google.com/fonts/specimen/Old+Standard+TT) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Domine (https://www.google.com/fonts/specimen/Domine) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Varela+Round (https://www.google.com/fonts/specimen/Varela+Round) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Bitter (https://www.google.com/fonts/specimen/Bitter) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Cardo (https://www.google.com/fonts/specimen/Cardo) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: Arvo (https://www.google.com/fonts/specimen/Arvo) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - Google Webfonts: PT+Serif (https://www.google.com/fonts/specimen/PT+Serif) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Roboto+Slab (https://www.google.com/fonts/specimen/Roboto+Slab) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)Web Fonts
+  - Google Web Fonts: Roboto (https://www.google.com/fonts/specimen/Roboto) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Google Web Fonts: Playfair+Display (https://www.google.com/fonts/specimen/Playfair+Display) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Work+Sans (https://www.google.com/fonts/specimen/Work+Sans) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Alegreya (https://www.google.com/fonts/specimen/Alegreya) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Alegreya+Sans (https://www.google.com/fonts/specimen/Alegreya+Sans) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Fira+Sans (https://www.google.com/fonts/specimen/Fira+Sans) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Droid+Sans (https://www.google.com/fonts/specimen/Droid+Sans) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Google Web Fonts: Source+Sans+Pro (https://www.google.com/fonts/specimen/Source+Sans+Pro) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Source+Serif+Pro (https://www.google.com/fonts/specimen/Source+Serif+Pro) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Lora (https://www.google.com/fonts/specimen/Lora) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Neuton (https://www.google.com/fonts/specimen/Neuton) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Poppins (https://www.google.com/fonts/specimen/Poppins) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Karla (https://www.google.com/fonts/specimen/Karla) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Merriweather (https://www.google.com/fonts/specimen/Merriweather) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Open+Sans (https://www.google.com/fonts/specimen/Open+Sans) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Google Web Fonts: Lato (https://www.google.com/fonts/specimen/Lato) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Droid+Serif (https://www.google.com/fonts/specimen/Droid+Serif) is licensed under Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Google Web Fonts: Archivo+Narrow (https://www.google.com/fonts/specimen/Archivo+Narrow) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Libre+Baskerville (https://www.google.com/fonts/specimen/Libre+Baskerville) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Crimson+Text (https://www.google.com/fonts/specimen/Crimson+Text) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Montserrat (https://www.google.com/fonts/specimen/Montserrat) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Chivo (https://www.google.com/fonts/specimen/Chivo) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Old+Standard+TT (https://www.google.com/fonts/specimen/Old+Standard+TT) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Domine (https://www.google.com/fonts/specimen/Domine) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Varela+Round (https://www.google.com/fonts/specimen/Varela+Round) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Bitter (https://www.google.com/fonts/specimen/Bitter) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Cardo (https://www.google.com/fonts/specimen/Cardo) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: Arvo (https://www.google.com/fonts/specimen/Arvo) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - Google Web Fonts: PT+Serif (https://www.google.com/fonts/specimen/PT+Serif) is licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 
 ### CSS
   - Skeleton: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
@@ -121,7 +121,7 @@ Please follow the steps below to install the theme.
   - Fixed the "Theme Options" issue: Subscribers cannot change "Theme Options" anymore.
   - Supports WP-Pagenavi plugin.
   - Supports dropdown menu.
-  - Theme Options layout enchance.
+  - Theme Options layout enhance.
 
 ### Version 1.3.2
   - Fixed CSS related bugs, especially on the IE browsers < version 9.x
@@ -143,10 +143,10 @@ Please follow the steps below to install the theme.
   - The design of "Sticky Post" has been made more prominent
   - A slightly darker color has been used for links
   - Fixed Meta links now redirect to their respective archive pages
-  - Users can now use any name for apple touch icons, favicons and logos
-  - Added Options to not use the default logos and favicons
+  - Users can now use any name for apple touch icons, favicon and logos
+  - Added Options to not use the default logos and favicon
   - Removed Site verification, analytics, etc.
-  - Removed default logo, favicons and apple touch icons
+  - Removed default logo, favicon and apple touch icons
   - Few sampression hooks ( sampression_meta, sampression_title, sampression_favicon, sampression_styles, sampression_links, sampression_logo, etc. ) are introduced.
 
 ### Version 1.3.2.1
@@ -155,9 +155,9 @@ Please follow the steps below to install the theme.
 ### Version 1.4
   - Added: Sampression Lite is now retina ready
   - Added: Added rtl.css for RTL(right-to-left) support 
-  - Added: Sampresson Lite now supports custom background image and color
-  - Added: Sampresson Lite now supports custom header image and color
-  - Added: Apple touch icon of size 144x144 for high resolution ipads with option on admin panel
+  - Added: Sampression Lite now supports custom background image and color
+  - Added: Sampression Lite now supports custom header image and color
+  - Added: Apple touch icon of size 144x144 for high resolution iPads with option on admin panel
   - Fixed: Top Nav resizing problem
   - Fixed: Custom code not working
   - Fixed: Categories overlap on archive page
@@ -172,14 +172,14 @@ Please follow the steps below to install the theme.
 
 ### Version 1.5
   - Added: Responsive video feature added.
-  - Changed: Isotope jquery plugin replaced by shuffle.js jquery plugin
+  - Changed: Isotope jQuery plugin replaced by shuffle.js jQuery plugin
   - Changed: Multiple category filtering changed to single category filtering in home page
   - Changed: Sticky post's position changed from right to left.
   - Fixed: CSS Fixings
   
 ### Version 1.5.1
   - Fixed: Repeating id changed to class
-  - Fixed: Category Filtering menu fixed in ios devices
+  - Fixed: Category Filtering menu fixed in iOS devices
   - Fixed: Removed extra closing tags on sidebar.php file
 
 ### Version 1.5.2
@@ -219,4 +219,4 @@ Please follow the steps below to install the theme.
   - Removed: Hook - sampression_footer
 
 ## Child Theme Support
-Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.
+Sampression Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

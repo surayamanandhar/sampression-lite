@@ -1693,9 +1693,6 @@ body.single .featured-img img {
  *  12.4 - Sidebar
  */
 
-section.corner-stamp {
-    margin: 1px 3% 0 0;
-}
 .sidebar-right .widget.widget_search .widget-entry {
     margin-left: 0;
 }

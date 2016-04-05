@@ -26,7 +26,7 @@ get_header(); ?>
   	while (have_posts()) : the_post(); 
       get_template_part( 'loop', 'search' );
     endwhile;
-	?>
+	?><div class="three columns shuffle__sizer"></div>
     
 </div>
 <!-- #post-listing --> 

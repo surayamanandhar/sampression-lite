@@ -51,7 +51,7 @@ get_header(); ?>
       get_template_part( 'loop', 'category' );
     endwhile;
 	?>
-    
+    <div class="three columns shuffle__sizer"></div>
 </div>
 <!-- #post-listing --> 
 <?php

@@ -68,6 +68,7 @@ get_header(); ?>
         get_template_part( 'loop', 'archive' );
     endwhile;
     ?>
+    <div class="three columns shuffle__sizer"></div>
 </div>
 <!-- #post-listing --> 
 <?php sampression_content_nav( 'nav-below' ); ?>

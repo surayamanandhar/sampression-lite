@@ -590,7 +590,7 @@ function sampression_customize_register( $wp_customize ) {
     /*
      * Header Code Setting
      */
-        $wp_customize->add_setting( 'sampression_header_code', array('sanitize_callback' => 'sampression_sanitize_html','default' => ''));
+        $wp_customize->add_setting( 'sampression_header_code', array('sanitize_callback' => 'sampression_sanitize_html','default' => get_option('opt_sam_header')));
         $wp_customize->add_control(
         'sampression_header_code',
         array(
@@ -618,7 +618,7 @@ function sampression_customize_register( $wp_customize ) {
     /*
      * Footer Code Setting
      */
-        $wp_customize->add_setting( 'sampression_footer_code', array('sanitize_callback' => 'sampression_sanitize_html','default' => ''));
+        $wp_customize->add_setting( 'sampression_footer_code', array('sanitize_callback' => 'sampression_sanitize_html','default' => get_option('opt_sam_footer')));
         $wp_customize->add_control(
         'sampression_footer_code',
         array(

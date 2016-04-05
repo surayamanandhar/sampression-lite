@@ -789,8 +789,8 @@ function sampression_font_family( $family ) {
 
 if(!function_exists('sampression_insert_into_header')) {
     function sampression_insert_into_header() {
-        if(!empty(get_theme_mod('sampression_header_code'))) {
-            echo get_theme_mod('sampression_header_code');
+        if(!empty(get_theme_mod('sampression_header_code', get_option('opt_sam_header')))) {
+            echo get_theme_mod('sampression_header_code', get_option('opt_sam_header'));
         }
     }
 }
@@ -799,8 +799,8 @@ add_action('wp_head','sampression_insert_into_header', 999);
 
 if(!function_exists('sampression_insert_into_footer')) {
     function sampression_insert_into_footer() {
-        if(!empty(get_theme_mod('sampression_footer_code'))) {
-            echo get_theme_mod('sampression_footer_code');
+        if(!empty(get_theme_mod('sampression_footer_code', get_option('opt_sam_footer')))) {
+            echo get_theme_mod('sampression_footer_code', get_option('opt_sam_footer'));
         }
     }
 }

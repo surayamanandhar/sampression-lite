@@ -61,7 +61,7 @@ function sampression_customize_register( $wp_customize ) {
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
         'title' => __( 'General Settings', 'sampression' ),
-        'description' => __( 'Description of what this panel does.', 'sampression' ),
+        'description' => __( "You can customize general settings of your site like the site's name, tagline, logo, site icon, copyright text, background image, colour, choice of font face and color here.", 'sampression' ),
     ) );
 
     /**
@@ -357,7 +357,7 @@ function sampression_customize_register( $wp_customize ) {
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
         'title' => __( 'Header &amp; Navigation', 'sampression' ),
-        'description' => __( 'Description of what this panel does.', 'sampression' ),
+        'description' => __( 'You can add/remove social media links, search bar and header image here.', 'sampression' ),
     ) );
 
     /**

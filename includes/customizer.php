@@ -60,7 +60,7 @@ function sampression_customize_register( $wp_customize ) {
         'priority' => 10,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __( 'General Setting', 'sampression' ),
+        'title' => __( 'General Settings', 'sampression' ),
         'description' => __( 'Description of what this panel does.', 'sampression' ),
     ) );
 

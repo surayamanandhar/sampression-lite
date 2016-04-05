@@ -751,6 +751,20 @@ function sampression_custom_header_style() {
             a:hover{
                 color: <?php echo get_theme_mod('body_textcolor') ?>;
             }
+            #top-nav ul li li a,
+            #top-nav ul li.current-menu-item li a,
+            #top-nav ul li.current-menu-parent li a,
+            #top-nav ul li.current-menu-ancestor li a,
+            #top-nav ul li li.current-menu-item li a,
+            #top-nav ul li li.current-menu-parent li a,
+            #top-nav ul li li.current-menu-parent li.current-menu-item a,
+            #top-nav .sub-menu li a,
+            #top-nav .sub-menu .sub-menu li a,
+            #top-nav .sub-menu li:last-child > .sub-menu li a,
+            #top-nav .sub-menu li:last-child > .sub-menu li:last-child > .sub-menu li a,
+            #top-nav .sub-menu li:last-child > .sub-menu li:last-child > .sub-menu li:last-child > .sub-menu li a {
+                color: <?php echo get_theme_mod('link_color') ?>;
+            }
         <?php
         }
         ?>

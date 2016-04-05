@@ -110,7 +110,6 @@ function about_sampression_theme_page() {
             display: inline-block;
             float: left;
             font-weight: bold;
-            height: 130px;
             padding: 10px;
             width: 30%;
         }

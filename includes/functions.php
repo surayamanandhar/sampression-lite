@@ -121,6 +121,11 @@ if ( is_admin() && isset( $_GET['activated'] ) && $pagenow == 'themes.php' ) {
 }
 
 /**
+ * Add shortcode support in widget_text
+ */
+add_filter('widget_text', 'do_shortcode');
+
+/**
  * Sampression theme background image css callback
  */
 if(!function_exists( 'sampression_custom_background_cb' )):

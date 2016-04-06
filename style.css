@@ -308,6 +308,9 @@ address, pre {
 pre {
     font-size: 14px;
     margin-left: 20px;
+    white-space: pre;
+    white-space: pre-wrap;
+    max-width: 100%;
 }
 code {
     background-color: #d1d1d1;

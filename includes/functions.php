@@ -717,14 +717,14 @@ function sampression_custom_header_style() {
             $body_font = get_theme_mod('body_font');
             $body_family = sampression_font_family($body_font);
             ?>
-            p {
+            p, #site-description {
                 font-family: <?php echo $body_family ?>;
             }
             <?php
         }
         if(get_theme_mod('body_textcolor')) {
         ?>
-            body{
+            body, #site-description {
                 color: <?php echo get_theme_mod('body_textcolor') ?>;
             }
         <?php

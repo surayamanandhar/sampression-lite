@@ -87,6 +87,7 @@ footer, header, main, menu, nav, section, summary {
 
 body {
     line-height: 1;
+    word-wrap: break-word;
 }
 
 ol, ul {
@@ -1795,6 +1796,7 @@ img.avatar {
     font-size: 2rem;
     margin-bottom: 40px;
     padding-left: 30px;
+    padding-right: 30px;
 }
 
 #reply-title {

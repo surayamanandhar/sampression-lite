@@ -188,7 +188,7 @@ if( ! function_exists( 'sampression_footer' ) ) {
     <div class="alignleft powered-wp">
         <?php
         if( get_theme_mod('sampression_remove_copyright_text') != 1 ) {
-            if(!empty(get_theme_mod('sampression_copyright_text'))) {
+            if( get_theme_mod('sampression_copyright_text') ) {
                 echo get_theme_mod('sampression_copyright_text') . ' ';
             } else {
             ?>
@@ -789,7 +789,7 @@ function sampression_font_family( $family ) {
 
 if(!function_exists('sampression_insert_into_header')) {
     function sampression_insert_into_header() {
-        if(!empty(get_theme_mod('sampression_header_code', get_option('opt_sam_header')))) {
+        if( get_theme_mod('sampression_header_code', get_option('opt_sam_header')) ) {
             echo get_theme_mod('sampression_header_code', get_option('opt_sam_header'));
         }
     }
@@ -799,7 +799,7 @@ add_action('wp_head','sampression_insert_into_header', 999);
 
 if(!function_exists('sampression_insert_into_footer')) {
     function sampression_insert_into_footer() {
-        if(!empty(get_theme_mod('sampression_footer_code', get_option('opt_sam_footer')))) {
+        if( get_theme_mod('sampression_footer_code', get_option('opt_sam_footer')) ) {
             echo get_theme_mod('sampression_footer_code', get_option('opt_sam_footer'));
         }
     }

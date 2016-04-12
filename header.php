@@ -89,7 +89,7 @@ if ( !defined('ABSPATH')) exit;
        if(get_option('opt_get_facebook'))
            $fb_icon = get_option('opt_get_facebook');
 
-	    if( !empty(get_theme_mod( 'sampression_socials_facebook', $fb_icon )) ) { ?>
+	    if( get_theme_mod( 'sampression_socials_facebook', $fb_icon ) ) { ?>
           <li class="sm-top-fb"><a class="genericon-facebook-alt" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_facebook', $fb_icon )); ?>" target="_blank"></a></li>
        <?php }
 		// Twitter
@@ -97,7 +97,7 @@ if ( !defined('ABSPATH')) exit;
        if(get_option('opt_get_twitter'))
            $tw_icon = get_option('opt_get_twitter');
 
-	   if( !empty(get_theme_mod( 'sampression_socials_twitter', $tw_icon )) ) {
+	   if( get_theme_mod( 'sampression_socials_twitter', $tw_icon ) ) {
 	    ?>
           <li class="sm-top-tw"><a class="genericon-twitter" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_twitter', $tw_icon ) ); ?>" target="_blank"></a></li>
          <?php }
@@ -106,7 +106,7 @@ if ( !defined('ABSPATH')) exit;
        if(get_option('opt_get_gplus'))
            $gp_icon = get_option('opt_get_gplus');
 
-	   if( !empty(get_theme_mod( 'sampression_socials_googleplus', $gp_icon )) ) {
+	   if( get_theme_mod( 'sampression_socials_googleplus', $gp_icon ) ) {
 	    ?>
           <li class="sm-top-gplus"><a class="genericon-googleplus" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_googleplus', $gp_icon ) ); ?>" target="_blank"></a></li>
           <?php } 
@@ -115,48 +115,48 @@ if ( !defined('ABSPATH')) exit;
        if(get_option('opt_get_youtube'))
            $yt_icon = get_option('opt_get_youtube');
 
-		if( !empty(get_theme_mod( 'sampression_socials_youtube', $yt_icon )) ) {
+		if( get_theme_mod( 'sampression_socials_youtube', $yt_icon ) ) {
 	    ?>
           <li class="sm-top-youtube"><a class="genericon-youtube" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_youtube', $yt_icon ) ); ?>" target="_blank"></a></li>
           <?php }
         // Tumblr
-        if( !empty( get_theme_mod( 'sampression_socials_tumblr' ) ) ) {
+        if( get_theme_mod( 'sampression_socials_tumblr' ) ) {
         ?>
           <li class="sm-top-tumblr"><a class="genericon-tumblr" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_tumblr' ) ); ?>" target="_blank"></a></li>
         <?php
         }
         // Pinterest
-        if( !empty( get_theme_mod( 'sampression_socials_pinterest' ) ) ) {
+        if( get_theme_mod( 'sampression_socials_pinterest' ) ) {
         ?>
           <li class="sm-top-pinterest"><a class="genericon-pinterest" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_pinterest' ) ); ?>" target="_blank"></a></li>
         <?php
         }
         // Linkedin
-        if( !empty( get_theme_mod( 'sampression_socials_linkedin' ) ) ) {
+        if( get_theme_mod( 'sampression_socials_linkedin' ) ) {
         ?>
           <li class="sm-top-linkedin"><a class="genericon-linkedin" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_linkedin' ) ); ?>" target="_blank"></a></li>
         <?php
         }
         // Github
-        if( !empty( get_theme_mod( 'sampression_socials_github' ) ) ) {
+        if( get_theme_mod( 'sampression_socials_github' ) ) {
         ?>
           <li class="sm-top-github"><a class="genericon-github" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_github' ) ); ?>" target="_blank"></a></li>
         <?php
         }
         // Instagram
-        if( !empty( get_theme_mod( 'sampression_socials_instagram' ) ) ) {
+        if( get_theme_mod( 'sampression_socials_instagram' ) ) {
         ?>
           <li class="sm-top-instagram"><a class="genericon-instagram" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_instagram' ) ); ?>" target="_blank"></a></li>
         <?php
         }
         // Flickr
-        if( !empty( get_theme_mod( 'sampression_socials_flickr' ) ) ) {
+        if( get_theme_mod( 'sampression_socials_flickr' ) ) {
         ?>
           <li class="sm-top-flickr"><a class="genericon-flickr" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_flickr' ) ); ?>" target="_blank"></a></li>
         <?php
         }
         // Vimeo
-        if( !empty( get_theme_mod( 'sampression_socials_vimeo' ) ) ) {
+        if( get_theme_mod( 'sampression_socials_vimeo' ) ) {
         ?>
           <li class="sm-top-vimeo"><a class="genericon-vimeo" href="<?php echo stripslashes(get_theme_mod( 'sampression_socials_vimeo' ) ); ?>" target="_blank"></a></li>
         <?php

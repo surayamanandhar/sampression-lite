@@ -180,7 +180,7 @@ table {
 * 3.0 - Typography
 */
 
-body {
+body, #site-description {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-size: 1.4rem;
@@ -1084,7 +1084,8 @@ article.post .post-title a,
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
 
-#logo-area {
+#logo-area,
+a.custom-logo-link {
     margin-top: 10px;
     text-decoration: none;
     vertical-align: middle;

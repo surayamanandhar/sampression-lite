@@ -32,26 +32,26 @@ if ( !defined('ABSPATH')) exit;
 
 <body <?php body_class('top'); ?>>
 <header id="header">
-  <div class="container">
-    <div class="columns five">
-	
-			<?php
-        if( get_custom_logo() && get_theme_mod('sampression_remove_logo') != 1) {
-						do_action('sampression_logo');
-				} else {
-			?>
-			
-			<div class="logo-txt">
-			  <h1 class="site-title" id="site-title">
-			  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			  <?php bloginfo( 'name' ); ?>
-			  </a>
-			  </h1>
-        <?php if(get_theme_mod('sampression_remove_tagline') != 1) { ?>
-			  <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
-        <?php } ?>
-			</div>
-        <?php } ?>
+    <div class="container">
+        <div class="columns five">
+        <?php
+        if( get_theme_mod( 'custom_logo' ) != '' && get_theme_mod('sampression_remove_logo') != 1) {
+			do_action('sampression_logo');
+		} else {
+		?>
+        <div class="logo-txt">
+            <h1 class="site-title" id="site-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                    <?php bloginfo( 'name' ); ?>
+			    </a>
+			</h1>
+            <?php if(get_theme_mod('sampression_remove_tagline') != 1) { ?>
+                <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
+            <?php } ?>
+		</div>
+        <?php
+        }
+        ?>
     </div>
     <div class="columns seven">
       <nav id="top-nav">

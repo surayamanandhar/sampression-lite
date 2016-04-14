@@ -554,15 +554,13 @@ endif; // ends check for sampression_comment()
  *=======================================================================*/
 add_action('sampression_logo', 'sampression_show_logo');
 function sampression_show_logo() {
-	if ( function_exists( 'the_custom_logo' ) ) {
-	?>
-		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( ucwords(get_bloginfo( 'name', 'display' )) ); ?>" rel="home" id="logo-area">
-            <?php the_custom_logo() ?>
-		</a>
-        <?php if(get_theme_mod('sampression_remove_tagline') != 1) { ?>
-        <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
-        <?php } ?>
-    <?php
+	if ( function_exists( 'the_custom_logo' ) && get_custom_logo() ) {
+	    the_custom_logo();
+        if(get_theme_mod('sampression_remove_tagline') != 1) {
+        ?>
+            <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>
+        <?php
+        }
 	}
 }
 

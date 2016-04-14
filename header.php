@@ -35,7 +35,7 @@ if ( !defined('ABSPATH')) exit;
     <div class="container">
         <div class="columns five">
         <?php
-        if( get_theme_mod( 'custom_logo' ) != '' && get_theme_mod('sampression_remove_logo') != 1) {
+        if( (get_theme_mod( 'custom_logo' ) != '' && get_theme_mod('sampression_remove_logo') != 1) || (get_theme_mod('sampression_logo', get_option('opt_sam_logo')) != '' && get_theme_mod('sampression_remove_logo') != 1) ) {
 			do_action('sampression_logo');
 		} else {
 		?>

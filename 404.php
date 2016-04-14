@@ -1,7 +1,6 @@
 <?php
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
-
 /**
  * The template for displaying 404 pages (Not Found).
  * 
@@ -9,7 +8,6 @@ if ( !defined('ABSPATH')) exit;
  * @since Sampression Lite 1.0
  */
 get_header(); ?>
-
 <section id="content" class="clearfix">
 	<div class="columns twelve offset-by-two">
 		<div id="page-not-found-message">

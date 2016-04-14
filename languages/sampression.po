@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sampression Lite\n"
-"POT-Creation-Date: 2016-03-30 17:11+0545\n"
-"PO-Revision-Date: 2016-03-30 17:11+0545\n"
+"POT-Creation-Date: 2016-04-14 18:33+0545\n"
+"PO-Revision-Date: 2016-04-14 18:33+0545\n"
 "Last-Translator: Sampression <themes@sampression.com>\n"
 "Language-Team: Sampression Team <themes@sampression.com>\n"
 "Language: en\n"
@@ -18,19 +18,19 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:16
+#: 404.php:14
 msgid "Oops! Page not found."
 msgstr ""
 
-#: 404.php:17
+#: 404.php:15
 msgid "Sorry but the page you looking for cannot be found."
 msgstr ""
 
-#: 404.php:18
+#: 404.php:16
 msgid "Better to go"
 msgstr ""
 
-#: 404.php:18
+#: 404.php:16
 msgid "home"
 msgstr ""
 
@@ -61,13 +61,11 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: archive.php:73 author.php:78 category.php:64 index.old.php:63 index.php:39
-#: tag.php:62
+#: archive.php:74 author.php:79 category.php:64 index.php:39 tag.php:62
 msgid "Nothing Found"
 msgstr ""
 
-#: archive.php:77 author.php:82 category.php:68 index.old.php:67 index.php:43
-#: tag.php:66
+#: archive.php:78 author.php:83 category.php:68 index.php:43 tag.php:66
 msgid ""
 "Apologies, but no results were found for the requested archive. Perhaps "
 "searching will help find a related post."
@@ -130,380 +128,358 @@ msgid ""
 "time> "
 msgstr ""
 
-#: image.php:41 loop.php:44 single.php:51
+#: image.php:40 loop.php:44 single.php:51
 msgid "No comments yet"
 msgstr ""
 
-#: image.php:41 loop.php:44 single.php:51
+#: image.php:40 loop.php:44 single.php:51
 msgid "1 Comment"
 msgstr ""
 
-#: image.php:41 loop.php:44 single.php:51
+#: image.php:40 loop.php:44 single.php:51
 msgid "% Comments"
 msgstr ""
 
-#: image.php:53 includes/functions.php:473 includes/functions.php:512
+#: image.php:51 includes/functions.php:482 includes/functions.php:521
 #: page.php:41 single.php:68
 msgid "Edit"
 msgstr ""
 
-#: image.php:109
+#: image.php:108
 msgid "<span class=\"meta-nav\">&larr;</span> Previous Image"
 msgstr ""
 
-#: image.php:110
+#: image.php:109
 msgid "Next Image <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: includes/customizer.php:63
-msgid "General Setting"
+msgid "General Settings"
 msgstr ""
 
-#: includes/customizer.php:64 includes/customizer.php:356
-msgid "Description of what this panel does."
+#: includes/customizer.php:64
+msgid ""
+"You can customize general settings of your site like the site's name, "
+"tagline, logo, site icon, copyright text, background image, colour, choice "
+"of font face and color here."
 msgstr ""
 
 #: includes/customizer.php:73
 msgid "Site Identity"
 msgstr ""
 
-#: includes/customizer.php:89 includes/old-customizer.php:64
+#: includes/customizer.php:88
 msgid "Logo"
 msgstr ""
 
-#: includes/customizer.php:93
+#: includes/customizer.php:92
 msgid "We recommend logo sizes within 220px x 120px."
 msgstr ""
 
-#: includes/customizer.php:106 includes/old-customizer.php:81
+#: includes/customizer.php:107
 msgid "Remove Logo?"
 msgstr ""
 
-#: includes/customizer.php:120 includes/old-customizer.php:95
+#: includes/customizer.php:121
 msgid "Remove Tagline?"
 msgstr ""
 
-#: includes/customizer.php:133 includes/old-customizer.php:122
+#: includes/customizer.php:134
 msgid "Copyright Text"
 msgstr ""
 
-#: includes/customizer.php:147
+#: includes/customizer.php:148
 msgid "Remove Copyright Text?"
 msgstr ""
 
-#: includes/customizer.php:158 includes/old-customizer.php:459
+#: includes/customizer.php:159
 msgid "Background Image"
 msgstr ""
 
-#: includes/customizer.php:171 includes/old-customizer.php:472
+#: includes/customizer.php:176
 msgid "Use Background as Cover"
 msgstr ""
 
-#: includes/customizer.php:216
+#: includes/customizer.php:221
 msgid "Typography"
 msgstr ""
 
-#: includes/customizer.php:238
+#: includes/customizer.php:243
 msgid "Select your desired font for the Title."
 msgstr ""
 
-#: includes/customizer.php:242
+#: includes/customizer.php:247
 msgid "Header Text Font"
 msgstr ""
 
-#: includes/customizer.php:260
+#: includes/customizer.php:265
 msgid "Header Text Color"
 msgstr ""
 
-#: includes/customizer.php:284
+#: includes/customizer.php:289
 msgid "Select your desired font for the body text."
 msgstr ""
 
-#: includes/customizer.php:288
+#: includes/customizer.php:293
 msgid "Body Text Font"
 msgstr ""
 
-#: includes/customizer.php:306
+#: includes/customizer.php:311
 msgid "Body Text Color"
 msgstr ""
 
-#: includes/customizer.php:329
+#: includes/customizer.php:334
 msgid "Link Color"
 msgstr ""
 
-#: includes/customizer.php:341
+#: includes/customizer.php:346
 msgid "Background Color"
 msgstr ""
 
-#: includes/customizer.php:355
+#: includes/customizer.php:360
 msgid "Header &amp; Navigation"
 msgstr ""
 
-#: includes/customizer.php:365
+#: includes/customizer.php:361
+msgid ""
+"You can add/remove social media links, search bar and header image here."
+msgstr ""
+
+#: includes/customizer.php:370
 msgid "Social Media"
 msgstr ""
 
-#: includes/customizer.php:382 includes/old-customizer.php:220
+#: includes/customizer.php:387
 msgid "Facebook link"
 msgstr ""
 
-#: includes/customizer.php:400 includes/old-customizer.php:238
+#: includes/customizer.php:405
 msgid "Twitter link"
 msgstr ""
 
-#: includes/customizer.php:418 includes/old-customizer.php:256
+#: includes/customizer.php:423
 msgid "Youtube link"
 msgstr ""
 
-#: includes/customizer.php:436 includes/old-customizer.php:274
+#: includes/customizer.php:441
 msgid "Google+ link"
 msgstr ""
 
-#: includes/customizer.php:450 includes/old-customizer.php:288
+#: includes/customizer.php:455
 msgid "Tumblr link"
 msgstr ""
 
-#: includes/customizer.php:464 includes/old-customizer.php:302
+#: includes/customizer.php:469
 msgid "Pinterest link"
 msgstr ""
 
-#: includes/customizer.php:478 includes/old-customizer.php:316
+#: includes/customizer.php:483
 msgid "Linkedin link"
 msgstr ""
 
-#: includes/customizer.php:492 includes/old-customizer.php:330
+#: includes/customizer.php:497
 msgid "Github link"
 msgstr ""
 
-#: includes/customizer.php:506 includes/old-customizer.php:344
+#: includes/customizer.php:511
 msgid "Instagram link"
 msgstr ""
 
-#: includes/customizer.php:520 includes/old-customizer.php:358
+#: includes/customizer.php:525
 msgid "Flickr link"
 msgstr ""
 
-#: includes/customizer.php:534 includes/old-customizer.php:372
+#: includes/customizer.php:539
 msgid "Vimeo link"
 msgstr ""
 
-#: includes/customizer.php:547
+#: includes/customizer.php:552
 msgid "Search Option"
 msgstr ""
 
-#: includes/customizer.php:561 includes/old-customizer.php:109
+#: includes/customizer.php:566
 msgid "Remove Search Box?"
 msgstr ""
 
-#: includes/customizer.php:571 includes/old-customizer.php:194
+#: includes/customizer.php:576
 msgid "Header Image"
 msgstr ""
 
-#: includes/customizer.php:581 includes/old-customizer.php:482
+#: includes/customizer.php:586
 msgid "Custom Code"
 msgstr ""
 
-#: includes/customizer.php:593 includes/old-customizer.php:494
+#: includes/customizer.php:598
 msgid "To insert into Header"
 msgstr ""
 
-#: includes/customizer.php:610 includes/old-customizer.php:511
+#: includes/customizer.php:615
 msgid ""
 "Write/Paste the codes which you want to insert in Header. For eg. custom "
 "styles, scripts, etc. This will be inserted before the  &#060;/head&#062; "
 "tag in the header of the document."
 msgstr ""
 
-#: includes/customizer.php:621 includes/old-customizer.php:522
+#: includes/customizer.php:626
 msgid "To insert into Footer"
 msgstr ""
 
-#: includes/customizer.php:638 includes/old-customizer.php:539
+#: includes/customizer.php:643
 msgid ""
 "Write/Paste the codes which you want to insert in Footer. For eg. custom "
 "styles, scripts, etc. This will be inserted before the  &#060;/body&#062; "
 "tag in the footer of the document."
 msgstr ""
 
-#: includes/customizer.php:649 includes/customizer.php:673
-#: includes/old-customizer.php:550 includes/old-customizer.php:573
+#: includes/customizer.php:654 includes/customizer.php:678
 msgid "Custom CSS"
 msgstr ""
 
-#: includes/customizer.php:676
+#: includes/customizer.php:681
 msgid "Custom CSS description to users"
 msgstr ""
 
-#: includes/customizer.php:695 includes/old-customizer.php:595
+#: includes/customizer.php:700
 msgid "Documentation"
 msgstr ""
 
-#: includes/customizer.php:696 includes/old-customizer.php:596
-msgid "Upgrade to PRO"
+#: includes/customizer.php:701
+msgid "SAMPRESSION PRO"
 msgstr ""
 
-#: includes/customizer.php:697 includes/old-customizer.php:597
+#: includes/customizer.php:702
 msgid "Knowledge Base"
 msgstr ""
 
-#: includes/customizer.php:698 includes/old-customizer.php:598
+#: includes/customizer.php:703
 msgid "Community"
 msgstr ""
 
-#: includes/functions.php:111
+#: includes/functions.php:115
 msgid "Top Menu"
 msgstr ""
 
-#: includes/functions.php:197
+#: includes/functions.php:206
 msgid "Proudly powered by"
 msgstr ""
 
-#: includes/functions.php:197
+#: includes/functions.php:206
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: includes/functions.php:197
+#: includes/functions.php:206
 msgid "WordPress"
 msgstr ""
 
-#: includes/functions.php:204
+#: includes/functions.php:213
 msgid "A theme by"
 msgstr ""
 
-#: includes/functions.php:204
+#: includes/functions.php:213
 msgid "http://www.sampression.com/"
 msgstr ""
 
-#: includes/functions.php:204
+#: includes/functions.php:213
 msgid "Sampression"
 msgstr ""
 
-#: includes/functions.php:266
+#: includes/functions.php:275
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: includes/functions.php:267
+#: includes/functions.php:276
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: includes/functions.php:305
+#: includes/functions.php:314
 msgid "Read more &#8250;"
 msgstr ""
 
-#: includes/functions.php:390
+#: includes/functions.php:399
 msgid "Bottom Widget One"
 msgstr ""
 
-#: includes/functions.php:391
+#: includes/functions.php:400
 msgid ""
 "Appears on bottom of the Page - First Widget - Please insert only one widget "
 "for better appearance."
 msgstr ""
 
-#: includes/functions.php:400
+#: includes/functions.php:409
 msgid "Bottom Widget Two"
 msgstr ""
 
-#: includes/functions.php:401
+#: includes/functions.php:410
 msgid ""
 "Appears on bottom of the Page - Second Widget - Please insert only one "
 "widget for better appearance."
 msgstr ""
 
-#: includes/functions.php:410
+#: includes/functions.php:419
 msgid "Bottom Widget Three"
 msgstr ""
 
-#: includes/functions.php:411
+#: includes/functions.php:420
 msgid ""
 "Appears on bottom of the Page - Third Widget - Please insert only one widget "
 "for better appearance."
 msgstr ""
 
-#: includes/functions.php:420
+#: includes/functions.php:429
 msgid "Inner Sidebar"
 msgstr ""
 
-#: includes/functions.php:421
+#: includes/functions.php:430
 msgid ""
 "Appears on right of the Interior Pages - Can use as much widgets as you wish."
 msgstr ""
 
-#: includes/functions.php:473
+#: includes/functions.php:482
 msgid "Pingback:"
 msgstr ""
 
-#: includes/functions.php:501
+#: includes/functions.php:510
 #, php-format
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: includes/functions.php:507
+#: includes/functions.php:516
 #, php-format
 msgid "<span class=\"date-details\">%1$s</span>"
 msgstr ""
 
-#: includes/functions.php:516
+#: includes/functions.php:525
 msgid "Reply <span>&darr;</span>"
 msgstr ""
 
-#: includes/functions.php:524
+#: includes/functions.php:533
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: includes/functions.php:593
+#: includes/functions.php:605
 #, php-format
 msgid ""
 "%3$s <time class=\"col\" datetime=\"2011-09-28\"><span class=\"ico"
 "\">Published on</span>%2$s</time> "
 msgstr ""
 
-#: includes/functions.php:610
+#: includes/functions.php:622
 msgid "0"
 msgstr ""
 
-#: includes/functions.php:610
+#: includes/functions.php:622
 msgid "1"
 msgstr ""
 
-#: includes/functions.php:610
+#: includes/functions.php:622
 msgid "%"
 msgstr ""
 
-#: includes/functions.php:617
+#: includes/functions.php:629
 #, php-format
 msgid ""
 "<span class=\"ico\">Categories</span><div class=\"overflow-hidden cat-listing"
 "\">%s</div>"
-msgstr ""
-
-#: includes/old-customizer.php:21
-msgid ""
-"The <a href=\"http://www.demo.sampression.com/sampression-pro/\" target="
-"\"_blank\">PRO version</a> offers various additional features including:<ul "
-"class=\"layouts-features\"><li>Multiple layouts</li><li>Google fonts "
-"support</li><li>Icons Mind icon set</li><li>Unlimited color</li><li>Premium "
-"customer support</li></ul>"
-msgstr ""
-
-#: includes/old-customizer.php:135
-msgid "Powered by Text"
-msgstr ""
-
-#: includes/old-customizer.php:148
-msgid "Layout, Typography & Blog Options"
-msgstr ""
-
-#: includes/old-customizer.php:178
-msgid "General Settings"
-msgstr ""
-
-#: includes/old-customizer.php:204
-msgid "Social Media Links"
-msgstr ""
-
-#: includes/old-customizer.php:383
-msgid "Colors"
 msgstr ""
 
 #: includes/theme-page.php:20

@@ -17,7 +17,7 @@ Sampression Lite is a free, Pinterest inspired responsive WordPress theme with a
 Responsive Design, Cross Browser Compatibility, Custom Code, Custom Logo, Customizer Options, Options to fine tune the theme to your exacting requirement, Easy Customization, Easy Installation, Retina Ready, Search Engine Optimized, Translation Ready, RTL Language Support, Social Media, Typography Options
 
 == Tags ==
-Tags: pinterest-style, custom-background, custom-colors, custom-header, custom-menu, responsive-layout, right-sidebar, four-columns, image-header, featured-image, green, sticky-post, customizer-option, threaded-comments, two-columns, white, orange, translation-ready, rtl-language-support
+Tags: custom-background, custom-colors, custom-header, custom-menu, responsive-layout, right-sidebar, four-columns, green, sticky-post, threaded-comments, two-columns, white, orange, translation-ready, rtl-language-support
 
 == Installation ==
 

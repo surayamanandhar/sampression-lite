@@ -97,6 +97,15 @@ if (!function_exists('sampression_setup')):
             'header-text' => false
 		) ); 
 		//define( 'NO_HEADER_TEXT', true );
+    
+        /*
+         * Enable support for custom logo.
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'      => 120,
+            'width'       => 220,
+            'flex-height' => true,
+        ) );
 		
         /**
          * This feature enables custom-menus support for a theme.
@@ -545,11 +554,10 @@ endif; // ends check for sampression_comment()
  *=======================================================================*/
 add_action('sampression_logo', 'sampression_show_logo');
 function sampression_show_logo() {
-    $logo = get_theme_mod('sampression_logo', get_option('opt_sam_logo'));
-	if(!empty($logo)) {
+	if ( function_exists( 'the_custom_logo' ) ) {
 	?>
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( ucwords(get_bloginfo( 'name', 'display' )) ); ?>" rel="home" id="logo-area">
-			<img class="logo-img" src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>">
+            <?php the_custom_logo() ?>
 		</a>
         <?php if(get_theme_mod('sampression_remove_tagline') != 1) { ?>
         <h2 id="site-description" class="site-description"><?php bloginfo( 'description' ); ?></h2>

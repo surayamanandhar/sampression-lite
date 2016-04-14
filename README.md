@@ -206,6 +206,7 @@ Please follow the steps below to install the theme.
   - Added: About Theme pages under Appearance menu
   - Added: Social Media Links (Tumblr, Pinterest, Linkedin, Github, Instagram, Flickr, Vimeo)
   - Added: Color options (Body text color and Link color)
+  - Added: Theme support - Custom Logo
   - Fixed: Responsive issues
   - Changed: Translation (.po and .mo files)
   - Changed: Theme description

@@ -77,25 +77,6 @@ function sampression_customize_register( $wp_customize ) {
     );
 
     /**
-     * Logo - Setting
-     */
-        $wp_customize->add_setting(
-            'sampression_logo', array('sanitize_callback' => 'esc_url_raw', 'default' => get_option('opt_sam_logo')));
-        $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-                $wp_customize,
-                'sam_theme_logo',
-                array(
-                    'label'    => __( 'Logo', 'sampression' ),
-                    'section'  => 'title_tagline',
-                    'settings' => 'sampression_logo',
-                    'priority'    => 60,
-                    'description' => __( 'We recommend logo sizes within 220px x 120px.', 'sampression' )
-                )
-            )
-        );
-
-    /**
      * Remove Logo - Setting
      */
         $wp_customize->add_setting( 'sampression_remove_logo', array('sanitize_callback' => 'sampression_sanitize_text'));

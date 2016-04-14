@@ -13,7 +13,7 @@ Responsive Design, Cross Browser Compatibility, Custom Code, Custom Logo, Custom
 
 
 ## Tags
-pinterest style, custom background, custom colors, custom header, custom menu, responsive layout, right sidebar, four-columns, image header, featured image, green, sticky post, customizer option, threaded comments, two-columns, white, orange, translation ready, rtl language support
+pinterest-style, custom-background, custom-colors, custom-header, custom-menu, responsive-layout, right-sidebar, four-columns, image-header, featured-image, green, sticky-post, customizer-option, threaded-comments, two-columns, white, orange, translation-ready, rtl-language-support
 
 ## Installation 
 Please follow the steps below to install the theme.

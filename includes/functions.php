@@ -201,7 +201,7 @@ if( ! function_exists( 'sampression_footer' ) ) {
                 echo get_theme_mod('sampression_copyright_text') . ' ';
             } else {
             ?>
-            <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php _e(date('Y')); ?>.  All Rights Reserved. </div>
+            <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php echo date('Y'); ?>.  All Rights Reserved. </div>
             <?php
                 _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
             <?php
@@ -513,7 +513,7 @@ function sampression_comment( $comment, $args, $depth ) {
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '<span class="date-details">%1$s</span>' ), get_comment_date(), get_comment_time() )
+								sprintf( __( '<span class="date-details">%1$s</span>', 'sampression' ), get_comment_date(), get_comment_time() )
 							)
 						);
 					?>

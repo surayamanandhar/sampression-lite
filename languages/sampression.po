@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sampression Lite\n"
-"POT-Creation-Date: 2016-04-14 18:33+0545\n"
-"PO-Revision-Date: 2016-04-14 18:33+0545\n"
+"POT-Creation-Date: 2016-06-03 16:18+0545\n"
+"PO-Revision-Date: 2016-06-03 16:18+0545\n"
 "Last-Translator: Sampression <themes@sampression.com>\n"
 "Language-Team: Sampression Team <themes@sampression.com>\n"
 "Language: en\n"
@@ -339,20 +339,16 @@ msgstr ""
 msgid "Custom CSS description to users"
 msgstr ""
 
-#: includes/customizer.php:700
-msgid "Documentation"
+#: includes/customizer.php:706
+msgid "Theme Documentation"
 msgstr ""
 
-#: includes/customizer.php:701
-msgid "SAMPRESSION PRO"
+#: includes/customizer.php:707
+msgid "UPGRADE TO PRO"
 msgstr ""
 
-#: includes/customizer.php:702
-msgid "Knowledge Base"
-msgstr ""
-
-#: includes/customizer.php:703
-msgid "Community"
+#: includes/customizer.php:708
+msgid "Support Ticket"
 msgstr ""
 
 #: includes/functions.php:115

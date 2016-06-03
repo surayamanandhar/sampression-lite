@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sampression Lite\n"
-"POT-Creation-Date: 2016-06-03 16:18+0545\n"
-"PO-Revision-Date: 2016-06-03 16:18+0545\n"
+"POT-Creation-Date: 2016-06-03 17:00+0545\n"
+"PO-Revision-Date: 2016-06-03 17:00+0545\n"
 "Last-Translator: Sampression <themes@sampression.com>\n"
 "Language-Team: Sampression Team <themes@sampression.com>\n"
 "Language: en\n"
@@ -484,6 +484,147 @@ msgstr ""
 
 #: includes/theme-page.php:20
 msgid "About Theme"
+msgstr ""
+
+#: includes/theme-page.php:28
+msgid "Welcome to Sampression Lite"
+msgstr ""
+
+#: includes/theme-page.php:29
+msgid ""
+"We hope you will enjoy using Sampression Lite, as much as we enjoyed "
+"creating it."
+msgstr ""
+
+#: includes/theme-page.php:32
+msgid "Getting started"
+msgstr ""
+
+#: includes/theme-page.php:33
+msgid "Customize everything from a single place."
+msgstr ""
+
+#: includes/theme-page.php:34
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: includes/theme-page.php:35
+msgid "Go to Customizer"
+msgstr ""
+
+#: includes/theme-page.php:35
+msgid "Visit"
+msgstr ""
+
+#: includes/theme-page.php:36
+msgid "For further help, please visit our support page at:"
+msgstr ""
+
+#: includes/theme-page.php:39
+msgid "Sampression PRO"
+msgstr ""
+
+#: includes/theme-page.php:40
+msgid ""
+"We also have a paid Pro version of the theme, which offers many more extra "
+"features and options for  customization. Sampression Pro offers additional "
+"following features:"
+msgstr ""
+
+#: includes/theme-page.php:42
+msgid "Custom logo"
+msgstr ""
+
+#: includes/theme-page.php:43
+msgid "You can upload your own logo from the customizer."
+msgstr ""
+
+#: includes/theme-page.php:45
+msgid "Google Fonts"
+msgstr ""
+
+#: includes/theme-page.php:46
+msgid ""
+"Supports fonts that have been provided by Google to enhance every sites "
+"design."
+msgstr ""
+
+#: includes/theme-page.php:48
+msgid "Icons Mind icon set"
+msgstr ""
+
+#: includes/theme-page.php:49
+msgid "Sampression Pro comes bundled with IconsMind iconset worth US$ 79.00."
+msgstr ""
+
+#: includes/theme-page.php:51
+msgid "Typography options"
+msgstr ""
+
+#: includes/theme-page.php:52
+msgid ""
+"Sampression Pro goes even further in its support for various typography "
+"options. Now you can make changes to all and any typography element of your "
+"website e.g. You can choose the font family, size, style, color etc."
+msgstr ""
+
+#: includes/theme-page.php:54
+msgid "Multiple layout options"
+msgstr ""
+
+#: includes/theme-page.php:55
+msgid ""
+"The pro version of Sampression offers various different layout options "
+"including number of columns (one, two, three and four) to be displayed in "
+"home page, option to turn sidebar off/on etc"
+msgstr ""
+
+#: includes/theme-page.php:57
+msgid "Set the number of post/category on home page"
+msgstr ""
+
+#: includes/theme-page.php:58
+msgid ""
+"The Pro version of the theme provides you with control over the number of "
+"posts/categories that you want to display in the home page."
+msgstr ""
+
+#: includes/theme-page.php:60
+msgid "Show hide your meta"
+msgstr ""
+
+#: includes/theme-page.php:61
+msgid ""
+"You can choose to either show or hide the display of meta information from "
+"your posts."
+msgstr ""
+
+#: includes/theme-page.php:63
+msgid "Write your own css in customizer"
+msgstr ""
+
+#: includes/theme-page.php:64
+msgid ""
+"You can further customize the look of your Sampression Pro theme using your "
+"own CSS code."
+msgstr ""
+
+#: includes/theme-page.php:66
+msgid "Custom code"
+msgstr ""
+
+#: includes/theme-page.php:67
+msgid "Add custom codes to Header and Footer easily."
+msgstr ""
+
+#: includes/theme-page.php:71
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: includes/theme-page.php:72
+msgid "Live Theme Demo"
 msgstr ""
 
 #: loop.php:28 page.php:37 single.php:78

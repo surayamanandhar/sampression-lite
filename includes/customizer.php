@@ -693,7 +693,7 @@ function sampression_customize_preview_js() {
 
 function sampression_customize_controls_js() {
 
-    $wp_url = get_bloginfo( 'wpurl' );
+    $wp_url = esc_url( site_url() );
     $wp_version = get_bloginfo( 'version' );
     $sampression_theme = wp_get_theme();
     $active_plugins = get_option( 'active_plugins' );

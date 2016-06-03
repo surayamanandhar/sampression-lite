@@ -703,10 +703,8 @@ function sampression_customize_controls_js() {
 
     wp_localize_script( 'sampression_customizer_script', 'objectL10n', array(
         
-        'documentation' => __( 'Documentation', 'sampression' ),
-        'pro' => __('SAMPRESSION PRO', 'sampression'),
-        'knowledge_base' => __('Knowledge Base', 'sampression'),
-        'community' => __('Community', 'sampression'),
+        'documentation' => __( 'Theme Documentation', 'sampression' ),
+        'pro' => __('UPGRADE TO PRO', 'sampression'),
         'support_ticket' => __('Support Ticket', 'sampression'),
         'support_ticket_subject' => 'Support Ticket: Sampression Lite Version ' . $sampression_theme->get( 'Version' ),
         'support_ticket_body' => 'Site URL: '.$wp_url.'%0D%0AWP Version: '.$wp_version.'%0D%0AInstalled Plugins: ' . $active_plugins

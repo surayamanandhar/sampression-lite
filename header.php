@@ -188,10 +188,10 @@ if ( !defined('ABSPATH')) exit;
     <i class="genericon-expand"></i>
   </a>
   <div class="columns twelve">
-    <div class="nav-label"><?php _e('Filter By:','sampression'); ?></div>
+    <div class="nav-label"><?php _e('Filter By:','sampression-lite'); ?></div>
 	
     <ul class="nav-listing clearfix" id="filter">
-        <li><a href="#" class="active selected" data-filter="*" data-group="all"><span></span><?php _e('Show All','sampression'); ?></a></li>
+        <li><a href="#" class="active selected" data-filter="*" data-group="all"><span></span><?php _e('Show All','sampression-lite'); ?></a></li>
         <?php
 		/*to exclude some categories */ 
 		$args = array( 'hide_empty' => 1);
@@ -214,7 +214,7 @@ if ( !defined('ABSPATH')) exit;
             ?>
 
             <select id="get-cat-ios">
-                <option value="<?php echo esc_url(home_url('/')); ?>"><?php _e('Show All', 'sampression'); ?></option>
+                <option value="<?php echo esc_url(home_url('/')); ?>"><?php _e('Show All', 'sampression-lite'); ?></option>
                 <?php
                 foreach ($categories as $category):
                     ?>

@@ -37,7 +37,7 @@ if (!function_exists('sampression_setup')):
         /**
          * Sampression is now available for translations.
          */
-		load_theme_textdomain('sampression', get_template_directory() . '/languages');
+		load_theme_textdomain('sampression-lite', get_template_directory() . '/languages');
 				
         /**
          * Add callback for custom TinyMCE editor stylesheets. (editor-style.css)
@@ -112,7 +112,7 @@ if (!function_exists('sampression_setup')):
          * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
          */	
         register_nav_menus(array(
-			'top-menu'         => __('Top Menu', 'sampression')
+			'top-menu'         => __('Top Menu', 'sampression-lite')
 		    )
 	    );
 
@@ -203,14 +203,14 @@ if( ! function_exists( 'sampression_footer' ) ) {
             ?>
             <div class="alignleft copyright"><?php bloginfo( 'name' ); ?> &copy; <?php echo date('Y'); ?>.  All Rights Reserved. </div>
             <?php
-                _e('Proudly powered by', 'sampression'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression' ); ?></a>
+                _e('Proudly powered by', 'sampression-lite'); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sampression-lite' ) ); ?>" title="<?php esc_attr_e( 'WordPress', 'sampression-lite' ); ?>" target="_blank" ><?php _e( 'WordPress', 'sampression-lite' ); ?></a>
             <?php
             }
         }
         ?>
     </div>
     <div class="alignright credit">
-    	 <?php _e( 'A theme by', 'sampression');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression' ); ?>"><?php _e( 'Sampression', 'sampression' ); ?></a>
+    	 <?php _e( 'A theme by', 'sampression-lite');?> <a href="<?php echo esc_url( __( 'http://www.sampression.com/', 'sampression-lite' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Sampression', 'sampression-lite' ); ?>"><?php _e( 'Sampression', 'sampression-lite' ); ?></a>
     </div>
     <?php
     }
@@ -272,8 +272,8 @@ function sampression_content_nav( $nav_id ) {
 				wp_pagenavi();
 			} else {
 			?>
-                <div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sampression' ) ); ?></div>
-                <div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sampression' ) ); ?></div>
+                <div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sampression-lite' ) ); ?></div>
+                <div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sampression-lite' ) ); ?></div>
             <?php
 			}
 			?>
@@ -311,7 +311,7 @@ add_filter('excerpt_length', 'sampression_excerpt_length');
  * Returns a "Read more" link for excerpts
  */
 function sampression_read_more() {
-    return ' <span class="read-more"><a href="' . get_permalink() . '">' . __('Read more &#8250;', 'sampression') . '</a></span>';
+    return ' <span class="read-more"><a href="' . get_permalink() . '">' . __('Read more &#8250;', 'sampression-lite') . '</a></span>';
 }
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and sampression_read_more_link().
@@ -396,8 +396,8 @@ if( ! function_exists( 'sampression_widgets_init' ) ) :
     function sampression_widgets_init() {
     	
     	register_sidebar(array(
-    		'name' => __('Bottom Widget One', 'sampression'),
-    		'description' => __('Appears on bottom of the Page - First Widget - Please insert only one widget for better appearance.', 'sampression'),
+    		'name' => __('Bottom Widget One', 'sampression-lite'),
+    		'description' => __('Appears on bottom of the Page - First Widget - Please insert only one widget for better appearance.', 'sampression-lite'),
     		'id' => 'bottom-widget-1',
     		'before_title' => '<h3 class="widget-title">',
     		'after_title' => '</h3>',
@@ -406,8 +406,8 @@ if( ! function_exists( 'sampression_widgets_init' ) ) :
     	));
     	
     	register_sidebar(array(
-    		'name' => __('Bottom Widget Two', 'sampression'),
-    		'description' => __('Appears on bottom of the Page - Second Widget - Please insert only one widget for better appearance.', 'sampression'),
+    		'name' => __('Bottom Widget Two', 'sampression-lite'),
+    		'description' => __('Appears on bottom of the Page - Second Widget - Please insert only one widget for better appearance.', 'sampression-lite'),
     		'id' => 'bottom-widget-2',
     		'before_title' => '<h3 class="widget-title">',
     		'after_title' => '</h3>',
@@ -416,8 +416,8 @@ if( ! function_exists( 'sampression_widgets_init' ) ) :
     	));
     	
     	register_sidebar(array(
-    		'name' => __('Bottom Widget Three', 'sampression'),
-    		'description' => __('Appears on bottom of the Page - Third Widget - Please insert only one widget for better appearance.', 'sampression'),
+    		'name' => __('Bottom Widget Three', 'sampression-lite'),
+    		'description' => __('Appears on bottom of the Page - Third Widget - Please insert only one widget for better appearance.', 'sampression-lite'),
     		'id' => 'bottom-widget-3',
     		'before_title' => '<h3 class="widget-title">',
     		'after_title' => '</h3>',
@@ -426,8 +426,8 @@ if( ! function_exists( 'sampression_widgets_init' ) ) :
     	));
     	
     	register_sidebar(array(
-    		'name' => __('Inner Sidebar', 'sampression'),
-    		'description' => __('Appears on right of the Interior Pages - Can use as much widgets as you wish.', 'sampression'),
+    		'name' => __('Inner Sidebar', 'sampression-lite'),
+    		'description' => __('Appears on right of the Interior Pages - Can use as much widgets as you wish.', 'sampression-lite'),
     		'id' => 'right-sidebar',
     		'before_title' => '<h3 class="widget-title">',
     		'after_title' => '</h3>',
@@ -479,7 +479,7 @@ function sampression_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'sampression' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit','sampression' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'sampression-lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit','sampression-lite' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -507,22 +507,22 @@ function sampression_comment( $comment, $args, $depth ) {
 					<?php
 					
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s on %2$s', 'sampression' ),
+						printf( __( '%1$s on %2$s', 'sampression-lite' ),
 							sprintf( '<span class="fn">%s</span>', get_comment_author_link()),
 							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '<span class="date-details">%1$s</span>', 'sampression' ), get_comment_date(), get_comment_time() )
+								sprintf( __( '<span class="date-details">%1$s</span>', 'sampression-lite' ), get_comment_date(), get_comment_time() )
 							)
 						);
 					?>
 
-					<?php edit_comment_link( __( 'Edit', 'sampression' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'sampression-lite' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-author  -->
                 
                 <div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'sampression' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'sampression-lite' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
 
 				
@@ -530,7 +530,7 @@ function sampression_comment( $comment, $args, $depth ) {
 			</header>
             
             <?php if ( $comment->comment_approved == '0' ) : ?>
-					<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'sampression' ); ?></div>
+					<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'sampression-lite' ); ?></div>
 			<?php endif; ?>
             
             
@@ -602,7 +602,7 @@ function sampression_filter_cat_callback() {
 
       <div class="meta clearfix">
 			<?php 
-                printf( __( '%3$s <time class="col" datetime="2011-09-28"><span class="ico">Published on</span>%2$s</time> ', 'sampression' ),'meta-prep meta-prep-author',
+                printf( __( '%3$s <time class="col" datetime="2011-09-28"><span class="ico">Published on</span>%2$s</time> ', 'sampression-lite' ),'meta-prep meta-prep-author',
 					sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
 						get_permalink(),
 						esc_attr( get_the_time() ),
@@ -610,7 +610,7 @@ function sampression_filter_cat_callback() {
 					),
 					sprintf( '<div class="post-author col"><span class="ico hello">Author</span><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></div>',
 						get_author_posts_url( get_the_author_meta( 'ID' ) ),
-					sprintf( esc_attr__( 'View all posts by %s', 'sampression' ), get_the_author() ),
+					sprintf( esc_attr__( 'View all posts by %s', 'sampression-lite' ), get_the_author() ),
 						get_the_author()
 						)
                 );
@@ -619,14 +619,14 @@ function sampression_filter_cat_callback() {
 			<?php if ( comments_open() ) : ?>
             <span class="col count-comment">
             <span class="pointer"></span>
-            <?php comments_popup_link(__('0', 'sampression'), __('1', 'sampression'), __('%', 'sampression')); ?>
+            <?php comments_popup_link(__('0', 'sampression-lite'), __('1', 'sampression-lite'), __('%', 'sampression-lite')); ?>
             </span>
             <?php endif; ?>
         
         
       </div>
       <div class="meta">
-        <div class="cats"><?php printf(__('<span class="ico">Categories</span><div class="overflow-hidden cat-listing">%s</div>', 'sampression'), get_the_category_list(', ')); ?></div>
+        <div class="cats"><?php printf(__('<span class="ico">Categories</span><div class="overflow-hidden cat-listing">%s</div>', 'sampression-lite'), get_the_category_list(', ')); ?></div>
       </div>
     </article>
 	<?php

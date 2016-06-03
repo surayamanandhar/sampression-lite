@@ -16,7 +16,7 @@ get_header(); ?>
 
 <header class="page-header columns twelve">
     <h2 class="page-title quick-note search-title"><?php
-        printf( __( 'Search Results for: %s', 'sampression' ), '<span>' . get_search_query() . '</span>' ); ?>
+        printf( __( 'Search Results for: %s', 'sampression-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
     </h2>
 </header>
 
@@ -34,11 +34,11 @@ get_header(); ?>
     
     <article id="post-0" class="no-results not-found">
         <header class="entry-header">
-            <h2 class="entry-title"><?php _e( 'Nothing Found For: ', 'sampression' ); echo '&quot;' . get_search_query() . '&quot;'; ?></h2>
+            <h2 class="entry-title"><?php _e( 'Nothing Found For: ', 'sampression-lite' ); echo '&quot;' . get_search_query() . '&quot;'; ?></h2>
         </header><!-- .entry-header -->
     
         <div class="entry-content">
-            <p><?php _e( 'Apologies, but no results were found for the requested keyword. Please try another keywords..', 'sampression' ); ?></p>
+            <p><?php _e( 'Apologies, but no results were found for the requested keyword. Please try another keywords..', 'sampression-lite' ); ?></p>
             
         </div><!-- .entry-content -->
     </article><!-- #post-0 -->

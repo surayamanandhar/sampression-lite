@@ -15,7 +15,7 @@ if ( !defined('ABSPATH')) exit;
 	// Showing Default Widgets untill User put any widget in "Right Sidebar"
 	 if (!dynamic_sidebar('right-sidebar')) : ?>
             <section class="widget">
-                <h3 class="widget-title"><?php _e('Most Popular', 'sampression'); ?></h3>
+                <h3 class="widget-title"><?php _e('Most Popular', 'sampression-lite'); ?></h3>
                 <div class="widget-entry">
 				<?php $args = array(
 								'posts_per_page' => 5,
@@ -35,7 +35,7 @@ if ( !defined('ABSPATH')) exit;
 			</section><!--.widget-->
             
             <section class="widget">
-                <h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3>
+                <h3 class="widget-title"><?php _e('Categories', 'sampression-lite'); ?></h3>
                 <div class="widget-entry">
                 
                 <ul class="widget-categories">
@@ -45,7 +45,7 @@ if ( !defined('ABSPATH')) exit;
 			</section><!--.widget -->
             
               <section class="widget">
-                <h3 class="widget-title"><?php _e('Archive', 'sampression'); ?></h3>
+                <h3 class="widget-title"><?php _e('Archive', 'sampression-lite'); ?></h3>
                 <div class="widget-entry">
                 
                 <ul class="widget-categories">

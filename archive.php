@@ -21,13 +21,13 @@ get_header(); ?>
         <header class="page-header columns twelve">
             <h2 class="quick-note">
                 <?php if ( is_day() ) : ?>
-                    <?php printf( __( 'Daily Archives: %s', 'sampression' ), '<span>' . get_the_date() . '</span>' ); ?>
+                    <?php printf( __( 'Daily Archives: %s', 'sampression-lite' ), '<span>' . get_the_date() . '</span>' ); ?>
                 <?php elseif ( is_month() ) : ?>
-                    <?php printf( __( 'Monthly Archives: %s', 'sampression' ), '<span>' . get_the_date( 'F Y' ) . '</span>' ); ?>
+                    <?php printf( __( 'Monthly Archives: %s', 'sampression-lite' ), '<span>' . get_the_date( 'F Y' ) . '</span>' ); ?>
                 <?php elseif ( is_year() ) : ?>
-                    <?php printf( __( 'Yearly Archives: %s', 'sampression' ), '<span>' . get_the_date( 'Y' ) . '</span>' ); ?>
+                    <?php printf( __( 'Yearly Archives: %s', 'sampression-lite' ), '<span>' . get_the_date( 'Y' ) . '</span>' ); ?>
                 <?php else : ?>
-                    <?php _e( 'Blog Archives', 'sampression' ); ?>
+                    <?php _e( 'Blog Archives', 'sampression-lite' ); ?>
                 <?php endif; ?>
             </h2>
         </header>
@@ -36,7 +36,7 @@ get_header(); ?>
             <!-- Corner Stamp: It will always remaing to the right top of the page -->
             <section class="corner-stamp post columns three item">
                 <header>
-                    <h3 class="widget-title"><?php _e('Archives', 'sampression'); ?></h3>
+                    <h3 class="widget-title"><?php _e('Archives', 'sampression-lite'); ?></h3>
                 </header>
                 <div class="entry">
                     <ul class="categories archives">
@@ -47,7 +47,7 @@ get_header(); ?>
                     </ul>
                 </div>
                 <header>
-                    <h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3>
+                    <h3 class="widget-title"><?php _e('Categories', 'sampression-lite'); ?></h3>
                 </header>
                 <div class="entry">
                     <ul class="categories">
@@ -71,11 +71,11 @@ get_header(); ?>
     <?php  else: ?>
         <article id="post-0" class="no-results not-found">
             <header class="entry-header">
-                <h2 class="entry-title"><?php _e( 'Nothing Found', 'sampression' ); ?></h2>
+                <h2 class="entry-title"><?php _e( 'Nothing Found', 'sampression-lite' ); ?></h2>
             </header>
             <!-- .entry-header -->
             <div class="entry-content">
-                <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'sampression' ); ?></p>
+                <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'sampression-lite' ); ?></p>
             </div>
             <!-- .entry-content -->
         </article>

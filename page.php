@@ -34,11 +34,11 @@ get_header(); ?>
     <div class="entry clearfix">
       <?php the_content(); ?>
       
-      <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'sampression' ) . '</span>', 'after' => '</div>' ) ); ?>
+      <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'sampression-lite' ) . '</span>', 'after' => '</div>' ) ); ?>
       
       <?php if(is_user_logged_in()){ ?>
        <div class="meta">
-      	<div class="edit genericon-edit"><?php edit_post_link( __( 'Edit', 'sampression' ) ); ?> </div>
+      	<div class="edit genericon-edit"><?php edit_post_link( __( 'Edit', 'sampression-lite' ) ); ?> </div>
        </div>
 	  <?php } ?>
     </div>

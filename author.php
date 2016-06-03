@@ -26,7 +26,7 @@ get_header(); ?>
                 
 <header class="page-header columns twelve">
     <h2 class="quick-note columns twelve">
-        <?php _e( 'Author Archives: ', 'sampression' ); echo get_the_author(); ?>
+        <?php _e( 'Author Archives: ', 'sampression-lite' ); echo get_the_author(); ?>
     </h2>
 </header>
 <!-- .page-header --> 
@@ -42,7 +42,7 @@ get_header(); ?>
     <!-- Corner Stamp: It will always remaing to the right top of the page -->
     <section class="corner-stamp post columns three item">
         <header>
-            <h3 class="widget-title"><?php _e('Archives', 'sampression'); ?></h3>
+            <h3 class="widget-title"><?php _e('Archives', 'sampression-lite'); ?></h3>
         </header>
         <div class="entry">
             <ul class="categories archives">
@@ -52,7 +52,7 @@ get_header(); ?>
             </ul>
         </div>
         <header>
-            <h3 class="widget-title"><?php _e('Categories', 'sampression'); ?></h3>
+            <h3 class="widget-title"><?php _e('Categories', 'sampression-lite'); ?></h3>
         </header>
         <div class="entry">
             <ul class="categories">
@@ -76,11 +76,11 @@ get_header(); ?>
 
     <article id="post-0" class="no-results not-found">
         <header class="entry-header">
-            <h2 class="entry-title"><?php _e( 'Nothing Found', 'sampression' ); ?></h2>
+            <h2 class="entry-title"><?php _e( 'Nothing Found', 'sampression-lite' ); ?></h2>
         </header>
         <!-- .entry-header -->
         <div class="entry-content">
-            <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'sampression' ); ?></p>
+            <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'sampression-lite' ); ?></p>
         </div>
         <!-- .entry-content -->
     </article>

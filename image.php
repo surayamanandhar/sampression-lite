@@ -14,8 +14,8 @@ get_header(); ?>
 <?php if (have_posts()) : ?>
 
 <nav id="nav-above" class="post-navigation clearfix columns twelve">
-    <h3 class="assistive-text hidden"><?php _e( 'Post navigation', 'sampression' ); ?></h3>
-    <div class="nav-previous alignleft"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Back to Gallery', 'sampression' ) ); ?></div>
+    <h3 class="assistive-text hidden"><?php _e( 'Post navigation', 'sampression-lite' ); ?></h3>
+    <div class="nav-previous alignleft"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Back to Gallery', 'sampression-lite' ) ); ?></div>
 </nav><!-- #nav-above -->
 
 <section id="content" class="columns nine" role="main">
@@ -28,7 +28,7 @@ get_header(); ?>
 
             <div class="meta clearfix">
                 <?php
-                printf( __( '<time class="col posted-on genericon-day" datetime="2011-09-28">%2$s</time> ', 'sampression' ),'meta-prep meta-prep-author',
+                printf( __( '<time class="col posted-on genericon-day" datetime="2011-09-28">%2$s</time> ', 'sampression-lite' ),'meta-prep meta-prep-author',
                     sprintf( '<a href="%4$s" title="%2$s" rel="bookmark">%3$s</a>',
                     get_permalink(),
                     esc_attr( get_the_time() ),
@@ -37,18 +37,18 @@ get_header(); ?>
                 ));
                 if ( comments_open() && get_comments_number() > 0 ) : ?>
                     <span class="col count-comment genericon-comment">
-                        <?php comments_popup_link(__('No comments yet', 'sampression'), __('1 Comment', 'sampression'), __('% Comments', 'sampression')); ?>
+                        <?php comments_popup_link(__('No comments yet', 'sampression-lite'), __('1 Comment', 'sampression-lite'), __('% Comments', 'sampression-lite')); ?>
                     </span>
                 <?php
                 endif;
                 printf( '<div class="post-author genericon-user col"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></div>',
                     get_author_posts_url( get_the_author_meta( 'ID' ) ),
-                    sprintf( esc_attr__( 'View all posts by %s', 'sampression' ), get_the_author() ),
+                    sprintf( esc_attr__( 'View all posts by %s', 'sampression-lite' ), get_the_author() ),
                     get_the_author()
                 );
                 if(is_user_logged_in()) {
                     ?>
-                    <div class="edit genericon-edit"><?php edit_post_link( __( 'Edit', 'sampression' ) ); ?> </div>
+                    <div class="edit genericon-edit"><?php edit_post_link( __( 'Edit', 'sampression-lite' ) ); ?> </div>
                     <?php
                 }
                 ?>
@@ -105,8 +105,8 @@ get_header(); ?>
                     ?>                            
                 </div><!-- .image-description -->
                 <nav id="nav-below" class="post-navigation clearfix">
-                    <div class="nav-previous alignleft"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous Image', 'sampression' ) ); ?></div>
-                    <div class="nav-next alignright"><?php next_image_link( false, __( 'Next Image <span class="meta-nav">&rarr;</span>', 'sampression' ) ); ?></div>
+                    <div class="nav-previous alignleft"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous Image', 'sampression-lite' ) ); ?></div>
+                    <div class="nav-next alignright"><?php next_image_link( false, __( 'Next Image <span class="meta-nav">&rarr;</span>', 'sampression-lite' ) ); ?></div>
                 </nav><!-- #nav-above -->
             </div>
             <!-- .entry -->

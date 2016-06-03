@@ -25,13 +25,13 @@ if ( !defined('ABSPATH')) exit;
       <?php } ?>
       <div class="entry clearfix">
         <?php the_excerpt(); ?>
-        <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'sampression' ) . '</span>', 'after' => '</div>' ) ); ?>
+        <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'sampression-lite' ) . '</span>', 'after' => '</div>' ) ); ?>
       </div>
       <!-- .entry -->
 
       <div class="meta clearfix">
 			<?php
-                printf( __( '<time class="col posted-on genericon-day" datetime="2011-09-28">%2$s</time> ', 'sampression' ),'meta-prep meta-prep-author',
+                printf( __( '<time class="col posted-on genericon-day" datetime="2011-09-28">%2$s</time> ', 'sampression-lite' ),'meta-prep meta-prep-author',
 					sprintf( '<a href="%4$s" title="%2$s" rel="bookmark">%3$s</a>',
 						get_permalink(),
 						esc_attr( get_the_time() ),
@@ -41,20 +41,20 @@ if ( !defined('ABSPATH')) exit;
             ?>
             <?php if ( comments_open() && get_comments_number() > 0 ) : ?>
             <span class="col count-comment genericon-comment">
-            <?php comments_popup_link(__('No comments yet', 'sampression'), __('1 Comment', 'sampression'), __('% Comments', 'sampression')); ?>
+            <?php comments_popup_link(__('No comments yet', 'sampression-lite'), __('1 Comment', 'sampression-lite'), __('% Comments', 'sampression-lite')); ?>
             </span>
          <?php endif; ?>
       </div>
       <div class="meta clearfix">
 <?php printf( '<div class="post-author genericon-user col"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></div>',
             get_author_posts_url( get_the_author_meta( 'ID' ) ),
-          sprintf( esc_attr__( 'View all posts by %s', 'sampression' ), get_the_author() ),
+          sprintf( esc_attr__( 'View all posts by %s', 'sampression-lite' ), get_the_author() ),
             get_the_author()
             ); ?>
       </div>
      <?php if(get_post_type() == 'post'){?>
     <div class="meta">
-        <div class="cats genericon-category"><?php printf(__('<div class="overflow-hidden cat-listing">%s</div>', 'sampression'), get_the_category_list(', ')); ?></div>
+        <div class="cats genericon-category"><?php printf(__('<div class="overflow-hidden cat-listing">%s</div>', 'sampression-lite'), get_the_category_list(', ')); ?></div>
       </div>
 
       <?php } if(has_tag()) {?>
@@ -65,7 +65,7 @@ if ( !defined('ABSPATH')) exit;
       
       <?php if(is_user_logged_in()){ ?>
       <div class="meta">
-      	<div class="edit genericon-edit"><?php edit_post_link( __( 'Edit this post', 'sampression' ) ); ?> </div>
+      	<div class="edit genericon-edit"><?php edit_post_link( __( 'Edit this post', 'sampression-lite' ) ); ?> </div>
       </div>
 	  <?php } ?>
          

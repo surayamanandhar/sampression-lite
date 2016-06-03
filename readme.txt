@@ -11,13 +11,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 == Theme Description ==
-Sampression Lite is a free, Pinterest inspired responsive WordPress theme with an attractive masonry blog layout. The theme has clean and lightweight design. It boasts of user friendly customizing options making it very easy to customize your blog’s header, menus, widgets, background color and images. The theme is also SEO friendly and translation ready, allowing you the freedom of expressing in your native language.
+Sampression Lite is a free, Pinterest inspired responsive WordPress theme with an attractive masonry blog layout. The theme has a clean and lightweight design. It boasts of user-friendly customizing options making it very easy to customize your blog’s header, menus, widgets, background color, and images. The theme is also SEO friendly and translation ready, allowing you the freedom of expressing in your native language. Get free support at http://sampression.com/support and View live demo site at http://www.demo.sampression.com/sampression-lite
 
 == Features ==
 Responsive Design, Cross Browser Compatibility, Custom Code, Custom Logo, Customizer Options, Options to fine tune the theme to your exacting requirement, Easy Customization, Easy Installation, Retina Ready, Search Engine Optimized, Translation Ready, RTL Language Support, Social Media, Typography Options
 
 == Tags ==
-Tags: custom-background, custom-colors, custom-header, custom-menu, responsive-layout, right-sidebar, four-columns, green, sticky-post, threaded-comments, two-columns, white, orange, translation-ready, rtl-language-support
+Tags: gray, white, orange, dark, light, two-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, flexible-header, responsive-layout, blavatar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 == Installation ==
 
@@ -236,6 +236,7 @@ Version 2.0
 Version 2.1
 = Added: editor-style support for theme
 = Added: Support Ticket Button
+= Changed: Theme description
 = Changed: Theme Tags
 = Changed: Support Page Link
 = Changed: Theme description

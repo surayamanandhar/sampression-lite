@@ -13,7 +13,7 @@ Responsive Design, Cross Browser Compatibility, Custom Code, Custom Logo, Custom
 
 
 ## Tags
-gray, white, orange, dark, light, two-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, flexible-header, responsive-layout, blavatar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+two-columns, four-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 ## Installation 
 Please follow the steps below to install the theme.

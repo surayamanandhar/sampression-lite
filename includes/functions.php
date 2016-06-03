@@ -43,7 +43,7 @@ if (!function_exists('sampression_setup')):
          * Add callback for custom TinyMCE editor stylesheets. (editor-style.css)
          * @see http://codex.wordpress.org/Function_Reference/add_editor_style
          */
-        add_editor_style();
+        add_editor_style('lib/css/editor-style.css');
 
         /**
          * This feature enables post and comment RSS feed links to head.

@@ -693,6 +693,12 @@ function sampression_customize_preview_js() {
 
 function sampression_customize_controls_js() {
 
+    $wp_url = get_bloginfo( 'wpurl' );
+    $wp_version = get_bloginfo( 'version' );
+    $sampression_theme = wp_get_theme();
+    $active_plugins = get_option( 'active_plugins' );
+    $active_plugins = implode( ', ', $active_plugins );
+
     wp_enqueue_script( 'sampression_customizer_script', get_template_directory_uri() . '/lib/js/sampression.customizer.js', array( 'jquery' ), '1.0', true  );
 
     wp_localize_script( 'sampression_customizer_script', 'objectL10n', array(
@@ -700,7 +706,10 @@ function sampression_customize_controls_js() {
         'documentation' => __( 'Documentation', 'sampression' ),
         'pro' => __('SAMPRESSION PRO', 'sampression'),
         'knowledge_base' => __('Knowledge Base', 'sampression'),
-        'community' => __('Community', 'sampression')
+        'community' => __('Community', 'sampression'),
+        'support_ticket' => __('Support Ticket', 'sampression'),
+        'support_ticket_subject' => 'Support Ticket: Sampression Lite Version ' . $sampression_theme->get( 'Version' ),
+        'support_ticket_body' => 'Site URL: '.$wp_url.'%0D%0AWP Version: '.$wp_version.'%0D%0AInstalled Plugins: ' . $active_plugins
 
     ) );
 

@@ -233,5 +233,13 @@ Version 2.0
 = Removed: Hook - sampression_title
 = Removed: Hook - sampression_footer
 
+Version 2.1
+= Added: editor-style support for theme
+= Added: Support Ticket Button
+= Changed: Theme Tags
+= Changed: Support Page Link
+= Changed: Forum Page Link
+= Changed: Knowledge Base Page Link
+
  == Child Theme Support ===
  Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

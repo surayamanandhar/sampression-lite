@@ -33,7 +33,7 @@ function about_sampression_theme_page() {
             <h4>Customize everything from a single place.</h4>
             <p>Using the WordPress Customizer you can easily customize every aspect of the theme.</p>
             <p><a class="button button-primary" href="<?php echo esc_url('customize.php?return=%2Fwp-admin%2Fthemes.php%3Fpage%3Dabout-sampression') ?>">Go to Customizer</a> <a class="button button-primary" href="<?php echo esc_url( site_url() ) ?>" target="_blank">Visit <?php bloginfo('name') ?></a></p>
-            <p>For further help, please visit our support page at: <a href="<?php echo esc_url( 'https://support.sampression.com/hc/en-us' ); ?>" target="_blank">https://support.sampression.com/</a></p>
+            <p>For further help, please visit our support page at: <a href="<?php echo esc_url( 'http://www.sampression.com/support/' ); ?>" target="_blank"><?php echo esc_url( 'http://www.sampression.com/support/' ); ?></a></p>
         </div>
         <div>
             <h2>Sampression PRO</h2>

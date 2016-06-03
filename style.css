@@ -288,7 +288,7 @@ blockquote b {
 
 address {
     font-style: italic;
-    margin: 0 0 20px;
+    margin: 0 0 28px;
 }
 
 code,
@@ -297,7 +297,7 @@ tt,
 var,
 samp,
 pre {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Inconsolata, monospace;
 }
 blockquote cite a, blockquote cite a:visited, blockquote cite a:visited {
     color: #333;

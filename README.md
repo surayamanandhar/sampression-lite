@@ -227,6 +227,7 @@ Please follow the steps below to install the theme.
   - Changed: Theme description
   - Removed: Forum Page Link
   - Removed: Knowledge Base Page Link
+  - Fixed: RTL Styling
 
 ## Child Theme Support
 Sampression Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

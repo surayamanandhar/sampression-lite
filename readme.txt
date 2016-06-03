@@ -241,6 +241,7 @@ Version 2.1
 = Changed: Theme description
 = Removed: Forum Page Link
 = Removed: Knowledge Base Page Link
+= Fixed: RTL Styling
 
  == Child Theme Support ===
  Sampresson Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

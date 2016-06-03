@@ -227,6 +227,7 @@ Please follow the steps below to install the theme.
   - Changed: Support Page Link
   - Changed: Theme description
   - Changed: Translation (.po and .mo files)
+  - Changed: Text domain changed to sampression-lite
   - Removed: Forum Page Link
   - Removed: Knowledge Base Page Link
   - Fixed: RTL Styling

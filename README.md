@@ -224,8 +224,9 @@ Please follow the steps below to install the theme.
   - Added: Support Ticket Button
   - Changed: Theme Tags
   - Changed: Support Page Link
-  - Changed: Forum Page Link
-  - Changed: Knowledge Base Page Link
+  - Changed: Theme description
+  - Removed: Forum Page Link
+  - Removed: Knowledge Base Page Link
 
 ## Child Theme Support
 Sampression Lite supports child themes. Please use child themes for customization of "Sampression Lite". For further reading: http://codex.wordpress.org/Child_Themes.

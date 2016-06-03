@@ -54,7 +54,7 @@ function about_sampression_theme_page() {
                 <li><h3>Multiple layout options</h3>
                     The pro version of Sampression offers various different layout options including number of columns (one, two, three and four) to be displayed in home page, option to turn sidebar off/on etc
                 </li>
-                <li><h3>Set the number of post,/category on home page</h3>
+                <li><h3>Set the number of post/category on home page</h3>
                     The Pro version of the theme provides you with control over the number of posts/categories that you want to display in the home page.
                 </li>
                 <li class="clear left"><h3>Show hide your meta</h3>
@@ -68,7 +68,7 @@ function about_sampression_theme_page() {
                 </li>
             </ul>
             <p style="clear: both; padding-top: 20px;">
-                <a target="_blank" class="button upgrade-pro" href="<?php echo esc_url( 'http://www.sampression.com/themes/sampression-pro/' ); ?>">Upgrade to PRO</a>
+                <a target="_blank" class="button upgrade-pro" href="<?php echo esc_url( 'http://www.sampression.com/?add-to-cart=447' ); ?>">Upgrade to PRO</a>
                 <a target="_blank" class="button button-primary" href="<?php echo esc_url( 'http://www.demo.sampression.com/sampression-pro/' ); ?>">Live Theme Demo</a>
             </p>
         </div>

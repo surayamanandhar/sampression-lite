@@ -226,6 +226,7 @@ Please follow the steps below to install the theme.
   - Changed: Theme Tags
   - Changed: Support Page Link
   - Changed: Theme description
+  - Changed: Translation (.po and .mo files)
   - Removed: Forum Page Link
   - Removed: Knowledge Base Page Link
   - Fixed: RTL Styling

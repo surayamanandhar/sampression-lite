@@ -818,3 +818,17 @@ if(!function_exists('sampression_insert_into_footer')) {
 }
 
 add_action('wp_footer','sampression_insert_into_footer', 999);
+
+/**
+ * Add css to the background to fix overlap issue between them links and customizer menus
+ */
+function my_customizer_styles() { ?>
+    <style>
+        #customize-theme-controls .current-panel, #customize-theme-controls .customize-pane-child.open {
+            background: #eee;
+        }
+    </style>
+    <?php
+
+}
+add_action( 'customize_controls_print_styles', 'my_customizer_styles', 999 );

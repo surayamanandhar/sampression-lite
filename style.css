@@ -674,8 +674,6 @@ a:hover, a:focus, a:active {
     left: 0;
     top: 0;
     z-index: 999;
-    border: none;
-    padding-bottom: 1px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
 }
 
@@ -689,15 +687,7 @@ body.admin-bar #primary-nav.fixed {
     overflow: hidden;
 }
 
-#primary-nav.fixed:after {
-    content: "";
-    display: block;
-    border-bottom: 1px solid #fff;
-    height: 0;
-    background: red;
-    position: relative;
-    bottom: -2px;
-}
+
 
 #btn-nav-opt {
     background: #EAEAEA;
@@ -713,9 +703,7 @@ body.admin-bar #primary-nav.fixed {
     border-radius: 2px 2px 0 0;
 }
 
-#primary-nav.fixed #btn-nav-opt {
-    bottom: -3px;
-}
+
 
 #btn-nav-opt i {
     margin: 2px 6px 0;
@@ -1462,7 +1450,6 @@ img.logo-img {
 #content-wrapper {
     padding: 30px 0 ;
     min-height: 400px;
-    border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
 }
 
@@ -2052,7 +2039,9 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
  * 13.3 - <= 767px
  */
 @media only screen and (max-width: 767px) {
-
+    #primary-nav .twelve{
+        height: 34px !important;
+    }
     .container,
     #primary-nav > .container {
         padding: 0 15px;

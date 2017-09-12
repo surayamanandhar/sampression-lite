@@ -1460,7 +1460,7 @@ img.logo-img {
  */
 
 #content-wrapper {
-    padding: 30px 0;
+    padding: 30px 0 ;
     min-height: 400px;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
@@ -1996,8 +1996,8 @@ body.single .entry.clearfix form.post-password-form input[type="submit"]{
     margin-top: 10px;
 }
 
-.bypostauthor {
-    
+.in-sub-panel .wp-full-overlay-sidebar-content > a {
+    display: none !important;
 }
 
 /**
